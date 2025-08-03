@@ -1,0 +1,332 @@
+
+[
+  {
+    "id": "rockpop80",
+    "title": "Rock Pop 80' 90' (Inglés y Español) - Audio",
+    "description": [
+      "✅ Los clásicos y hits que todos piden (80s, 90s, 2000s).",
+      "✅ Ediciones con Intro/Outro, listas para mezclar.",
+      "✅ Audio de Alta Calidad.",
+      "⚡ Tus clásicos en español, listos para la cabina.",
+      "⚡ Ahorra tiempo con edits profesionales.",
+      "🔥 Descarga ahora y potencia tus sets.",
+      "🌐 Servidor: Google Drive"
+    ],
+    "price": "US$ 27.00",
+    "paymentLink": "https://www.paypal.com/ncp/payment/WDLC5DVW5CNSE",
+    "image": "rockpop80.jpg"
+  },
+  {
+    "id": "clasicos",
+    "title": "Colección Clásicos del Recuerdo (Audio)",
+    "description": [
+      "✅ Los hits inmortales con Intro/Outro para DJs.",
+      "✅ Baladas, Rock, Pop, Salsa y más. Pura nostalgia.",
+      "✅ Calidad WAV Profesional.",
+      "🔥 Ediciones exclusivas de los clásicos que todos aman.",
+      "🔥 Ahorra tiempo. Tracks listos para la cabina.",
+      "🔥 Acceso a tu Correo Personal.",
+      "🌐 Servidor: Google Drive"
+    ],
+    "price": "US$ 15.00",
+    "paymentLink": "https://www.paypal.com/ncp/payment/F7K5BGQUTRKTN",
+    "image": "clasicos.jpg"
+  },
+  {
+    "id": "horaloca",
+    "title": "Pack Hora Loca (Audio)",
+    "description": [
+      "✅ Tracks con Intro y Outro para transiciones perfectas.",
+      "✅ Ahorra tiempo: Los hits que sí o sí funcionan.",
+      "✅ Alta Calidad.",
+      "⚡️ Puro fuego: Hits 100% mezclables.",
+      "⚡️ La energía y variedad que tu set necesita.",
+      "⚡️ Acceso Directo a tu Correo.",
+      "🌐 Servidor: Google Drive"
+    ],
+    "price": "US$ 5.00",
+    "paymentLink": "https://www.paypal.com/ncp/payment/QXEUFCXDQASJL",
+    "image": "horaloca.jpg"
+  },
+  {
+    "id": "megapackcumbia",
+    "title": "Mega Pack Cumbia (Audio)",
+    "description": [
+      "⚡ Cumbia Colombiana",
+      "⚡ Cumbia Sureña",
+      "⚡ Cumbia Selva Sanjuanera", 
+      "⚡ Cumbia Argentina",
+      "⚡ Acceso Inmediato",
+      "⚡ Audio: Mp3, M4a, Flac, Wav & Ogg",
+      "🌐 Servidor: Google Drive"
+    ],
+    "price": "US$ 9.00",
+    "paymentLink": "https://www.paypal.com/ncp/payment/SWCFUWQE5BABJ",
+    "image": "megapackcumbia.jpg"
+  },
+  {
+    "id": "aleteoguaracha",
+    "title": "Mega Pack Aleteo, Guaracha & Tribal (Audio)",
+    "description": [
+      "⚡ 3 Géneros Musicales",
+      "⚡ Aleteo, Guaracha & Tribal",
+      "⚡ Retro & Actual",
+      "⚡ Acceso Inmediato",
+      "⚡ Audio: Mp3, M4a, Flac, Wav & Ogg",
+      "🌐 Servidor: Google Drive"
+    ],
+    "price": "US$ 5.00",
+    "paymentLink": "https://www.paypal.com/ncp/payment/QZPDA9C6F5DHJ",
+    "image": "aleteoguaracha.jpg"
+  },
+  {
+    "id": "transiciones",
+    "title": "Mega Pack Puentes y Transiciones (Audio)",
+    "description": [
+      "⚡ Género Full Variado",
+      "⚡ Ordenado por Género",
+      "⚡ Transiciones Antiguas y Actuales",
+      "⚡ Más de 20 GB",
+      "⚡ Acceso Inmediato",
+      "⚡ Audio: Mp3, M4a, Flac, Wav & Ogg",
+      "🌐 Servidor: Google Drive"
+    ],
+    "price": "US$ 18.00",
+    "paymentLink": "https://www.paypal.com/ncp/payment/G77SJZKVNWAZQ",
+    "image": "transiciones.jpeg"
+  },
+  {
+    "id": "baladas",
+    "title": "Pack Baladas Remix (Audio)",
+    "description": [
+      "⚡ Género Full Baladas",
+      "⚡ Baladas Pop",
+      "⚡ Baladas Clásicas",
+      "⚡ Más de 10 GB",
+      "⚡ Acceso Inmediato",
+      "⚡ Audio: Mp3, M4a, Flac, Wav & Ogg",
+      "🌐 Servidor: Google Drive"
+    ],
+    "price": "US$ 9.99",
+    "paymentLink": "https://www.paypal.com/ncp/payment/WNM8YMYMZU3RN",
+    "image": "baladas.jpeg"
+  },
+  {
+    "id": "cumbiaperuana",
+    "title": "Pack Cumbia Peruana (Audio)",
+    "description": [
+      "⚡ Ordenado por Artista",
+      "⚡ Agua Bella, Grupo 5",
+      "⚡ Grupo Néctar, La Bella Luz",
+      "⚡ Armonía 10, Única Tropical",
+      "⚡ Más de 200 GB",
+      "⚡ Acceso Inmediato",
+      "⚡ Audio: Mp3, M4a, Flac, Wav & Ogg",
+      "🌐 Servidor: Google Drive"
+    ],
+    "price": "US$ 49.00",
+    "paymentLink": "https://www.paypal.com/ncp/payment/9GXN6FRQRBKU6",
+    "image": "cumbiaperuana.jpeg"
+  },
+  {
+    "id": "techno",
+    "title": "Pack Techno 90's (Audio)",
+    "description": [
+      "⚡ Género Full Techno",
+      "⚡ Techno de Oro 90's",
+      "⚡ Techno Transiciones",
+      "⚡ Techno en Inglés & Español",
+      "⚡ Más de 25 GB",
+      "⚡ Acceso Inmediato",
+      "⚡ Audio: Mp3, M4a, Flac, Wav & Ogg",
+      "🌐 Servidor: Google Drive"
+    ],
+    "price": "US$ 17.00",
+    "paymentLink": "https://www.paypal.com/ncp/payment/EU6VF2QKS396L",
+    "image": "techno.jpeg"
+  },
+  {
+    "id": "huayno",
+    "title": "Pack Huayno Peruano (Audio)",
+    "description": [
+      "⚡ Género Full Huayno",
+      "⚡ Huayno Ordenado por Artista",
+      "⚡ Huayno Ayacuchano",
+      "⚡ Huayno Cajamarquino & Más",
+      "⚡ Más de 15 GB",
+      "⚡ Acceso Inmediato",
+      "⚡ Audio: Mp3, M4a, Flac, Wav & Ogg",
+      "🌐 Servidor: Google Drive"
+    ],
+    "price": "US$ 9.00",
+    "paymentLink": "https://www.paypal.com/ncp/payment/EEK5PGFP4TYX6",
+    "image": "huayno.jpeg"
+  },
+  {
+    "id": "electrohouse",
+    "title": "Pack Electro House (Audio)",
+    "description": [
+      "⚡ Género Full Electrónica",
+      "⚡ Electro Deep House",
+      "⚡ Electro EDM, Hardstyle, Muestreo",
+      "⚡ Electro House, Festival, Electro Pop",
+      "⚡ Más de 28 GB",
+      "⚡ Acceso Inmediato",
+      "⚡ Audio: Mp3, M4a, Flac, Wav & Ogg",
+      "🌐 Servidor: Google Drive"
+    ],
+    "price": "US$ 17.00",
+    "paymentLink": "https://www.paypal.com/ncp/payment/SMRKVMYK7QXHG",
+    "image": "electrohouse.jpeg"
+  },
+  {
+    "id": "rock",
+    "title": "Pack Rock en Español e Inglés (Audio)",
+    "description": [
+      "⚡ Género Full Rock",
+      "⚡ Rock 70s",
+      "⚡ Rock en Español (Ordenado por Artista)",
+      "⚡ Rock en Inglés (Ordenado por Artista)",
+      "⚡ Más de 15 GB",
+      "⚡ Acceso Inmediato",
+      "⚡ Audio: Mp3, M4a, Flac, Wav & Ogg",
+      "🌐 Servidor: Google Drive"
+    ],
+    "price": "US$ 12.00",
+    "paymentLink": "https://www.paypal.com/ncp/payment/7NDB5XD799CNL",
+    "image": "rock.jpeg"
+  },
+  {
+    "id": "merengue",
+    "title": "Pack Merengue Remix (Audio)",
+    "description": [
+      "⚡ Género Full Merengue",
+      "⚡ Merengue Lambada",
+      "⚡ Merengue Bailetón",
+      "⚡ Merengue Pachanga",
+      "⚡ Más de 20 GB",
+      "⚡ Acceso Inmediato",
+      "⚡ Audio: Mp3, M4a, Flac, Wav & Ogg",
+      "🌐 Servidor: Google Drive"
+    ],
+    "price": "US$ 16.00",
+    "paymentLink": "https://www.paypal.com/ncp/payment/EWSYXHYMM2L8Y",
+    "image": "merengue.jpeg"
+  },
+  {
+    "id": "techhouse",
+    "title": "Pack Tech House (Audio)",
+    "description": [
+      "⚡ Género Full Tech House",
+      "⚡ Tech House Trance",
+      "⚡ Tech House Retro",
+      "⚡ Tech House Actual",
+      "⚡ Más de 20 GB",
+      "⚡ Acceso Inmediato",
+      "⚡ Audio: Mp3, M4a, Flac, Wav & Ogg",
+      "🌐 Servidor: Google Drive"
+    ],
+    "price": "US$ 15.00",
+    "paymentLink": "https://www.paypal.com/ncp/payment/RF4E8KBCX4D94",
+    "image": "techhouse.jpeg"
+  },
+  {
+    "id": "salsa",
+    "title": "Mega Pack Salsa Remix (Audio)",
+    "description": [
+      "⚡ Género Full Salsa",
+      "⚡ Salsa Timba",
+      "⚡ Salsa Sensual",
+      "⚡ Salsa Bailable",
+      "⚡ Salsa Perucha",
+      "⚡ Más de 30 GB",
+      "⚡ Acceso Inmediato",
+      "⚡ Audio: Mp3, M4a, Flac, Wav & Ogg",
+      "🌐 Servidor: Google Drive"
+    ],
+    "price": "US$ 18.00",
+    "paymentLink": "https://www.paypal.com/ncp/payment/GNEZ7PXWKQ3KU",
+    "image": "salsa.jpeg"
+  },
+  {
+    "id": "reggaetonaudio",
+    "title": "Mega Pack Reggaetón (Audio)",
+    "description": [
+      "⚡ Género Full Reggaetón",
+      "⚡ Extended Actuales, Antiguos Old School, Mixtape, Romántico & Más",
+      "⚡ Más de 80 GB",
+      "⚡ Acceso Inmediato",
+      "⚡ Audio: Mp3, M4a, Flac, Wav & Ogg",
+      "🎁 Bonus",
+      "🌐 Servidor: Google Drive"
+    ],
+    "price": "US$ 19.00",
+    "paymentLink": "https://www.paypal.com/ncp/payment/ESD68STQXQ9JN",
+    "image": "reggaetonaudio.jpeg"
+  },
+  {
+    "id": "badbunny",
+    "title": "ALBUM DEBÍ TIRAR MÁS FOTOS (Audio)",
+    "description": [
+      "🔹 Los 17 temas del álbum completamente editados y en varias versiones",
+      "🔹 Open Show, Intros, Coros & Más",
+      "🔹 Versiones para DJs",
+      "🔹 Versiones Privadas",
+      "🔹 Más de 10 GB",
+      "🔹 Versiones en audio de alta calidad",
+      "🌐 Servidor: Google Drive"
+    ],
+    "price": "US$ 9.00",
+    "paymentLink": "https://www.paypal.com/ncp/payment/3H6WNDGH7Z47L",
+    "image": "badbunny.jpeg"
+  },
+  {
+    "id": "sanvalentin",
+    "title": "Mega Pack San Valentín (Audio)",
+    "description": [
+      "🔹 Open Show Románticos",
+      "🔹 Baladas En Inglés y Español",
+      "🔹 Reggaetón Romántico",
+      "🔹 Versiones para DJs",
+      "🔹 Más de 16 GB en Audio",
+      "🌐 Servidor: Google Drive"
+    ],
+    "price": "US$ 9.00",
+    "paymentLink": "https://www.paypal.com/ncp/payment/E85DAJ96NAVZ6",
+    "image": "sanvalentin.jpeg"
+  },
+  {
+    "id": "infantil",
+    "title": "Mega Pack Infantil (Audio)",
+    "description": [
+      "🔹 Open Show Música Infantil",
+      "🔹 Edits Privados, Retro & Actual",
+      "🔹 Música Original, Pistas",
+      "🔹 Ordenado por Carpetas",
+      "🔹 Intro Show, Puentes, Efectos",
+      "🔹 Mixes, Instrumentales, Bailes",
+      "🔹 Baby Shower, Hora Loca, Bases",
+      "🌐 Servidor: Google Drive"
+    ],
+    "price": "US$ 10.00",
+    "paymentLink": "https://www.paypal.com/ncp/payment/D3XC2KGMH7QYL",
+    "image": "infantil.jpeg"
+  },
+  {
+    "id": "carnavales",
+    "title": "Mega Pack Carnavales (Audio)",
+    "description": [
+      "🔹 Open Shows, IO",
+      "🔹 Edits Privados, Retro & Actual",
+      "🔹 Carnaval Cajamarquino - Ayacuchano, Tinkus",
+      "🔹 Puentes, Transiciones",
+      "🔹 Huayno Carnaval",
+      "🔹 Calidad en Audio WAV, Flac, Mp3 320 Kbps",
+      "🔹 Más de 30 GB",
+      "🌐 Servidor: Google Drive"
+    ],
+    "price": "US$ 15.00",
+    "paymentLink": "https://www.paypal.com/ncp/payment/58NBXQPT5FYHW",
+    "image": "carnavales.jpeg"
+  }
+]

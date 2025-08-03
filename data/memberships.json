@@ -1,0 +1,90 @@
+[
+  {
+    "id": "audio",
+    "title": "Membresía en Audio",
+    "description": [
+      "✔️ Música Peruana Exclusiva",
+      "✔️ Top Plataformas: América Remix, BPM Latino, Club Killers, etc.",
+      "✔️ Ediciones Exclusivas: DJs Peruanos & Extranjeros",
+      "✔️ Intros, Mashups, Open Shows",
+      "✔️ Actualización Semanal: ¡Cada Viernes!",
+      "✔️ Más de 40 GB al Mes",
+      "✔️ Acceso 24/7",
+      "✔️ Audio Profesional: MP3, WAV, M4A, FLAC, OGG",
+      "✔️ Descarga Directa: 🌐 Google Drive"
+    ],
+    "prices": [
+      { "period": "Mensual", "price": "US$ 7.00", "paymentLink": "https://www.paypal.com/ncp/payment/5ZMJB759D69HQ" },
+      { "period": "Trimestral", "price": "US$ 19.00", "paymentLink": "https://www.paypal.com/ncp/payment/5ZMJB759D69HQ" },
+      { "period": "Semestral", "price": "US$ 37.00", "paymentLink": "https://www.paypal.com/ncp/payment/5ZMJB759D69HQ" },
+      { "period": "Anual", "price": "US$ 69.00", "paymentLink": "https://www.paypal.com/ncp/payment/5ZMJB759D69HQ" }
+    ],
+    "image": "audio.jpg"
+  },
+  {
+    "id": "video",
+    "title": "Membresía en Video",
+    "description": [
+      "📼 Video Remix HD",
+      "✔️ Calidad HD Impactante",
+      "✔️ Amplia Variedad: Géneros Actuales y Retro",
+      "✔️ Éxitos Actuales y Clásicos Retro",
+      "✔️ Fuentes Top: Remix MP4, Pro Videos DJs y Más",
+      "✔️ Actualización Semanal: ¡Cada Viernes!",
+      "✔️ Contenido Exclusivo de Páginas Extranjeras",
+      "✔️ Lo Nuevo y los Hits de Siempre",
+      "✔️ Acceso 24/7",
+      "✔️ Descarga Directa: 🌐 Google Drive"
+    ],
+    "prices": [
+      { "period": "Mensual", "price": "US$ 10.00", "paymentLink": "https://www.paypal.com/ncp/payment/4G9LN4V4T7SQA" },
+      { "period": "Trimestral", "price": "US$ 27.00", "paymentLink": "https://www.paypal.com/ncp/payment/4G9LN4V4T7SQA" },
+      { "period": "Semestral", "price": "US$ 52.00", "paymentLink": "https://www.paypal.com/ncp/payment/4G9LN4V4T7SQA" },
+      { "period": "Anual", "price": "US$ 99.00", "paymentLink": "https://www.paypal.com/ncp/payment/4G9LN4V4T7SQA" }
+    ],
+    "image": "video.jpeg"
+  },
+  {
+    "id": "ordenado",
+    "title": "Membresía Ordenado por Género (Audio)",
+    "description": [
+      "🎶 Música Organizada a Tu Medida",
+      "✔️ Todo Clasificado por Género Musical",
+      "✔️ Desde los Clásicos hasta las Últimas Tendencias",
+      "✔️ Encuentra Fácilmente lo que Buscas",
+      "✔️ Navegación Rápida y Eficiente",
+      "✔️ Ideal para Preparar Sets Temáticos",
+      "✔️ Acceso 24/7",
+      "✔️ Actualización Semanal: ¡Cada Viernes!",
+      "✔️ Descarga Directa: 🌐 Google Drive"
+    ],
+    "prices": [
+      { "period": "Mensual", "price": "US$ 14.00", "paymentLink": "https://www.paypal.com/ncp/payment/VUCWC2H8SUZZA" },
+      { "period": "Trimestral", "price": "US$ 39.00", "paymentLink": "https://www.paypal.com/ncp/payment/VUCWC2H8SUZZA" },
+      { "period": "Semestral", "price": "US$ 75.00", "paymentLink": "https://www.paypal.com/ncp/payment/VUCWC2H8SUZZA" },
+      { "period": "Anual", "price": "US$ 149.00", "paymentLink": "https://www.paypal.com/ncp/payment/VUCWC2H8SUZZA" }
+    ],
+    "image": "ordenado.jpeg"
+  },
+  {
+    "id": "completo",
+    "title": "Membresía en Audio y Video (Completo)",
+    "description": [
+      "✔️ Todo el Contenido: Audio + Video + Ordenada",
+      "✔️ Disponible a Toda Hora",
+      "✔️ Éxitos Actuales y Clásicos Retro",
+      "✔️ Ediciones Privadas Exclusivas",
+      "✔️ Conéctate Cuando Quieras",
+      "✔️ Más de 100 GB al Mes en Audio y Video",
+      "✔️ Actualización Semanal: ¡Cada Viernes!",
+      "✔️ Descarga Directa: 🌐 Google Drive"
+    ],
+    "prices": [
+      { "period": "Mensual", "price": "US$ 16.00", "paymentLink": "https://www.paypal.com/ncp/payment/PEZ4NV29479EC" },
+      { "period": "Trimestral", "price": "US$ 45.00", "paymentLink": "https://www.paypal.com/ncp/payment/PEZ4NV29479EC" },
+      { "period": "Semestral", "price": "US$ 89.00", "paymentLink": "https://www.paypal.com/ncp/payment/PEZ4NV29479EC" },
+      { "period": "Anual", "price": "US$ 169.00", "paymentLink": "https://www.paypal.com/ncp/payment/PEZ4NV29479EC" }
+    ],
+    "image": "audiovideo.jpeg"
+  }
+]

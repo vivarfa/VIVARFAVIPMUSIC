@@ -1,0 +1,1263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEMBRESIA VIVARFA VIP MUSIC</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Inter', sans-serif; }
+        
+        /* --- ESTILOS GENERALES --- */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111827;
+            color: #f3f4f6;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        
+        /* --- ESTILOS RESPONSIVE --- */
+        @media (max-width: 768px) {
+            .header-title {
+                font-size: 1.25rem;
+            }
+            
+            .stats-card {
+                padding: 0.75rem;
+            }
+            
+            .stats-card h3 {
+                font-size: 0.875rem;
+            }
+            
+            .stats-card .value {
+                font-size: 1.25rem;
+            }
+            
+            .file-card {
+                padding: 0.75rem;
+            }
+            
+            .breadcrumb-item {
+                padding: 0.25rem 0.5rem;
+                font-size: 0.75rem;
+            }
+            
+            /* Botones de acción responsive */
+            .action-button {
+                padding: 0.375rem;
+                font-size: 0.875rem;
+            }
+            
+            /* Mejoras para móviles */
+            .search-input {
+                font-size: 0.875rem;
+                padding: 0.5rem 0.75rem 0.5rem 2.5rem;
+            }
+            
+            .empty-state i {
+                font-size: 48px;
+            }
+            
+            #breadcrumbs {
+                max-width: calc(100vw - 80px);
+                white-space: nowrap;
+            }
+            
+            .context-menu {
+                min-width: 180px;
+                max-width: 80vw;
+            }
+            
+            .context-menu-item {
+                padding: 10px 14px;
+                font-size: 0.875rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .stats-card .text-2xl {
+                font-size: 1.25rem;
+            }
+            
+            .stats-card i {
+                font-size: 1.25rem;
+            }
+            
+            .loading-spinner {
+                width: 30px;
+                height: 30px;
+            }
+            
+            .empty-state {
+                padding: 40px 10px;
+            }
+            
+            .empty-state i {
+                font-size: 36px;
+            }
+        }
+        
+        /* Estilos base mejorados */
+        .gradient-bg { 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        .card-hover { 
+            transition: all 0.3s ease; 
+            transform: translateY(0);
+        }
+        .card-hover:hover { 
+            transform: translateY(-2px); 
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+        .search-glow:focus { 
+            box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.3);
+        }
+        .pulse-loader { 
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse { 
+            0%, 100% { opacity: 1; } 
+            50% { opacity: 0.5; } 
+        }
+        /* --- MEJORA 2: ANIMACIÓN DE ZOOM EN LOS ITEMS --- */
+        .grid-item { 
+            transition: all 0.2s ease-in-out;
+            transform: scale(1); /* Estado inicial */
+        }
+        .grid-item:hover { 
+            background: rgba(139, 92, 246, 0.1); 
+            border-color: rgba(139, 92, 246, 0.3);
+            transform: scale(1.03); /* Efecto de zoom */
+            z-index: 10;
+        }
+        .filter-active { 
+            background: rgba(139, 92, 246, 0.2); 
+            border-color: #8b5cf6;
+            font-weight: 500;
+        }
+        .breadcrumb-item { 
+            transition: all 0.2s ease;
+        }
+        .breadcrumb-item:hover { 
+            color: #8b5cf6; 
+            text-decoration: underline;
+        }
+        .stats-card { 
+            background: rgba(139, 92, 246, 0.1); 
+            border: 1px solid rgba(139, 92, 246, 0.2);
+            transition: all 0.3s ease;
+        }
+        .stats-card:hover {
+            background: rgba(139, 92, 246, 0.15);
+            transform: translateY(-2px);
+        }
+        .view-toggle { 
+            background: rgba(55, 65, 81, 0.5); 
+            border: 1px solid rgba(75, 85, 99, 0.5);
+            transition: all 0.2s ease;
+        }
+        .view-toggle.active { 
+            background: #8b5cf6; 
+            border-color: #8b5cf6;
+        }
+        .fade-in { 
+            animation: fadeIn 0.5s ease-in;
+        }
+        @keyframes fadeIn { 
+            from { opacity: 0; transform: translateY(10px); } 
+            to { opacity: 1; transform: translateY(0); } 
+        }
+        .loading-spinner { 
+            border: 3px solid rgba(139, 92, 246, 0.3); 
+            border-top: 3px solid #8b5cf6; 
+            border-radius: 50%; 
+            width: 40px; 
+            height: 40px; 
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin { 
+            0% { transform: rotate(0deg); } 
+            100% { transform: rotate(360deg); } 
+        }
+        .context-menu { 
+            position: absolute; 
+            background: #1f2937; 
+            border: 1px solid #374151; 
+            border-radius: 8px; 
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); 
+            z-index: 1000; 
+            min-width: 200px;
+        }
+        .context-menu-item { 
+            padding: 12px 16px; 
+            cursor: pointer; 
+            transition: background 0.2s ease; 
+            border-bottom: 1px solid #374151;
+        }
+        .context-menu-item:hover { 
+            background: rgba(139, 92, 246, 0.1);
+        }
+        .context-menu-item:last-child { 
+            border-bottom: none;
+        }
+        .empty-state { 
+            text-align: center; 
+            padding: 60px 20px; 
+            color: #9ca3af;
+        }
+        .empty-state i { 
+            font-size: 64px; 
+            margin-bottom: 16px; 
+            opacity: 0.5;
+        }
+        .search-results-highlight { 
+            background: rgba(251, 191, 36, 0.3); 
+            border-radius: 4px; 
+            padding: 2px 4px;
+        }
+        .file-size { 
+            font-size: 0.75rem; 
+            color: #9ca3af;
+        }
+        .file-date { 
+            font-size: 0.75rem; 
+            color: #6b7280;
+        }
+        .folder-stats { 
+            background: rgba(17, 24, 39, 0.5); 
+            border: 1px solid rgba(55, 65, 81, 0.5); 
+            border-radius: 8px; 
+            padding: 12px; 
+            margin-bottom: 20px;
+        }
+        .progress-bar { 
+            height: 4px; 
+            background: rgba(139, 92, 246, 0.2); 
+            border-radius: 2px; 
+            overflow: hidden;
+        }
+        .progress-fill { 
+            height: 100%; 
+            background: #8b5cf6; 
+            transition: width 0.3s ease;
+        }
+        
+        /* Notificación mejorada */
+        .notification {
+            position: fixed;
+            top: 60px; 
+            right: 20px;
+            background: #1f2937;
+            border: 1px solid #374151;
+            border-radius: 10px;
+            padding: 16px;
+            z-index: 2000;
+            opacity: 0;
+            transform: translateX(20px);
+            transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), opacity 0.4s ease;
+            pointer-events: none;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+            max-width: calc(100vw - 40px);
+            width: 350px;
+        }
+        
+        @media (max-width: 480px) {
+            .notification {
+                padding: 12px;
+                right: 10px;
+                top: 50px;
+                width: auto;
+            }
+        }
+        
+        .notification.show {
+            opacity: 1;
+            transform: translateX(0);
+            pointer-events: auto;
+        }
+        
+        .notification.success { 
+            border-color: #10b981; 
+            background: rgba(16, 185, 129, 0.1);
+        }
+        .notification.error { 
+            border-color: #ef4444; 
+            background: rgba(239, 68, 68, 0.1);
+        }
+
+        /* Marquee mejorado */
+        .marquee-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            display: flex;
+            align-items: center;
+            z-index: 1002;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        
+        .marquee-container:hover .marquee-content {
+            animation-play-state: paused;
+        }
+
+        .marquee-content {
+            display: inline-block;
+            white-space: nowrap;
+            font-weight: 500;
+            padding-left: 100%;
+            animation: marquee 350s linear infinite; 
+        }
+        
+        .marquee-content span {
+            margin: 0 40px;
+            opacity: 0.9;
+            transition: all 0.3s ease;
+        }
+        
+        .marquee-content span:hover {
+            opacity: 1;
+            text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+        }
+        
+        .marquee-content i {
+            margin-right: 8px;
+            opacity: 0.7;
+        }
+        
+        @keyframes marquee {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-100%); }
+        }
+        
+        @media (max-width: 640px) {
+            .marquee-container {
+                height: 32px;
+            }
+            .marquee-content {
+                font-size: 0.875rem;
+            }
+            .marquee-content span {
+                margin: 0 20px;
+            }
+        }
+
+        /* ===== ESTILOS PARA LOS BOTONES DE CABECERA ===== */
+        .header-button {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            padding: 8px 16px; /* Aumenta un poco el padding */
+            border-radius: 9999px; /* Totalmente redondeado */
+            font-size: 0.875rem; /* Un poco más grande */
+            font-weight: 500;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            border: 1px solid transparent;
+            white-space: nowrap; /* Evita que el texto se parta */
+        }
+        .header-button:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        .header-button.primary {
+            background: linear-gradient(135deg, #8b5cf6, #6366f1);
+        }
+        .header-button.secondary {
+            background: linear-gradient(135deg, #fbbf24, #f59e0b);
+            color: #1f2937;
+        }
+        .header-button.free {
+            background: linear-gradient(135deg, #22c55e, #10b981);
+        }
+
+        /* --- INICIO: ESTILOS DEL WIDGET DE WHATSAPP --- */
+        .whatsapp-fab {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            width: 60px;
+            height: 60px;
+            background-color: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            z-index: 1010;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            animation: whatsappPulse 2s infinite;
+        }
+        .whatsapp-fab:hover {
+            transform: scale(1.1);
+            animation-play-state: paused;
+        }
+        
+        .whatsapp-chatbox {
+            position: fixed;
+            bottom: 100px;
+            right: 25px;
+            width: 350px;
+            max-width: calc(100vw - 50px);
+            background: #111827;
+            border: 1px solid #374151;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            opacity: 0;
+            transform: translateY(20px) scale(0.95);
+            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            pointer-events: none;
+            z-index: 1009;
+        }
+        .whatsapp-chatbox.show {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+            pointer-events: auto;
+        }
+
+        .chatbox-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 16px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .chatbox-header-title {
+            font-weight: 600;
+            font-size: clamp(0.9rem, 3vw, 1rem);
+        }
+        .chatbox-close {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+            opacity: 0.8;
+            transition: all 0.2s ease;
+        }
+        .chatbox-close:hover {
+            opacity: 1;
+            transform: rotate(90deg);
+        }
+
+        .chatbox-body {
+            padding: 20px;
+            background-color: rgba(139, 92, 246, 0.05);
+            font-size: clamp(0.8rem, 2.5vw, 0.9rem);
+            color: #d1d5db;
+        }
+        .chatbox-footer {
+            padding: 16px;
+            background-color: #1f2937;
+            border-top: 1px solid #374151;
+        }
+        .chatbox-footer textarea {
+            width: 100%;
+            height: 60px;
+            padding: 10px;
+            background: #374151;
+            border: 1px solid #4b5563;
+            border-radius: 8px;
+            resize: none;
+            color: white;
+            font-size: 0.9rem;
+            margin-bottom: 12px;
+        }
+        .chatbox-footer textarea:focus {
+            outline: none;
+            border-color: #8b5cf6;
+            box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.3);
+        }
+        .chatbox-send-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #25D366;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-size: clamp(0.8rem, 2.5vw, 0.9rem);
+        }
+        .chatbox-send-btn:hover {
+            background-color: #1DAE52;
+            transform: scale(1.02);
+        }
+        @keyframes whatsappPulse {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+        @media (max-width: 480px) {
+            .whatsapp-fab {
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
+                bottom: 20px;
+                right: 20px;
+            }
+            .whatsapp-chatbox {
+                bottom: 80px;
+                right: 10px;
+                max-width: calc(100vw - 20px);
+            }
+            .chatbox-footer textarea {
+                height: 50px;
+            }
+        }
+        /* --- FIN: ESTILOS DEL WIDGET DE WHATSAPP --- */
+    </style>
+    
+    <!-- Script de Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9975952999842017" crossorigin="anonymous"></script>
+</head>
+<body class="bg-gray-900 text-gray-100 min-h-screen">
+    <header class="shadow-lg" style="padding-top: 40px;">
+        <div class="marquee-container">
+            <div id="marquee-content" class="marquee-content"></div>
+        </div>
+        <div class="gradient-bg">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between h-16">
+                    <div class="flex items-center">
+                        <i class="fas fa-music text-white text-2xl mr-3"></i>
+                        <h1 class="text-white text-xl font-bold">VIVARFA VIP MUSIC</h1>
+                        <span class="bg-white bg-opacity-20 text-white px-3 py-1 rounded-full text-sm ml-3">2025</span>
+                    </div>
+                    <div class="hidden md:flex items-center space-x-3">
+                        <a href="index.html#inicio" class="header-button">
+                            <i class="fas fa-home mr-2"></i> Inicio
+                        </a>
+                        <a href="index.html#membresias" class="header-button secondary">
+                            <i class="fas fa-star mr-2"></i> Adquirir Membresía
+                        </a>
+                        <a href="index.html#audio-packs" class="header-button primary">
+                            <i class="fas fa-shopping-cart mr-2"></i> Ver Packs, Backups y Más
+                        </a>
+                        <a href="index.html#gratis" class="header-button free">
+                            <i class="fas fa-gift mr-2"></i> Packs Gratis
+                        </a>
+                    </div>
+                    <div class="md:hidden">
+                        <button id="mobile-menu-button" class="text-white p-2 focus:outline-none">
+                            <i class="fas fa-bars text-xl"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Menú móvil desplegable -->
+    <div id="mobile-menu" class="hidden fixed top-[104px] left-0 right-0 bg-gray-800 z-50 shadow-lg border-b border-gray-700">
+        <div class="p-4 flex flex-col space-y-3">
+            <a href="index.html#inicio" class="flex items-center p-2 rounded-lg hover:bg-gray-700">
+                <i class="fas fa-home mr-3 text-purple-400"></i> Inicio
+            </a>
+            <a href="index.html#membresias" class="flex items-center p-2 rounded-lg hover:bg-gray-700 bg-gray-700">
+                <i class="fas fa-star mr-3 text-yellow-400"></i> Adquirir Membresía
+            </a>
+            <a href="index.html#audio-packs" class="flex items-center p-2 rounded-lg hover:bg-gray-700">
+                <i class="fas fa-shopping-cart mr-3 text-purple-400"></i> Ver Packs, Backups y Más
+            </a>
+            <a href="index.html#gratis" class="flex items-center p-2 rounded-lg hover:bg-gray-700">
+                <i class="fas fa-gift mr-3 text-green-400"></i> Packs Gratis
+            </a>
+        </div>
+    </div>
+    <!-- Main Container -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        
+        <!-- Search and Filters -->
+        <div class="bg-gray-800 rounded-lg shadow-lg p-6 mb-6">
+            <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+                <div class="flex-1">
+                    <div class="relative w-full">
+                        <i class="fas fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                        <input 
+                            type="text" 
+                            id="search-input" 
+                            placeholder="Buscar archivos dentro de cada carpeta..." 
+                            class="w-full pl-10 pr-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:border-purple-500 search-glow text-white placeholder-gray-400"
+                        >
+                    </div>
+                </div>
+                <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:space-x-4 mt-4 lg:mt-0">
+                    <div class="flex flex-wrap items-center gap-2 w-full sm:w-auto">
+                        <span class="text-sm text-gray-400 mr-1">Filtros:</span>
+                        <button class="filter-btn px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm border border-gray-600 hover:border-purple-500 transition-colors" data-filter="all">
+                            <i class="fas fa-list mr-1"></i>Todos
+                        </button>
+                        <button class="filter-btn px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm border border-gray-600 hover:border-purple-500 transition-colors" data-filter="folder">
+                            <i class="fas fa-folder mr-1"></i>Carpetas
+                        </button>
+                        <button class="filter-btn px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm border border-gray-600 hover:border-purple-500 transition-colors" data-filter="audio">
+                            <i class="fas fa-music mr-1"></i>Audio
+                        </button>
+                        <button class="filter-btn px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm border border-gray-600 hover:border-purple-500 transition-colors" data-filter="video">
+                            <i class="fas fa-video mr-1"></i>Video
+                        </button>
+                    </div>
+                    <div class="flex items-center space-x-2 self-end sm:self-auto">
+                        <span class="text-xs sm:text-sm text-gray-400">Vista:</span>
+                        <button id="grid-view" class="view-toggle px-2 sm:px-3 py-1 sm:py-2 rounded-lg">
+                            <i class="fas fa-th text-sm sm:text-base"></i>
+                        </button>
+                        <button id="list-view" class="view-toggle px-2 sm:px-3 py-1 sm:py-2 rounded-lg active">
+                            <i class="fas fa-list text-sm sm:text-base"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Breadcrumbs -->
+        <nav class="bg-gray-800 rounded-lg shadow-lg p-3 sm:p-4 mb-4 sm:mb-6">
+            <div class="flex items-center space-x-2 text-xs sm:text-sm overflow-x-auto pb-1">
+                <i class="fas fa-home text-purple-400 flex-shrink-0"></i>
+                <div id="breadcrumbs" class="flex items-center space-x-2 overflow-x-auto"></div>
+            </div>
+        </nav>
+
+        <!-- Stats -->
+        <div id="stats-container" class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+            <div class="stats-card p-4 rounded-lg">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="text-sm text-gray-400">Total Items</p>
+                        <p class="text-2xl font-bold text-white" id="total-items">0</p>
+                    </div>
+                    <i class="fas fa-files text-purple-400 text-2xl"></i>
+                </div>
+            </div>
+            <div class="stats-card p-4 rounded-lg">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="text-sm text-gray-400">Carpetas</p>
+                        <p class="text-2xl font-bold text-white" id="total-folders">0</p>
+                    </div>
+                    <i class="fas fa-folder text-yellow-400 text-2xl"></i>
+                </div>
+            </div>
+            <div class="stats-card p-4 rounded-lg">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="text-sm text-gray-400">Audio</p>
+                        <p class="text-2xl font-bold text-white" id="total-audio">0</p>
+                    </div>
+                    <i class="fas fa-music text-green-400 text-2xl"></i>
+                </div>
+            </div>
+            <div class="stats-card p-4 rounded-lg">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="text-sm text-gray-400">Videos</p>
+                        <p class="text-2xl font-bold text-white" id="total-videos">0</p>
+                    </div>
+                    <i class="fas fa-video text-red-400 text-2xl"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Loading -->
+        <div id="loading" class="hidden">
+            <div class="bg-gray-800 rounded-lg shadow-lg p-4 sm:p-8 text-center">
+                <div class="loading-spinner mx-auto mb-3 sm:mb-4"></div>
+                <p class="text-gray-400 text-sm sm:text-base">Cargando contenido...</p>
+                <div class="progress-bar mt-3 sm:mt-4">
+                    <div class="progress-fill" id="progress-fill" style="width: 0%"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Error Message -->
+        <div id="error-message" class="hidden bg-red-900 border border-red-700 rounded-lg p-3 sm:p-4 mb-4 sm:mb-6 text-sm sm:text-base">
+            <div class="flex items-center">
+                <i class="fas fa-exclamation-triangle text-red-400 mr-2 sm:mr-3"></i>
+                <span id="error-text"></span>
+            </div>
+        </div>
+
+        <!-- File List -->
+        <div id="file-list" class="fade-in"></div>
+
+        <!-- Empty State -->
+        <div id="empty-state" class="hidden">
+            <div class="empty-state px-4">
+                <i class="fas fa-folder-open text-4xl sm:text-5xl"></i>
+                <h3 class="text-lg sm:text-xl font-semibold mb-1 sm:mb-2">Carpeta vacía</h3>
+                <p class="text-sm sm:text-base">No hay archivos en esta ubicación.</p>
+            </div>
+        </div>
+
+        <!-- No Results -->
+        <div id="no-results" class="hidden">
+            <div class="empty-state px-4">
+                <i class="fas fa-search text-4xl sm:text-5xl"></i>
+                <h3 class="text-lg sm:text-xl font-semibold mb-1 sm:mb-2">Sin resultados</h3>
+                <p class="text-sm sm:text-base">No se encontraron archivos que coincidan con tu búsqueda.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Context Menu -->
+    <div id="context-menu" class="context-menu hidden z-50">
+        <div class="context-menu-item" onclick="copyToClipboard()">
+            <i class="fas fa-copy mr-2"></i>Copiar nombre
+        </div>
+        <div class="context-menu-item" onclick="showDetails()">
+            <i class="fas fa-info-circle mr-2"></i>Detalles
+        </div>
+        <div class="context-menu-item" onclick="refreshFolder()">
+            <i class="fas fa-sync mr-2"></i>Actualizar
+        </div>
+    </div>
+
+    <!-- Notification -->
+    <div id="notification" class="notification">
+        <div class="flex items-center">
+            <i id="notification-icon" class="mr-3"></i>
+            <span id="notification-text" class="text-sm sm:text-base"></span>
+        </div>
+    </div>
+
+    <!-- --- INICIO: HTML DEL WIDGET DE WHATSAPP --- -->
+    <div id="whatsapp-fab" class="whatsapp-fab">
+        <i class="fab fa-whatsapp"></i>
+    </div>
+    <div id="whatsapp-chatbox" class="whatsapp-chatbox">
+        <div class="chatbox-header">
+            <span class="chatbox-header-title">Chatea con nosotros</span>
+            <button id="chatbox-close-btn" class="chatbox-close"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="chatbox-body">
+            Hola 👋<br>¿Cómo podemos ayudarte?
+        </div>
+        <div class="chatbox-footer">
+            <textarea id="whatsapp-message" placeholder="Escribe tu mensaje aquí..." rows="3"></textarea>
+            <button id="whatsapp-send-btn" class="chatbox-send-btn">
+                <i class="fab fa-whatsapp mr-2"></i>Enviar Mensaje
+            </button>
+        </div>
+    </div>
+    <!-- --- FIN: HTML DEL WIDGET DE WHATSAPP --- -->
+
+    <script src="https://lib.youware.com/youware-lib-editor.1751946057.js" id="yourware-lib"></script><script>
+        // Configuración
+        const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz11dE5LcnGqFVxMbDtK5vMnYR-TyjTmSCpRyNaGfGQCPflLdHUtwiVER1VhgQfpl3Q/exec";
+        const ROOT_FOLDER_ID = "1kFTLZ6KqYE0YMC2unsLwAWCnTYERE09G";
+        const WHATSAPP_NUMBER = '51917776934'; // <--- CAMBIA TU NÚMERO AQUÍ
+
+        // Estado de la aplicación
+        let currentData = [];
+        let filteredData = [];
+        let currentFilter = 'all';
+        let currentView = 'list';
+        let searchQuery = '';
+        let navigationPath = [{ name: 'Inicio', id: ROOT_FOLDER_ID }];
+        let selectedItem = null;
+        let notificationTimeout;
+
+        // Elementos DOM
+        const elements = {
+            fileList: document.getElementById('file-list'),
+            breadcrumbs: document.getElementById('breadcrumbs'),
+            loading: document.getElementById('loading'),
+            errorMessage: document.getElementById('error-message'),
+            errorText: document.getElementById('error-text'),
+            searchInput: document.getElementById('search-input'),
+            emptyState: document.getElementById('empty-state'),
+            noResults: document.getElementById('no-results'),
+            contextMenu: document.getElementById('context-menu'),
+            notification: document.getElementById('notification'),
+            totalItems: document.getElementById('total-items'),
+            totalFolders: document.getElementById('total-folders'),
+            totalAudio: document.getElementById('total-audio'),
+            totalVideos: document.getElementById('total-videos'),
+            progressFill: document.getElementById('progress-fill'),
+            marqueeContent: document.getElementById('marquee-content'),
+            // --- Elementos de WhatsApp ---
+            whatsappFab: document.getElementById('whatsapp-fab'),
+            whatsappChatbox: document.getElementById('whatsapp-chatbox'),
+            whatsappCloseBtn: document.getElementById('chatbox-close-btn'),
+            whatsappMessage: document.getElementById('whatsapp-message'),
+            whatsappSendBtn: document.getElementById('whatsapp-send-btn')
+        };
+
+        // Utilidades
+        function showNotification(message, type = 'success') {
+            const notification = elements.notification;
+            const icon = document.getElementById('notification-icon');
+            const text = document.getElementById('notification-text');
+            
+            clearTimeout(notificationTimeout);
+            notification.className = 'notification';
+            void notification.offsetWidth;
+            notification.classList.add(type);
+            
+            icon.className = type === 'success' ? 'fas fa-check-circle text-green-400' : 'fas fa-exclamation-circle text-red-400';
+            text.textContent = message;
+            
+            notification.classList.add('show');
+            
+            notificationTimeout = setTimeout(() => {
+                notification.classList.remove('show');
+            }, 3000);
+        }
+
+        function getFileIcon(type) {
+            const icons = {
+                folder: 'fas fa-folder text-yellow-400',
+                audio: 'fas fa-music text-green-400',
+                video: 'fas fa-video text-red-400',
+                image: 'fas fa-image text-blue-400',
+                other: 'fas fa-file text-gray-400'
+            };
+            return icons[type] || icons.other;
+        }
+        
+        function formatFileSize(bytes) {
+            if (!bytes) return '';
+            const sizes = ['B', 'KB', 'MB', 'GB'];
+            const i = Math.floor(Math.log(bytes) / Math.log(1024));
+            return Math.round(bytes / Math.pow(1024, i) * 100) / 100 + ' ' + sizes[i];
+        }
+
+        function formatDate(dateString) {
+            if (!dateString) return '';
+            const date = new Date(dateString);
+            return date.toLocaleDateString('es-ES', { year: 'numeric', month: 'short', day: 'numeric' });
+        }
+
+        function highlightSearchText(text, query) {
+            if (!query) return text;
+            const regex = new RegExp(`(${query})`, 'gi');
+            return text.replace(regex, '<span class="search-results-highlight">$1</span>');
+        }
+
+        function updateBreadcrumbs() {
+            elements.breadcrumbs.innerHTML = '';
+            navigationPath.forEach((part, index) => {
+                if (index > 0) {
+                    const separator = document.createElement('span');
+                    separator.innerHTML = '<i class="fas fa-chevron-right text-gray-500 mx-2"></i>';
+                    elements.breadcrumbs.appendChild(separator);
+                }
+                
+                if (index < navigationPath.length - 1) {
+                    const link = document.createElement('a');
+                    link.href = '#';
+                    link.className = 'breadcrumb-item text-purple-400 hover:text-purple-300';
+                    link.textContent = part.name;
+                    link.onclick = (e) => {
+                        e.preventDefault();
+                        navigationPath = navigationPath.slice(0, index + 1);
+                        loadFolderContent(part.id);
+                    };
+                    elements.breadcrumbs.appendChild(link);
+                } else {
+                    const current = document.createElement('span');
+                    current.className = 'text-gray-300 font-medium';
+                    current.textContent = part.name;
+                    elements.breadcrumbs.appendChild(current);
+                }
+            });
+        }
+
+        function filterAndSearch() {
+            let result = currentData;
+            
+            if (currentFilter !== 'all') {
+                result = result.filter(item => item.type === currentFilter);
+            }
+            
+            if (searchQuery) {
+                result = result.filter(item => 
+                    item.name.toLowerCase().includes(searchQuery.toLowerCase())
+                );
+            }
+            
+            filteredData = result;
+            renderContent();
+        }
+
+        function updateStats() {
+            const stats = {
+                total: currentData.length,
+                folders: currentData.filter(item => item.type === 'folder').length,
+                audio: currentData.filter(item => item.type === 'audio').length,
+                videos: currentData.filter(item => item.type === 'video').length
+            };
+            
+            elements.totalItems.textContent = stats.total;
+            elements.totalFolders.textContent = stats.folders;
+            elements.totalAudio.textContent = stats.audio;
+            elements.totalVideos.textContent = stats.videos;
+        }
+
+        function renderContent() {
+            elements.fileList.innerHTML = '';
+            elements.emptyState.classList.add('hidden');
+            elements.noResults.classList.add('hidden');
+            
+            if (filteredData.length === 0) {
+                if (searchQuery || currentFilter !== 'all') {
+                    elements.noResults.classList.remove('hidden');
+                } else {
+                    elements.emptyState.classList.remove('hidden');
+                }
+                return;
+            }
+            
+            if (currentView === 'grid') {
+                renderGridView();
+            } else {
+                renderListView();
+            }
+        }
+
+        function renderGridView() {
+    elements.fileList.className = 'grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4';
+    
+    filteredData.forEach(item => {
+        const card = document.createElement('div');
+        card.className = 'bg-gray-800 rounded-lg shadow-lg overflow-hidden card-hover grid-item border border-gray-700';
+        card.innerHTML = `
+            <div class="p-4">
+                <div class="flex items-center justify-center h-16 mb-3">
+                    <i class="${getFileIcon(item.type)} text-4xl"></i>
+                </div>
+                <div class="text-center">
+                    <h3 class="font-medium text-white text-sm mb-1 truncate" title="${item.name}">
+                        ${highlightSearchText(item.name, searchQuery)}
+                    </h3>
+                    <p class="text-xs text-gray-400 capitalize">${item.type}</p>
+                    ${item.size ? `<p class="file-size mt-1">${formatFileSize(item.size)}</p>` : ''}
+                    ${item.modifiedTime ? `<p class="file-date mt-1">${formatDate(item.modifiedTime)}</p>` : ''}
+                </div>
+            </div>
+        `;
+        
+        if (item.type === 'folder') {
+            card.style.cursor = 'pointer';
+            card.onclick = () => {
+                navigationPath.push({ name: item.name, id: item.id });
+                loadFolderContent(item.id);
+            };
+        }
+        
+        card.oncontextmenu = (e) => {
+            e.preventDefault();
+            selectedItem = item;
+            showContextMenu(e);
+        };
+        
+        elements.fileList.appendChild(card);
+    });
+        }
+
+        function renderListView() {
+    elements.fileList.className = 'bg-gray-800 rounded-lg shadow-lg overflow-hidden';
+    
+    const table = document.createElement('div');
+    table.className = 'divide-y divide-gray-700';
+    
+    filteredData.forEach(item => {
+        const row = document.createElement('div');
+        row.className = 'flex flex-col sm:flex-row items-start sm:items-center p-4 hover:bg-gray-700 transition-colors grid-item';
+        row.innerHTML = `
+            <div class="flex items-center flex-1 w-full sm:w-auto mb-2 sm:mb-0">
+                <i class="${getFileIcon(item.type)} text-xl mr-4"></i>
+                <div class="flex-1 min-w-0">
+                    <h3 class="font-medium text-white truncate">
+                        ${highlightSearchText(item.name, searchQuery)}
+                    </h3>
+                    <p class="text-sm text-gray-400 capitalize">${item.type}</p>
+                </div>
+            </div>
+            <div class="text-left sm:text-right text-sm text-gray-400 w-full sm:w-auto mt-2 sm:mt-0">
+                ${item.size ? `<p class="file-size inline-block sm:block mr-3 sm:mr-0">${formatFileSize(item.size)}</p>` : ''}
+                ${item.modifiedTime ? `<p class="file-date inline-block sm:block">${formatDate(item.modifiedTime)}</p>` : ''}
+            </div>
+        `;
+        
+        if (item.type === 'folder') {
+            row.style.cursor = 'pointer';
+            row.onclick = () => {
+                navigationPath.push({ name: item.name, id: item.id });
+                loadFolderContent(item.id);
+            };
+        }
+        
+        row.oncontextmenu = (e) => {
+            e.preventDefault();
+            selectedItem = item;
+            showContextMenu(e);
+        };
+        
+        table.appendChild(row);
+    });
+    
+    elements.fileList.appendChild(table);
+        }
+
+        async function loadFolderContent(folderId) {
+            elements.loading.classList.remove('hidden');
+            elements.errorMessage.classList.add('hidden');
+            elements.fileList.innerHTML = '';
+            elements.emptyState.classList.add('hidden');
+            elements.noResults.classList.add('hidden');
+            
+            let progress = 0;
+            const progressInterval = setInterval(() => {
+                progress += Math.random() * 30;
+                if (progress > 90) progress = 90;
+                elements.progressFill.style.width = progress + '%';
+            }, 200);
+            
+            try {
+                const response = await fetch(`${SCRIPT_URL}?folderId=${folderId}`);
+                if (!response.ok) throw new Error(`Error del servidor: ${response.status} ${response.statusText}`);
+                const result = await response.json();
+                
+                if (result.success) {
+                    currentData = result.data.content || [];
+                    filteredData = currentData;
+                    updateStats();
+                    renderContent();
+                    showNotification('Contenido cargado exitosamente');
+                } else {
+                    throw new Error(result.error?.message || 'Error desconocido del script');
+                }
+            } catch (error) {
+                console.error('Error loading folder:', error);
+                elements.errorText.textContent = error.message;
+                elements.errorMessage.classList.remove('hidden');
+                showNotification('Error al cargar el contenido', 'error');
+            } finally {
+                clearInterval(progressInterval);
+                elements.progressFill.style.width = '100%';
+                setTimeout(() => {
+                    elements.loading.classList.add('hidden');
+                    elements.progressFill.style.width = '0%';
+                }, 300);
+                updateBreadcrumbs();
+            }
+        }
+
+        function showContextMenu(e) {
+            const menu = elements.contextMenu;
+            menu.classList.remove('hidden');
+            menu.style.left = e.pageX + 'px';
+            menu.style.top = e.pageY + 'px';
+            setTimeout(() => { document.addEventListener('click', hideContextMenu); }, 100);
+        }
+
+        function hideContextMenu() {
+            elements.contextMenu.classList.add('hidden');
+            document.removeEventListener('click', hideContextMenu);
+        }
+
+        function copyToClipboard() {
+            if (selectedItem) {
+                navigator.clipboard.writeText(selectedItem.name);
+                showNotification('Nombre copiado al portapapeles');
+            }
+            hideContextMenu();
+        }
+
+        function showDetails() {
+            if (selectedItem) {
+                const details = [
+                    `Nombre: ${selectedItem.name}`,
+                    `Tipo: ${selectedItem.type}`,
+                    selectedItem.size ? `Tamaño: ${formatFileSize(selectedItem.size)}` : '',
+                    selectedItem.modifiedTime ? `Modificado: ${formatDate(selectedItem.modifiedTime)}` : ''
+                ].filter(Boolean).join('\n');
+                alert(details);
+            }
+            hideContextMenu();
+        }
+
+        function refreshFolder() {
+            const currentFolderId = navigationPath[navigationPath.length - 1].id;
+            loadFolderContent(currentFolderId);
+            hideContextMenu();
+        }
+
+        function initializeMarquee() {
+            const messages = [
+                'Membresía Para DJs y VDJs', 'Membresia en Audio y Video', 'Contenido Premium', 'Música Peruana Exclusiva',
+                'Top Plataformas: América Remix, BPM Latino, Club Killers, Europa Remix, Latin Remixes, etc.',
+                'Ediciones Exclusivas: DJ Editores Peruanos & Extranjeros', 'Intros, Mashups, Open Shows',
+                'Actualización Semanal: ¡Cada Viernes!', 'Más de 40 GB al Mes', 'Acceso 24/7',
+                'Audio Profesional: MP3, WAV, M4A, FLAC, OGG', 'Descarga Directa: 🌐 Google Drive',
+                'Disponible a Toda Hora', 'Éxitos Actuales y Clásicos Retro', 'Ediciones Privadas Exclusivas',
+                'Conéctate Cuando Quieras', 'Más de 70 GB al Mes en Audio y Video', 'Actualización Semanal: ¡Cada Viernes!',
+                'Video Remix HD', 'Calidad HD Impactante', 'Amplia Variedad: Géneros Actuales y Retro',
+                'Éxitos Actuales y Clásicos Retro', 'Fuentes Top: Remix MP4, Pro Videos DJs y Más',
+                'Actualización Semanal: ¡Cada Viernes!', 'Contenido Exclusivo de Páginas Extranjeras',
+                'Lo Nuevo y los Hits de Siempre', '🎶 Música Organizada a Tu Medida',
+                'Todo Clasificado por Género Musical', 'Desde los Clásicos hasta las Últimas Tendencias por Género',
+                'Encuentra Fácilmente lo que Buscas', 'Ideal para Preparar Sets Temáticos'
+            ];
+
+            messages.sort(() => Math.random() - 0.5);
+            const content = messages.map(msg => `<span><i class="fas fa-compact-disc"></i>${msg}</span>`).join('');
+            elements.marqueeContent.innerHTML = content + content;
+        }
+
+        // --- INICIO: LÓGICA DEL WIDGET DE WHATSAPP ---
+        function setupWhatsAppWidget() {
+            elements.whatsappFab.addEventListener('click', () => {
+                elements.whatsappChatbox.classList.toggle('show');
+            });
+
+            elements.whatsappCloseBtn.addEventListener('click', () => {
+                elements.whatsappChatbox.classList.remove('show');
+            });
+
+            elements.whatsappSendBtn.addEventListener('click', () => {
+                const message = elements.whatsappMessage.value.trim();
+                if (message) {
+                    const encodedMessage = encodeURIComponent(message);
+                    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`;
+                    window.open(url, '_blank');
+                    elements.whatsappMessage.value = '';
+                    elements.whatsappChatbox.classList.remove('show');
+                } else {
+                    showNotification('Por favor, escribe un mensaje.', 'error');
+                }
+            });
+        }
+        // --- FIN: LÓGICA DEL WIDGET DE WHATSAPP ---
+
+
+        // Event Listeners
+        elements.searchInput.addEventListener('input', (e) => {
+            searchQuery = e.target.value;
+            filterAndSearch();
+        });
+
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('filter-active'));
+                e.currentTarget.classList.add('filter-active');
+                currentFilter = e.currentTarget.dataset.filter;
+                filterAndSearch();
+            });
+        });
+
+        document.getElementById('grid-view').addEventListener('click', () => {
+            currentView = 'grid';
+            document.querySelectorAll('.view-toggle').forEach(btn => btn.classList.remove('active'));
+            document.getElementById('grid-view').classList.add('active');
+            renderContent();
+        });
+
+        document.getElementById('list-view').addEventListener('click', () => {
+            currentView = 'list';
+            document.querySelectorAll('.view-toggle').forEach(btn => btn.classList.remove('active'));
+            document.getElementById('list-view').classList.add('active');
+            renderContent();
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.ctrlKey || e.metaKey) {
+                switch(e.key) {
+                    case 'f': e.preventDefault(); elements.searchInput.focus(); break;
+                    case 'r': e.preventDefault(); refreshFolder(); break;
+                }
+            }
+            if (e.key === 'Escape') {
+                elements.searchInput.value = '';
+                searchQuery = '';
+                filterAndSearch();
+            }
+        });
+
+        // Inicialización
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelector('.filter-btn[data-filter="all"]').classList.add('filter-active');
+    initializeMarquee();
+    setupWhatsAppWidget(); // Inicializa el widget de WhatsApp
+    loadFolderContent(ROOT_FOLDER_ID);
+    
+    setTimeout(() => {
+        showNotification('¡Bienvenido a VIVARFA VIP MUSIC 2025!');
+    }, 1000);
+    
+    // Inicializar menú móvil
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    function closeMobileMenu() {
+        if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+            mobileMenu.classList.add('hidden');
+            const icon = mobileMenuButton?.querySelector('i');
+            if (icon) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        }
+    }
+    
+    if (mobileMenuButton && mobileMenu) {
+        mobileMenuButton.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+            const icon = mobileMenuButton.querySelector('i');
+            if (icon) {
+                if (mobileMenu.classList.contains('hidden')) {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                } else {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                }
+            }
+        });
+        
+        // Cerrar menú al hacer clic fuera
+        document.addEventListener('click', function(event) {
+            if (!mobileMenu.contains(event.target) && !mobileMenuButton.contains(event.target) && !mobileMenu.classList.contains('hidden')) {
+                closeMobileMenu();
+            }
+        });
+        
+        // Cerrar menú al hacer clic en un enlace
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
+        });
+        
+        // Cerrar menú al hacer scroll
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 100) {
+                closeMobileMenu();
+            }
+        }, { passive: true });
+    }
+});
+    </script>
+</body>
+</html>

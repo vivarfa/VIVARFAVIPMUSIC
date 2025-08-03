@@ -1,0 +1,265 @@
+/**
+ * Estilos para el tema claro/oscuro - VIVARFA VIP MUSIC
+ * Este archivo contiene los estilos específicos para los modos claro y oscuro
+ */
+
+/* Variables CSS para Tema Oscuro (por defecto) */
+:root {
+    --theme-transition-duration: 0.4s;
+    
+    /* Colores principales */
+    --accent-primary: #9333ea;
+    --accent-secondary: #ec4899;
+    --accent-tertiary: #3b82f6;
+    --accent-success: #10b981;
+    --accent-warning: #f59e0b;
+    --accent-error: #ef4444;
+    
+    /* Colores de fondo con mejor contraste */
+    --bg-primary: #0a0f1c;
+    --bg-secondary: #1a1f2e;
+    --bg-tertiary: #2a2f3e;
+    --bg-quaternary: #3a3f4e;
+    --text-primary: #ffffff;
+    --text-secondary: #e5e7eb;
+    --text-muted: #9ca3af;
+    --text-accent: #c084fc;
+    --border-color: #374151;
+    --border-light: #4b5563;
+    
+    --card-bg: #1a1f2e;
+    --card-bg-hover: #2a2f3e;
+    --card-border: #374151;
+    --card-hover-border: #9333ea;
+    --shadow-color: rgba(0, 0, 0, 0.4);
+    --shadow-color-light: rgba(0, 0, 0, 0.2);
+
+    --header-bg: rgba(10, 15, 28, 0.9);
+    --footer-bg: #0a0f1c;
+    
+    --input-bg: #2a2f3e;
+    --input-border: #4b5563;
+    --input-focus-border: #9333ea;
+    --input-text: #ffffff;
+    --input-placeholder: #9ca3af;
+
+    /* Colores para botones CTA mejorados */
+    --cta-primary-bg: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+    --cta-primary-text: #ffffff;
+    --cta-primary-hover-bg: linear-gradient(135deg, #7e22ce, #d946ef);
+    --cta-primary-hover-text: #ffffff;
+    --cta-primary-shadow: 0 8px 25px rgba(147, 51, 234, 0.3);
+
+    --cta-secondary-bg: rgba(255, 255, 255, 0.05);
+    --cta-secondary-text: #e5e7eb;
+    --cta-secondary-border: #4b5563;
+    --cta-secondary-hover-bg: rgba(255, 255, 255, 0.1);
+    --cta-secondary-hover-text: #ffffff;
+    --cta-secondary-hover-border: #9333ea;
+}
+
+/* Variables CSS para Tema Claro con mejor contraste */
+html:not(.dark) {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8fafc;
+    --bg-tertiary: #f1f5f9;
+    --bg-quaternary: #e2e8f0;
+    --text-primary: #0f172a;
+    --text-secondary: #334155;
+    --text-muted: #64748b;
+    --text-accent: #7c3aed;
+    --border-color: #cbd5e1;
+    --border-light: #e2e8f0;
+    
+    --card-bg: #ffffff;
+    --card-bg-hover: #f8fafc;
+    --card-border: #e2e8f0;
+    --card-hover-border: #9333ea;
+    --shadow-color: rgba(15, 23, 42, 0.08);
+    --shadow-color-light: rgba(15, 23, 42, 0.04);
+
+    --header-bg: rgba(255, 255, 255, 0.95);
+    --footer-bg: #0f172a; /* Footer oscuro para contraste */
+    
+    --input-bg: #ffffff;
+    --input-border: #cbd5e1;
+    --input-focus-border: #9333ea;
+    --input-text: #0f172a;
+    --input-placeholder: #64748b;
+
+    /* Colores para botones CTA en Tema Claro */
+    --cta-primary-bg: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+    --cta-primary-text: #ffffff;
+    --cta-primary-hover-bg: linear-gradient(135deg, #7e22ce, #d946ef);
+    --cta-primary-hover-text: #ffffff;
+    --cta-primary-shadow: 0 8px 25px rgba(147, 51, 234, 0.2);
+
+    --cta-secondary-bg: #ffffff;
+    --cta-secondary-text: #334155;
+    --cta-secondary-border: #cbd5e1;
+    --cta-secondary-hover-bg: #f1f5f9;
+    --cta-secondary-hover-text: #0f172a;
+    --cta-secondary-hover-border: #9333ea;
+}
+
+/* Aplicación de variables y transiciones mejoradas */
+body, .bg-gray-900, .bg-white, .bg-gray-50, .bg-purple-50 {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    transition: background-color var(--theme-transition-duration), 
+                color var(--theme-transition-duration),
+                border-color var(--theme-transition-duration);
+}
+
+.theme-transition {
+    transition: background-color var(--theme-transition-duration), 
+                color var(--theme-transition-duration), 
+                border-color var(--theme-transition-duration),
+                box-shadow var(--theme-transition-duration),
+                transform var(--theme-transition-duration);
+}
+
+/* Aplicación de estilos de tarjetas mejorados */
+.bg-gray-800, .bg-gray-700, .bg-white\/10, .bg-gray-800\/50 {
+    background-color: var(--card-bg) !important;
+    border-color: var(--card-border);
+    color: var(--text-primary);
+    box-shadow: 0 4px 12px var(--shadow-color);
+    transition: all var(--theme-transition-duration);
+    backdrop-filter: blur(10px);
+}
+
+.bg-gray-800:hover, .bg-gray-700:hover {
+    background-color: var(--card-bg-hover) !important;
+    border-color: var(--card-hover-border);
+    box-shadow: 0 8px 25px var(--shadow-color);
+    transform: translateY(-2px);
+}
+
+header, .bg-gray-900\/80, .backdrop-blur-lg {
+    background-color: var(--header-bg) !important;
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid var(--border-color);
+    transition: all var(--theme-transition-duration);
+}
+
+footer, footer .bg-gray-900 {
+    background-color: var(--footer-bg) !important;
+    color: var(--text-primary);
+}
+
+footer .border-gray-800 {
+    border-color: var(--border-color);
+}
+
+/* Estilos para texto con mejor contraste */
+.text-white, .text-gray-100, .text-gray-900 { color: var(--text-primary) !important; }
+.text-gray-200, .text-gray-300, .text-gray-400, .text-gray-600, .text-gray-700, .text-gray-800 { color: var(--text-secondary) !important; }
+.text-gray-500 { color: var(--text-muted) !important; }
+
+/* Estilos para bordes */
+.border-gray-700, .border-gray-600, .border-white\/20, .border-gray-200 {
+    border-color: var(--border-color) !important;
+}
+
+.border-gray-300, .border-gray-400 {
+    border-color: var(--border-light) !important;
+}
+
+/* Estilos para inputs mejorados */
+input, textarea, select {
+    background-color: var(--input-bg) !important;
+    border-color: var(--input-border) !important;
+    color: var(--input-text) !important;
+    transition: all var(--theme-transition-duration);
+}
+
+input::placeholder, textarea::placeholder {
+    color: var(--input-placeholder) !important;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: var(--input-focus-border) !important;
+    box-shadow: 0 0 0 3px rgba(147, 51, 234, 0.2) !important;
+    outline: none;
+}
+
+/* Fondos de secciones */
+.bg-gradient-to-br, .bg-white {
+    transition: background-color var(--theme-transition-duration);
+}
+
+html:not(.dark) .bg-white {
+    background-color: #ffffff;
+}
+
+html:not(.dark) .from-gray-50 {
+    background-color: var(--bg-secondary);
+}
+
+/* Tarjetas */
+.bg-white\/5, .bg-white.border-gray-200, .bg-gradient-to-br.from-purple-50 {
+    background-color: var(--card-bg);
+    border-color: var(--card-border);
+    box-shadow: 0 5px 15px var(--shadow-color);
+}
+
+.hover\:shadow-2xl:hover {
+    box-shadow: 0 10px 30px var(--shadow-color);
+}
+
+.hover\:shadow-xl:hover {
+    box-shadow: 0 20px 40px var(--shadow-color);
+}
+
+/* Botones CTA principales mejorados */
+.cta-button-primary {
+    background: var(--cta-primary-bg);
+    color: var(--cta-primary-text) !important;
+    border: none;
+    box-shadow: var(--cta-primary-shadow);
+    transition: all var(--theme-transition-duration);
+}
+.cta-button-primary:hover {
+    background: var(--cta-primary-hover-bg);
+    color: var(--cta-primary-hover-text) !important;
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 12px 35px rgba(147, 51, 234, 0.4);
+}
+
+.cta-button-secondary {
+    background: var(--cta-secondary-bg);
+    color: var(--cta-secondary-text) !important;
+    border: 2px solid var(--cta-secondary-border);
+    transition: all var(--theme-transition-duration);
+}
+.cta-button-secondary:hover {
+    background: var(--cta-secondary-hover-bg);
+    color: var(--cta-secondary-hover-text) !important;
+    border-color: var(--cta-secondary-hover-border);
+    transform: translateY(-2px) scale(1.02);
+}
+
+/* Botón del switcher de tema mejorado */
+#theme-switcher {
+    box-shadow: 0 6px 20px var(--shadow-color);
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    transition: all var(--theme-transition-duration);
+}
+
+#theme-switcher:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 25px var(--shadow-color);
+}
+
+/* Mejoras para elementos interactivos */
+.hover\:scale-105:hover {
+    transform: scale(1.05) translateY(-2px);
+}
+
+/* Estilos para elementos con mejor accesibilidad */
+.focus\:outline-none:focus {
+    outline: 2px solid var(--accent-primary);
+    outline-offset: 2px;
+}

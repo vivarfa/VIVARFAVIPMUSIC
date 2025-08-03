@@ -1,0 +1,128 @@
+
+[
+  {
+    "id": "vivarf-vip",
+    "title": "MEGA BACKUP RETRO FULL (Audio)",
+    "description": [
+      "🔥 Los hits en Inglés y Español que marcaron tu vida.",
+      "🔥 Perfecto para fiestas, eventos o coleccionistas.",
+      "🔥 Mas de 120 GB.",
+      "✅ Clásicos de los 70s, 80s y 90s.",
+      "✅ Disco, Rock, Pop, New Wave, Nueva Ola, Anglo y Más.",
+      "✅ Acceso a Tu Correo Personal.",
+      "🌐 Servidor: Google Drive"
+    ],
+    "price": "US$ 99.00", 
+    "paymentLink": "https://www.paypal.com/ncp/payment/SEKPEQA4MYYYS",
+    "image": "backupretro.jpg"
+  },
+  {
+    "id": "retro-full",
+    "title": "MEGA BACKUP RETRO FULL PARTE 2",
+    "description": [
+      "🔥 Una joya musical imprescindible para los verdaderos amantes del retro.",
+      "🔥 Más de 215 GB de música clásica que marcó generaciones.",
+      "🔥 Solo para coleccionistas exigentes y DJs profesionales.",
+      "✅ Éxitos Legendarios de los 60s, 70s, 80s, 90s y 2000s",
+      "✅ Incluye: Pop, Rock, Disco, Funk, New Wave, Romanticismo y más",
+      "🎧 Ideal para: cabinas, eventos, colecciones privadas, fiestas o radios online", 
+      "🌐 Servidor: Google Drive"
+    ],
+    "price": "US$ 109.00",
+    "paymentLink": "https://www.paypal.com/ncp/payment/GMNEAZSGUAGVE",
+    "image": "backupretroparte2.jpg"
+  },
+  {
+    "id": "premium-dj",
+    "title": "BACKUP PREMIUM DJ 2025 - VIVARFA",
+    "description": [
+      "🔥 Más de 599 GB de Música Exclusiva",
+      "🔥 Afro, Reggaetón, House, Tech, Huayno, Rock, Salsa, Transiciones & Más.",
+      "⚡ Ordenado por Genero",
+      "🔥 Formato WAV, MP3, FLAC, AIFF y más.",
+      "⚡ Fácil descarga y acceso",
+      "🎁 Herramientas DJ",
+      "🌐 Servidor: Google Drive"
+    ],
+    "price": "US$ 89.00",
+    "paymentLink": "https://www.paypal.com/ncp/payment/VQHP6482Q8RE6",
+    "image": "backuppremium.jpeg"
+  },
+  {
+    "id": "latin-complete",
+    "title": "BACKUP COMPLETO (Video Remixes)",
+    "description": [
+      "⚡ Ordenado por Genero",
+      "⚡ Actuales & Retros",
+      "⚡ Video En HD",
+      "⚡ Más de 300 GB",
+      "⚡ El Mas Completo",
+      "💾 Descarga Directa",
+      "🎁 Bonus",
+      "🌐 Servidor: Google Drive"
+    ],
+    "price": "US$ 79.00",
+    "paymentLink": "https://www.paypal.com/ncp/payment/KBHVP3S3KVA38",
+    "image": "backupvideo.jpeg"
+  },
+  {
+    "id": "electronic-pack",
+    "title": "BACKUP PARA DJ (Audio)",
+    "description": [
+      "⚡ Más de 380 GB de música para DJs",
+      "⚡ Todos los géneros incluidos",
+      "⚡ Formatos WAV, MP3, FLAC, OGG & Más",
+      "⚡ Calidad de audio profesional",
+      "⚡ Entrega rápida por correo electrónico",
+      "⚡ Fácil descarga y acceso",
+      "🎁 Bonus",
+      "🌐 Servidor: Google Drive"
+    ],
+    "price": "US$ 21.00",
+    "paymentLink": "https://www.paypal.com/ncp/payment/3DALDHU3LA8EG",
+    "image": "backupparadj.jpeg"
+  },
+  {
+    "id": "rock-legends",
+    "title": "BACKUP MUSICA NORMAL (Audio)",
+    "description": [
+      "✅ Miles de canciones no editadas.",
+      "✅ Cumbia, Salsa, Rock, Huayno, Baladas y más.",
+      "✅ Audio de Alta Calidad. Descarga Fácil.",
+      "🔥 Tus géneros favoritos en formato original.",
+      "🔥 Perfecto para fiestas, casa o el auto.",
+      "🔥 Descarga Inmediata. Sonido Impecable.",
+      "🌐 Servidor: Google Drive"
+    ],
+    "price": "US$ 13.00",
+    "paymentLink": "https://www.paypal.com/ncp/payment/KKG5D5WGTJDXJ",
+    "image": "backupnormal.jpg"
+  },
+  {
+    "id": "peruvian-collection",
+    "title": "MEGA PACK LIBRERIA COMPLETA",
+    "description": [
+      "⚡ Librería Aleteo Guaracha",
+      "⚡ Librería Bachata",
+      "⚡ Librería Brazilian",
+      "⚡ Librería Brown Bounce",
+      "⚡ Librería Cumbia - Villera",
+      "⚡ Librería DanceHall",
+      "⚡ Librería Dembow",
+      "⚡ Librería Electrónica",
+      "⚡ Librería Hip-Hop",
+      "⚡ Librería Mambo & Merengue",
+      "⚡ Librería Moombahton",
+      "⚡ Librería Reggae",
+      "⚡ Librería Reggaetón",
+      "⚡ Librería Rock",
+      "⚡ Librería Salsa",
+      "⚡ Librería Trap",
+      "⚡ Mas de 35 GB",
+      "🌐 Servidor: Google Drive"
+    ],
+    "price": "US$ 11.00",
+    "paymentLink": "https://www.paypal.com/ncp/payment/LUNUZNUJLVQ5Y",
+    "image": "libreriacompleta.jpeg"
+  }
+]

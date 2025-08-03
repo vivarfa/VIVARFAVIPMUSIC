@@ -1,0 +1,157 @@
+/* Animaciones y efectos para hacer la página más dinámica */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animación para títulos con efecto de escritura */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #ec4899 }
+}
+
+/* Animación para botones */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(147, 51, 234, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(147, 51, 234, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(147, 51, 234, 0);
+    }
+}
+
+/* Animación para el fondo */
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Animación para iconos */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* Clases para aplicar las animaciones */
+.animate-fadeInUp {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-typing {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid;
+    width: 0;
+    animation: 
+        typing 3.5s steps(40, end) forwards,
+        blink-caret .75s step-end infinite;
+}
+
+.animate-pulse {
+    animation: pulse 2s infinite;
+}
+
+.animate-gradient {
+    background: linear-gradient(-45deg, #1e293b, #374151, #1f2937, #111827);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+
+.animate-float {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Efectos de hover mejorados */
+.hover-scale {
+    transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+    transform: scale(1.05);
+}
+
+.hover-glow {
+    transition: box-shadow 0.3s ease;
+}
+
+.hover-glow:hover {
+    box-shadow: 0 0 15px rgba(147, 51, 234, 0.7);
+}
+
+/* Efecto de parallax para imágenes */
+.parallax {
+    transition: transform 0.2s ease-out;
+}
+
+.card-3d {
+    transition: transform 0.3s ease;
+    transform-style: preserve-3d;
+}
+
+.card-3d:hover {
+    transform: rotateY(5deg) rotateX(5deg);
+}
+
+/* Animación para el carrusel de testimonios infinito mejorado */
+@keyframes scroll-infinite {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-33.333%);
+    }
+}
+
+.animate-scroll-infinite {
+    animation: scroll-infinite 60s linear infinite;
+    will-change: transform;
+}
+
+.animate-scroll-infinite:hover {
+    animation-play-state: paused;
+}
+
+/* Animación de entrada suave para testimonios */
+@keyframes fadeInSlide {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in-slide {
+    animation: fadeInSlide 0.6s ease-out forwards;
+}

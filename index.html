@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIVARFA VIP MUSIC | Packs de Audio y Video para DJs</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Descubre VIVARFA VIP MUSIC: tu fuente premium para packs de audio y video, membresías exclusivas, y backups esenciales para DJs y productores.">
+    <meta name="keywords" content="packs de audio, video remix, DJ, productor musical, música electrónica, reggaetón, cumbia, salsa, membresías VIP, backups musicales, samples gratis">
+    <meta name="theme-color" content="#9333ea">
+    
+    <!-- Script de Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts y Font Awesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animations.css">
+    
+    <link rel="icon" href="logo.png" type="image/png">
+
+    <!-- Script de Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9975952999842017" crossorigin="anonymous"></script>
+    
+    <!-- Configuración adicional de Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'display': ['Montserrat', 'sans-serif'],
+                    },
+                    animation: {
+                        'bounce-slow': 'bounce 3s infinite',
+                        'scroll': 'scroll 180s linear infinite',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-900 text-white font-sans antialiased">
+    <!-- Fondo de partículas para efecto dinámico -->
+    <div id="particles-background" class="fixed inset-0 z-0 pointer-events-none"></div>
+
+    <!-- ===== Header ===== -->
+    <header class="bg-gray-900/80 backdrop-blur-lg sticky top-0 z-50 border-b border-gray-700">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-3">
+            <!-- BRANDING ACTUALIZADO -->
+            <a href="#" data-section="home" class="nav-link flex items-center gap-3 cursor-pointer hover-scale">
+                <img src="./images/vivarfa.png" alt="Vivarfa VIP Music Logo" class="h-10 w-10 object-contain animate-float">
+                <span class="text-xl md:text-2xl font-bold gradient-text">VIVARFA VIP MUSIC</span>
+            </a>
+            <ul class="hidden md:flex items-center space-x-6">
+                <li><a href="#" data-section="home" class="nav-link active">Inicio</a></li>
+                <li><a href="#" data-section="memberships" class="nav-link">Membresías</a></li>
+                <li><a href="#" data-section="audio-packs" class="nav-link">Audio Packs</a></li>
+                <li><a href="#" data-section="video-packs" class="nav-link">Video Packs</a></li>
+                <li><a href="#" data-section="backups" class="nav-link">Backups</a></li>
+                <li><a href="#" data-section="free" class="nav-link">Gratis</a></li>
+            </ul>
+            <button id="mobile-menu-button" class="md:hidden text-white text-2xl hover-scale">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800/95 backdrop-blur-sm">
+            <ul class="flex flex-col items-center py-4 space-y-4">
+                 <li><a href="#" data-section="home" class="nav-link">Inicio</a></li>
+                 <li><a href="#" data-section="memberships" class="nav-link">Membresías</a></li>
+                 <li><a href="#" data-section="audio-packs" class="nav-link">Audio Packs</a></li>
+                 <li><a href="#" data-section="video-packs" class="nav-link">Video Packs</a></li>
+                 <li><a href="#" data-section="backups" class="nav-link">Backups</a></li>
+                 <li><a href="#" data-section="free" class="nav-link">Gratis</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <!-- El contenido estático de la página principal se mantiene aquí -->
+        <div id="static-content">
+            <!-- Hero Section Profesional Mejorada -->
+            <section class="relative overflow-hidden min-h-screen flex items-center justify-center section-background">
+                <!-- Fondo con overlay mejorado -->
+                <div class="absolute inset-0 bg-black/40 z-10"></div>
+                
+                <!-- Contenido principal -->
+                <div class="relative z-20 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <!-- Badge superior -->
+                    <div class="inline-flex items-center gap-2 bg-purple-600/20 backdrop-blur-sm border border-purple-500/30 rounded-full px-6 py-3 mb-8 animate-fadeInUp">
+                        <div class="w-2 h-2 bg-purple-400 rounded-full animate-pulse"></div>
+                        <span class="text-purple-200 font-semibold text-sm uppercase tracking-wider">Contenido Exclusivo para DJs</span>
+                    </div>
+                    
+                    <!-- Título principal -->
+                    <h1 class="text-4xl sm:text-6xl lg:text-7xl xl:text-8xl font-black text-white mb-6 leading-tight animate-fadeInUp" style="animation-delay: 0.1s;">
+                        <span class="block bg-gradient-to-r from-white via-purple-200 to-pink-200 bg-clip-text text-transparent">
+                            VIVARFA
+                        </span>
+                        <span class="block bg-gradient-to-r from-purple-400 via-pink-400 to-purple-600 bg-clip-text text-transparent">
+                            VIP MUSIC
+                        </span>
+                    </h1>
+                    
+                    <!-- Descripción -->
+                    <p class="text-lg sm:text-xl lg:text-2xl text-gray-200 max-w-4xl mx-auto mb-10 leading-relaxed animate-fadeInUp" style="animation-delay: 0.2s;">
+                        La plataforma líder en contenido premium para DJs profesionales.
+                        <span class="block mt-2 text-purple-200">
+                            Más de 1000+ packs de audio y video actualizados semanalmente.
+                        </span>
+                    </p>
+                    
+                    <!-- Botones de acción -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mb-16 animate-fadeInUp" style="animation-delay: 0.3s;">
+                        <button data-section="memberships" class="nav-link-button group relative bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-xl text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25 w-full sm:w-auto">
+                            <span class="relative z-10 flex items-center justify-center gap-3">
+                                <i class="fas fa-crown text-xl"></i>
+                                Explorar Membresías
+                            </span>
+                            <div class="absolute inset-0 bg-gradient-to-r from-purple-700 to-pink-700 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </button>
+                        
+                        <button data-section="free" class="nav-link-button group relative bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white font-bold py-4 px-8 rounded-xl text-lg border border-white/20 hover:border-white/40 transition-all duration-300 transform hover:scale-105 w-full sm:w-auto">
+                            <span class="flex items-center justify-center gap-3">
+                                <i class="fas fa-download text-xl"></i>
+                                Contenido Gratuito
+                            </span>
+                        </button>
+                    </div>
+                    
+                    <!-- Estadísticas rápidas -->
+                    <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8 max-w-4xl mx-auto animate-fadeInUp" style="animation-delay: 0.4s;">
+                        <div class="bg-white/5 backdrop-blur-sm rounded-xl p-4 sm:p-6 border border-white/10">
+                            <div class="text-2xl sm:text-3xl font-bold text-purple-400 mb-1">1000+</div>
+                            <div class="text-sm sm:text-base text-gray-300">Audio Packs</div>
+                        </div>
+                        <div class="bg-white/5 backdrop-blur-sm rounded-xl p-4 sm:p-6 border border-white/10">
+                            <div class="text-2xl sm:text-3xl font-bold text-pink-400 mb-1">500+</div>
+                            <div class="text-sm sm:text-base text-gray-300">Video Packs</div>
+                        </div>
+                        <div class="bg-white/5 backdrop-blur-sm rounded-xl p-4 sm:p-6 border border-white/10">
+                            <div class="text-2xl sm:text-3xl font-bold text-blue-400 mb-1">100+</div>
+                            <div class="text-sm sm:text-base text-gray-300">DJs Activos</div>
+                        </div>
+                        <div class="bg-white/5 backdrop-blur-sm rounded-xl p-4 sm:p-6 border border-white/10">
+                            <div class="text-2xl sm:text-3xl font-bold text-green-400 mb-1">24/7</div>
+                            <div class="text-sm sm:text-base text-gray-300">Soporte</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Elementos decorativos con partículas -->
+                <div class="absolute inset-0 overflow-hidden pointer-events-none">
+                    <div id="hero-particles" class="absolute inset-0"></div>
+                </div>
+                
+                <!-- Indicador de scroll mejorado -->
+                <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 hidden lg:block">
+                    <div class="flex flex-col items-center gap-2 text-white/60 hover:text-white/80 transition-colors cursor-pointer">
+                        <span class="text-sm font-medium">Explorar más</span>
+                        <div class="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
+                            <div class="w-1 h-3 bg-white/60 rounded-full mt-2 animate-bounce"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección de características mejorada -->
+            <section class="py-20 section-background">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-16">
+                        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                            ¿Por qué elegir 
+                            <span class="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+                                VIVARFA VIP MUSIC?
+                            </span>
+                        </h2>
+                        <p class="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                            Ofrecemos la mejor experiencia para DJs profesionales con contenido exclusivo y de alta calidad
+                        </p>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+                        <!-- Característica 1 -->
+                        <div class="group bg-gray-800/50 backdrop-blur-sm p-8 rounded-2xl border border-gray-700 hover:border-blue-500 transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20">
+                            <div class="bg-gradient-to-r from-blue-500 to-purple-600 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                                <i class="fas fa-sync-alt text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white mb-4">Actualizaciones Semanales</h3>
+                            <p class="text-gray-300 leading-relaxed">
+                                Nuevo contenido cada semana para mantener tu biblioteca siempre fresca y actualizada con las últimas tendencias musicales del mercado.
+                            </p>
+                        </div>
+                        
+                        <!-- Característica 2 -->
+                        <div class="group bg-gray-800/50 backdrop-blur-sm p-8 rounded-2xl border border-gray-700 hover:border-purple-500 transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20">
+                            <div class="bg-gradient-to-r from-purple-500 to-pink-600 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                                <i class="fas fa-star text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white mb-4">Calidad Premium</h3>
+                            <p class="text-gray-300 leading-relaxed">
+                                Audio en alta definición y videos optimizados para garantizar el mejor rendimiento en tus presentaciones profesionales.
+                            </p>
+                        </div>
+                        
+                        <!-- Característica 3 -->
+                        <div class="group bg-gray-800/50 backdrop-blur-sm p-8 rounded-2xl border border-gray-700 hover:border-green-500 transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-green-500/20">
+                            <div class="bg-gradient-to-r from-green-500 to-blue-600 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                                <i class="fas fa-headset text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white mb-4">Soporte 24/7</h3>
+                            <p class="text-gray-300 leading-relaxed">
+                                Atención directa y rápida a través de WhatsApp para resolver cualquier duda o solicitud especial en tiempo real.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Sección de Estadísticas -->
+            <section class="py-12 bg-gray-800/50 backdrop-blur-sm">
+                <div class="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                    <div class="p-4 scroll-animate">
+                        <div class="text-4xl font-bold text-purple-400 counter" data-target="100">0</div>
+                        <div class="text-gray-400 mt-2">Packs de Audio</div>
+                    </div>
+                    <div class="p-4 scroll-animate">
+                        <div class="text-4xl font-bold text-pink-400 counter" data-target="2300">0</div>
+                        <div class="text-gray-400 mt-2">Videos HD</div>
+                    </div>
+                    <div class="p-4 scroll-animate">
+                        <div class="text-4xl font-bold text-blue-400 counter" data-target="115">0</div>
+                        <div class="text-gray-400 mt-2">DJs Satisfechos</div>
+                    </div>
+                    <div class="p-4 scroll-animate">
+                        <div class="text-4xl font-bold text-green-400 counter" data-target="24">0</div>
+                        <div class="text-gray-400 mt-2">Horas de Servicio</div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+        <!-- El contenido dinámico de las secciones (Membresías, Packs, etc.) se renderizará aquí -->
+        <div id="dynamic-content"></div>
+        
+        <!-- Este contenido es común a todas las vistas y se queda fuera del dinámico -->
+        <!-- Sección CTA mejorada -->
+        <section class="py-20 section-background relative overflow-hidden">
+            <!-- Elementos decorativos de fondo -->
+            <div class="absolute inset-0">
+                <div id="cta-particles" class="absolute inset-0"></div>
+                <!-- Círculos decorativos sutiles -->
+                <div class="absolute top-1/4 right-1/4 w-32 h-32 bg-white/5 rounded-full blur-xl"></div>
+                <div class="absolute bottom-1/4 left-1/4 w-48 h-48 bg-pink-300/10 rounded-full blur-2xl"></div>
+            </div>
+            
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+                <div class="mb-8">
+                    <span class="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-2 rounded-full text-sm font-semibold mb-6">
+                        🚀 ÚNETE A LA REVOLUCIÓN MUSICAL
+                    </span>
+                </div>
+                
+                <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight">
+                    ¿Listo para llevar tu música al 
+                    <span class="bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">
+                        siguiente nivel?
+                    </span>
+                </h2>
+                
+                <p class="text-xl sm:text-2xl text-purple-100 mb-12 max-w-3xl mx-auto leading-relaxed">
+                    Únete a miles de DJs profesionales que ya confían en VIVARFA VIP MUSIC para crear experiencias musicales inolvidables
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
+                    <a href="#memberships" data-section="memberships" class="nav-link group bg-white text-purple-600 px-10 py-5 rounded-2xl font-bold text-lg hover:bg-gray-50 transform hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-3xl border-4 border-white/20">
+                        <i class="fas fa-crown mr-3 group-hover:animate-bounce"></i>
+                        Explorar Membresías Premium
+                    </a>
+                    <button id="contactSupportBtn" class="group bg-transparent border-3 border-white/80 backdrop-blur-sm text-white px-10 py-5 rounded-2xl font-bold text-lg hover:bg-white hover:text-purple-600 transform hover:scale-105 transition-all duration-300 shadow-xl">
+                        <i class="fas fa-comments mr-3 group-hover:animate-pulse"></i>
+                        Contactar Soporte 24/7
+                    </button>
+                </div>
+                
+                <!-- Estadísticas rápidas -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-3xl mx-auto">
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-white mb-2">100+</div>
+                        <div class="text-purple-200 text-sm font-medium">DJs Activos</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-white mb-2">5TB+</div>
+                        <div class="text-purple-200 text-sm font-medium">Contenido Premium</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-white mb-2">24/7</div>
+                        <div class="text-purple-200 text-sm font-medium">Soporte Técnico</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Sección de Testimonios mejorada -->
+        <section class="py-20 testimonials-section section-background">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16 animate-fade-in-slide">
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+                        Lo que dicen nuestros 
+                        <span class="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+                            DJs profesionales
+                        </span>
+                    </h2>
+                    <p class="text-lg sm:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                        Testimonios reales de profesionales que confían en VIVARFA VIP MUSIC para elevar sus presentaciones
+                    </p>
+                    <div class="mt-8 flex justify-center">
+                        <div class="bg-gradient-to-r from-purple-500 to-pink-500 h-1 w-24 rounded-full"></div>
+                    </div>
+                </div>
+                
+                <div id="testimonial-carousel-wrapper" class="relative w-full overflow-hidden group rounded-2xl">
+                    <div class="absolute inset-0 bg-gradient-to-r from-white via-transparent to-white dark:from-gray-900 dark:via-transparent dark:to-gray-900 z-10 pointer-events-none"></div>
+                    <div id="testimonials-container" class="flex">
+                        <!-- Los testimonios se cargarán dinámicamente desde script.js -->
+                    </div>
+                </div>
+                
+                <div class="text-center mt-12">
+                    <p class="text-sm text-gray-500 dark:text-gray-400 font-medium">
+                        <i class="fas fa-star text-yellow-400 mr-2"></i>
+                        Más de 127 DJs confían en VIVARFA VIP MUSIC
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== Footer Mejorado ===== -->
+    <footer class="bg-gray-900 border-t border-gray-800 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <img src="./images/vivarfa.png" alt="Vivarfa VIP Music Logo" class="h-10 w-10 object-contain">
+                        <span class="text-xl font-bold gradient-text">VIVARFA VIP MUSIC</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">Tu fuente premium de audio y video para DJs y productores. Actualizaciones semanales con el mejor contenido.</p>
+                    <div id="social-links-container" class="flex space-x-4 mt-4">
+                        <!-- Iconos de redes sociales -->
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-white">Enlaces Rápidos</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" data-section="home" class="nav-link hover:text-white transition-colors">Inicio</a></li>
+                        <li><a href="#" data-section="memberships" class="nav-link hover:text-white transition-colors">Membresías</a></li>
+                        <li><a href="#" data-section="audio-packs" class="nav-link hover:text-white transition-colors">Audio Packs</a></li>
+                        <li><a href="#" data-section="video-packs" class="nav-link hover:text-white transition-colors">Video Packs</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-white">Recursos</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" data-section="backups" class="nav-link hover:text-white transition-colors">Backups</a></li>
+                        <li><a href="#" data-section="free" class="nav-link hover:text-white transition-colors">Contenido Gratuito</a></li>
+                        <li><a href="faq.html" class="hover:text-white transition-colors">Preguntas Frecuentes</a></li>
+                        <li><a href="dj-resources.html" class="hover:text-white transition-colors">Recursos DJ</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-white">Información</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="contact.html" class="hover:text-white transition-colors">Contacto</a></li>
+                        <li><a href="privacy.html" class="hover:text-white transition-colors">Política de Privacidad</a></li>
+                        <li><a href="about.html" class="hover:text-white transition-colors">Nosotros</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 mt-8 text-center">
+                <p class="text-gray-500">© 2025 VIVARFA VIP MUSIC. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== Widget de Mini-Chat de WhatsApp Mejorado ===== -->
+    <div id="whatsapp-chat-widget" class="animate-fadeInUp">
+        <div class="whatsapp-chat-window">
+            <div class="whatsapp-header">
+                <div class="flex items-center">
+                    <img src="./images/vivarfa.png" alt="Vivarfa VIP Music Logo" class="h-8 w-8 object-contain mr-2">
+                    <div>
+                        <div class="title">VIVARFA VIP MUSIC</div>
+                        <div class="subtitle">¿Cómo podemos ayudarte?</div>
+                    </div>
+                </div>
+            </div>
+            <div class="whatsapp-body">
+                <div class="whatsapp-message">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 mr-3">
+                            <img src="./images/vivarfa.png" alt="Vivarfa VIP Music Logo" class="h-8 w-8 object-contain rounded-full">
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-400 mb-1">Soporte VIVARFA</p>
+                            <div class="bg-gray-700 p-3 rounded-lg">
+                                Hola 👋<br>¡Bienvenido a VIVARFA VIP MUSIC!<br>¿En qué podemos ayudarte hoy?
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="whatsapp-footer">
+                <input id="whatsapp-message-input" type="text" placeholder="Escribe tu mensaje...">
+                <button id="whatsapp-send-btn" class="animate-pulse">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+        <button id="whatsapp-chat-toggle" class="whatsapp-chat-toggle">
+            <i class="fab fa-whatsapp"></i>
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+
+    <!-- Modal de Contacto -->
+    <div id="contactModal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center p-4">
+        <div class="bg-gray-900 rounded-2xl p-8 max-w-md w-full mx-4 border border-purple-500/30">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-2xl font-bold text-white">Contactar Soporte</h3>
+                <button id="closeModal" class="text-gray-400 hover:text-white text-2xl">&times;</button>
+            </div>
+            <form id="contactForm">
+                <div class="mb-4">
+                    <label class="block text-gray-300 text-sm font-medium mb-2">Nombre</label>
+                    <input type="text" id="userName" class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:border-purple-500 focus:outline-none" required>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-300 text-sm font-medium mb-2">Mensaje</label>
+                    <textarea id="userMessage" rows="4" class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:border-purple-500 focus:outline-none resize-none" placeholder="Describe tu consulta..." required></textarea>
+                </div>
+                <button type="submit" class="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300">
+                    <i class="fab fa-whatsapp mr-2"></i>
+                    Enviar por WhatsApp
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="effects.js"></script>
+    
+</body>
+</html>

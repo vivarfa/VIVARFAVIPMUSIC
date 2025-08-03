@@ -1,0 +1,36 @@
+User-agent: *
+Allow: /
+
+# Página principal
+Allow: /index.html
+
+# Páginas de información
+Allow: /about.html
+Allow: /contact.html
+Allow: /privacy.html
+
+# Páginas de productos y servicios
+Allow: /membresias.html
+Allow: /demospacks.html
+Allow: /testimonials.html
+Allow: /faq.html
+Allow: /dj-resources.html
+
+# Permitir acceso a recursos estáticos
+Allow: /images/
+Allow: /data/
+Allow: /*.css
+Allow: /*.js
+
+# Configuración específica para Googlebot
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+# Configuración para Bingbot
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Sitemap
+Sitemap: https://www.vivarfa.com/sitemap.xml

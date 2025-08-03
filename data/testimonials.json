@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "José Diego",
+    "role": "DJ",
+    "avatar": "dj1.jpg",
+    "rating": 5,
+    "testimonial": "Increíble colección de música y videos. La calidad del contenido es excepcional y las actualizaciones semanales mantienen mi repertorio siempre fresco. Recomendado para cualquier DJ profesional."
+  },
+  {
+    "id": 2,
+    "name": "María Campos",
+    "role": "DJ",
+    "avatar": "dj2.jpg",
+    "rating": 5,
+    "testimonial": "Con VIVARFA VIP he podido mejorar mi trabajo como DJ. El contenido está muy bien organizado y la calidad del audio es impresionante. El soporte es rápido y eficiente."
+  },
+  {
+    "id": 3,
+    "name": "Roberto López",
+    "role": "DJ",
+    "avatar": "dj3.jpg",
+    "rating": 5,
+    "testimonial": "La membresía completa es una inversión que vale cada centavo. El acceso a contenido exclusivo y las actualizaciones constantes han revolucionado mis presentaciones."
+  },
+  {
+    "id": 4,
+    "name": "Ana Martínez",
+    "role": "DJ",
+    "avatar": "dj4.jpg",
+    "rating": 5,
+    "testimonial": "La calidad y variedad del contenido es impresionante. Las ediciones exclusivas y los packs de video han elevado mis sets a otro nivel. Totalmente recomendado."
+  },
+  {
+    "id": 5,
+    "name": "Carlos Rodríguez",
+    "role": "DJ",
+    "avatar": "dj5.jpg",
+    "rating": 5,
+    "testimonial": "Desde que me suscribí a VIVARFA VIP, mis clientes están más satisfechos con mi trabajo. El contenido organizado por género me facilita encontrar exactamente lo que necesito para cada evento."
+  },
+  {
+    "id": 6,
+    "name": "Laura Sánchez",
+    "role": "DJ",
+    "avatar": "dj6.jpg",
+    "rating": 5,
+    "testimonial": "El mejor servicio para DJs que he encontrado. Las actualizaciones semanales y la calidad del contenido son incomparables. El soporte 24/7 es un plus invaluable."
+  }
+]

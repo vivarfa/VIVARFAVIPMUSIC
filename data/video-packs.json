@@ -1,0 +1,199 @@
+
+[
+  {
+    "id": "videocumbia",
+    "title": "MEGA PACK CUMBIA (Video Remix)",
+    "description": [
+      "⚡ Género Full Cumbia",
+      "⚡ Video Remix en HD",
+      "⚡ Más de 20 GB",
+      "⚡ Acceso Inmediato",
+      "✅ Ediciones con Intro/Outro, listas para mezclar.",
+      "✅ Audio de Alta Calidad.",
+      "🌐 Servidor: Google Drive"
+    ],
+    "price": "US$ 14.00",
+    "paymentLink": "https://www.paypal.com/ncp/payment/YTV8P443GZ74U",
+    "image": "videocumbia.jpeg"
+  },
+  {
+    "id": "videopuentes",
+    "title": "MEGA PACK PUENTES & TRANSICIONES (Video Remix)",
+    "description": [
+      "⚡ Género Variado",
+      "⚡ Bajadas, Puentes",
+      "⚡ Subidas o Elevador",
+      "⚡ Más de 30 GB",
+      "⚡ Acceso Inmediato",
+      "⚡ Video Remix En HD",
+      "🎁 Bonus",
+      "🌐 Servidor: Google Drive"
+    ],
+    "price": "US$ 25.00",
+    "paymentLink": "https://www.paypal.com/ncp/payment/E42W5TH7M5YPW",
+    "image": "videopuentes.jpeg"
+  },
+  {
+    "id": "videotiktok",
+    "title": "MEGA PACK TIK TOK (Video Remix)",
+    "description": [
+      "⚡ Género Variado",
+      "⚡ Video Remix TikTok Virales",
+      "⚡ Video Remix TikTok Songs",
+      "⚡ Más de 15 GB",
+      "⚡ Acceso Inmediato",
+      "⚡ Video Remix En HD",
+      "🎁 Bonus",
+      "🌐 Servidor: Google Drive"
+    ],
+    "price": "US$ 11.00",
+    "paymentLink": "https://www.paypal.com/ncp/payment/PR9D9D5CYLWQA",
+    "image": "videotiktok.jpeg"
+  },
+  {
+    "id": "videoelectronica",
+    "title": "MEGA PACK ELECTRÓNICA (Video Remix)",
+    "description": [
+      "⚡ Video Remix Clásicos",
+      "⚡ Video Remix EDM",
+      "⚡ Video Remix Tech House",
+      "⚡ Video Remix House & Más",
+      "⚡ Más de 28 GB",
+      "⚡ Acceso Inmediato",
+      "⚡ Video Remix En HD",
+      "🎁 Bonus",
+      "🌐 Servidor: Google Drive"
+    ],
+    "price": "US$ 25.00",
+    "paymentLink": "https://www.paypal.com/ncp/payment/L4TWD7YPKC5R8",
+    "image": "videoelectronica.jpeg"
+  },
+  {
+    "id": "videolatin",
+    "title": "MEGA PACK LATIN (Video Remix)",
+    "description": [
+      "⚡ Género Full Latin",
+      "⚡ Video Remix Clásicos",
+      "⚡ Más de 12 GB",
+      "⚡ Acceso Inmediato",
+      "⚡ Video Remix En HD",
+      "🎁 Bonus",
+      "🌐 Servidor: Google Drive"
+    ],
+    "price": "US$ 13.00",
+    "paymentLink": "https://www.paypal.com/ncp/payment/MA2W97FRFX75C",
+    "image": "videolatin.jpeg"
+  },
+  {
+    "id": "videorock",
+    "title": "MEGA PACK ROCK EN ESPAÑOL E INGLÉS (Video Remix)",
+    "description": [
+      "⚡ Género Full Rock",
+      "⚡ Video Remix Clásicos en Español e Inglés",
+      "⚡ Más de 27 GB",
+      "⚡ Acceso Inmediato",
+      "⚡ Video Remix En HD",
+      "🎁 Bonus",
+      "🌐 Servidor: Google Drive"
+    ],
+    "price": "US$ 27.00",
+    "paymentLink": "https://www.paypal.com/ncp/payment/RK7MZ9LYDTPMW",
+    "image": "videorock.jpeg"
+  },
+  {
+    "id": "videomerengue",
+    "title": "MEGA PACK MERENGUE (Video Remix)",
+    "description": [
+      "⚡ Género Full Merengue",
+      "⚡ Video Remix Clásicos",
+      "⚡ Más de 25 GB",
+      "⚡ Acceso Inmediato",
+      "⚡ Video Remix En HD",
+      "🎁 Bonus",
+      "🌐 Servidor: Google Drive"
+    ],
+    "price": "US$ 25.00",
+    "paymentLink": "https://www.paypal.com/ncp/payment/ZVJQLVLMBYCAA",
+    "image": "videomerengue.jpeg"
+  },
+  {
+    "id": "videosalsa",
+    "title": "MEGA PACK SALSA (Video Remix)",
+    "description": [
+      "⚡ Género Full Salsa",
+      "⚡ Video Remix Clásicos",
+      "⚡ Más de 24 GB",
+      "⚡ Acceso Inmediato",
+      "⚡ Video Remix En HD",
+      "🎁 Bonus",
+      "🌐 Servidor: Google Drive"
+    ],
+    "price": "US$ 21.00",
+    "paymentLink": "https://www.paypal.com/ncp/payment/BMME8N7CATF7Y",
+    "image": "videosalsa.jpeg"
+  },
+  {
+    "id": "videoreggueton",
+    "title": "MEGA PACK REGGAETÓN (Video Remix)",
+    "description": [
+      "⚡ Género Full Reggaetón",
+      "⚡ Video Remix Clásicos",
+      "⚡ Más de 35 GB",
+      "⚡ Acceso Inmediato",
+      "⚡ Video Remix En HD",
+      "🎁 Bonus",
+      "🌐 Servidor: Google Drive"
+    ],
+    "price": "US$ 19.00",
+    "paymentLink": "https://www.paypal.com/ncp/payment/YS5X9LYS2MEK2",
+    "image": "videoreggaeton.jpeg"
+  },
+  {
+    "id": "videoreggueton",
+    "title": "MEGA PACK HIP HOP (Video Remix)",
+    "description": [
+      "⚡ Genero Full Hip Hop",
+      "⚡ Video Remix Actual & Retro",
+      "⚡ Más de 20 GB",
+      "⚡ Acceso Inmediato",
+      "⚡ Video Remix En HD",
+      "🎁 Bonus",
+      "🌐 Servidor: Google Drive"
+    ],
+    "price": "US$ 17.00",
+    "paymentLink": "https://www.paypal.com/ncp/payment/K9W7G7Y74FXS4",
+    "image": "videohiphop.jpeg"
+  },
+  {
+    "id": "videoreggueton",
+    "title": "MEGA PACK BACHATA (Video Remix)",
+    "description": [
+      "⚡ Genero Bachata",
+      "⚡ Video Remix Clásicos",
+      "⚡ Más de 22 GB",
+      "⚡ Acceso Inmediato",
+      "⚡ Video Remix En HD",
+      "🎁 Bonus",
+      "🌐 Servidor: Google Drive"
+    ],
+    "price": "US$ 18.00",
+    "paymentLink": "https://www.paypal.com/ncp/payment/SHRXAYSYJU8VL",
+    "image": "videobachata.jpeg"
+  },
+  {
+    "id": "videovallenato",
+    "title": "MEGA PACK VALLENATO (Video Remix)",
+    "description": [
+      "⚡ Género Full Vallenato",
+      "⚡ Video Remix Clásicos",
+      "⚡ Más de 18 GB",
+      "⚡ Acceso Inmediato",
+      "⚡ Video Remix En HD",
+      "🎁 Bonus",
+      "🌐 Servidor: Google Drive"
+    ],
+    "price": "US$ 15.00",
+    "paymentLink": "https://www.paypal.com/ncp/payment/E8GCLCEST99QG",
+    "image": "videovallenato.jpeg"
+  }
+]

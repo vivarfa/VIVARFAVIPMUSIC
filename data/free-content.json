@@ -1,0 +1,63 @@
+
+[
+  {
+    "id": "sample-pack-1",
+    "title": "Pack Muestra Cumbia (GRATIS)",
+    "description": [
+      "🆓 Muestra Gratuita",
+      "🎵 5 Tracks de Cumbia",
+      "🎵 Calidad MP3 320kbps",
+      "🎵 Sin Límites de Descarga",
+      "🎵 Acceso Inmediato",
+      "🌐 Servidor: Google Drive"
+    ],
+    "price": "GRATIS",
+    "downloadLink": "https://drive.google.com/free-sample-cumbia",
+    "image": "free-cumbia-sample.jpg"
+  },
+  {
+    "id": "sample-pack-2", 
+    "title": "Pack Muestra Reggaetón (GRATIS)",
+    "description": [
+      "🆓 Muestra Gratuita",
+      "🎵 3 Tracks de Reggaetón",
+      "🎵 Calidad MP3 320kbps",
+      "🎵 Sin Límites de Descarga",
+      "🎵 Acceso Inmediato",
+      "🌐 Servidor: Google Drive"
+    ],
+    "price": "GRATIS",
+    "downloadLink": "https://drive.google.com/free-sample-reggaeton",
+    "image": "free-reggaeton-sample.jpg"
+  },
+  {
+    "id": "sample-pack-3",
+    "title": "Pack Muestra Salsa (GRATIS)",
+    "description": [
+      "🆓 Muestra Gratuita",
+      "🎵 4 Tracks de Salsa",
+      "🎵 Calidad MP3 320kbps", 
+      "🎵 Sin Límites de Descarga",
+      "🎵 Acceso Inmediato",
+      "🌐 Servidor: Google Drive"
+    ],
+    "price": "GRATIS",
+    "downloadLink": "https://drive.google.com/free-sample-salsa",
+    "image": "free-salsa-sample.jpg"
+  },
+  {
+    "id": "demo-video-1",
+    "title": "Demo Video Electrónica (GRATIS)",
+    "description": [
+      "🆓 Video Demo Gratuito",
+      "📹 1 Video Remix HD",
+      "📹 Género Electrónica",
+      "📹 Sin Límites de Descarga",
+      "📹 Acceso Inmediato",
+      "🌐 Servidor: Google Drive"
+    ],
+    "price": "GRATIS",
+    "downloadLink": "https://drive.google.com/free-demo-electronica",
+    "image": "free-electronica-demo.jpg"
+  }
+]
