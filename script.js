@@ -523,7 +523,7 @@ document.addEventListener('DOMContentLoaded', () => {
             
             if (userName && userMessage) {
                 const whatsappMessage = `Hola, soy ${userName}. ${userMessage}`;
-                const whatsappUrl = `https://wa.me/5491234567890?text=${encodeURIComponent(whatsappMessage)}`;
+                const whatsappUrl = `https://wa.me/51917776934?text=${encodeURIComponent(whatsappMessage)}`;
                 
                 // Abrir WhatsApp en nueva ventana
                 window.open(whatsappUrl, '_blank');
@@ -537,4 +537,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Iniciar la aplicación
     init();
+
 });
