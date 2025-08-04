@@ -479,3 +479,732 @@ body {
 .section-background .text-gray-900 {
     color: #d1d5db !important;
 }
+
+/* ===== RESPONSIVE DESIGN COMPLETO ===== */
+
+/* Tablets (768px - 1023px) */
+@media (max-width: 1023px) {
+    /* Header y navegación */
+    .nav-link {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+    }
+    
+    /* Hero section */
+    .hero-section h1 {
+        font-size: 3rem !important;
+        line-height: 1.1;
+    }
+    
+    .hero-section p {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+    }
+    
+    /* Estadísticas */
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    /* Tarjetas de membresía */
+    .membership-card {
+        margin-bottom: 1.5rem;
+    }
+    
+    /* WhatsApp widget */
+    .whatsapp-chat-window {
+        width: 350px;
+        bottom: 80px;
+        transform-origin: bottom right;
+    }
+    
+    .whatsapp-chat-toggle {
+        width: 58px;
+        height: 58px;
+        font-size: 2rem;
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+/* Móviles grandes (481px - 767px) */
+@media (max-width: 767px) {
+    /* Contenedor principal */
+    .max-w-7xl {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    /* Header */
+    .nav-brand {
+        font-size: 1.2rem;
+    }
+    
+    .nav-brand img {
+        height: 2rem;
+        width: 2rem;
+    }
+    
+    /* Hero section */
+    .hero-section {
+        padding: 4rem 1rem;
+        min-height: 80vh;
+    }
+    
+    .hero-section h1 {
+        font-size: 2.5rem !important;
+        margin-bottom: 1.5rem;
+    }
+    
+    .hero-section p {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+    
+    /* Botones */
+    .hero-buttons {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .hero-buttons button {
+        width: 100%;
+        padding: 1rem 2rem;
+        font-size: 1rem;
+    }
+    
+    /* Estadísticas */
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+    }
+    
+    .stats-item {
+        padding: 1rem;
+    }
+    
+    .stats-item .text-3xl {
+        font-size: 1.5rem;
+    }
+    
+    /* Secciones */
+    .section-padding {
+        padding: 3rem 1rem;
+    }
+    
+    /* Tarjetas */
+    .card-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    /* Testimonios */
+    .testimonial-card {
+        width: 100%;
+        margin: 0 0.5rem;
+    }
+    
+    /* WhatsApp widget */
+    .whatsapp-chat-window {
+        width: calc(100vw - 2rem);
+        max-width: 340px;
+        right: 1rem;
+        left: auto;
+        bottom: 80px;
+        transform-origin: bottom right;
+    }
+    
+    .whatsapp-chat-toggle {
+        width: 55px;
+        height: 55px;
+        font-size: 1.9rem;
+        bottom: 20px;
+        right: 20px;
+    }
+    
+    .whatsapp-header {
+        padding: 1rem;
+    }
+    
+    .whatsapp-body {
+        padding: 1rem;
+    }
+    
+    .whatsapp-footer {
+        padding: 1rem;
+        gap: 0.5rem;
+    }
+    
+    #whatsapp-message-input {
+        padding: 0.75rem;
+        font-size: 0.95rem;
+    }
+    
+    #whatsapp-send-btn {
+        width: 45px;
+        font-size: 1.1rem;
+    }
+    
+    /* Formularios */
+    .form-input {
+        padding: 0.75rem;
+        font-size: 1rem;
+    }
+    
+    /* Modales */
+    .modal-content {
+        margin: 1rem;
+        max-height: calc(100vh - 2rem);
+    }
+}
+
+/* Móviles pequeños (320px - 480px) */
+@media (max-width: 480px) {
+    /* Tipografía base */
+    body {
+        font-size: 14px;
+    }
+    
+    /* Header */
+    .nav-brand {
+        font-size: 1rem;
+    }
+    
+    .nav-brand img {
+        height: 1.75rem;
+        width: 1.75rem;
+    }
+    
+    /* Hero section */
+    .hero-section {
+        padding: 3rem 0.75rem;
+    }
+    
+    .hero-section h1 {
+        font-size: 2rem !important;
+        line-height: 1.2;
+    }
+    
+    .hero-section p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+    
+    /* Badge superior */
+    .hero-badge {
+        padding: 0.5rem 1rem;
+        font-size: 0.75rem;
+    }
+    
+    /* Botones */
+    .hero-buttons button {
+        padding: 0.875rem 1.5rem;
+        font-size: 0.9rem;
+    }
+    
+    /* Estadísticas */
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+    
+    .stats-item {
+        padding: 0.75rem;
+    }
+    
+    .stats-item .text-3xl {
+        font-size: 1.25rem;
+    }
+    
+    .stats-item .text-base {
+        font-size: 0.8rem;
+    }
+    
+    /* Secciones */
+    .section-padding {
+        padding: 2rem 0.75rem;
+    }
+    
+    /* Títulos de sección */
+    .section-title {
+        font-size: 1.75rem;
+        margin-bottom: 1rem;
+    }
+    
+    .section-subtitle {
+        font-size: 0.9rem;
+        margin-bottom: 2rem;
+    }
+    
+    /* Tarjetas de membresía */
+    .membership-card {
+        padding: 1.25rem;
+        margin-bottom: 1rem;
+    }
+    
+    .membership-card h3 {
+        font-size: 1.25rem;
+    }
+    
+    .membership-card .price {
+        font-size: 1.5rem;
+    }
+    
+    /* Lista de características */
+    .feature-list {
+        max-height: 180px;
+        font-size: 0.85rem;
+    }
+    
+    /* Botones de tarjetas */
+    .card-button {
+        padding: 0.75rem 1.5rem;
+        font-size: 0.9rem;
+    }
+    
+    /* WhatsApp widget */
+    .whatsapp-chat-toggle {
+        width: 50px;
+        height: 50px;
+        font-size: 1.6rem;
+        bottom: 20px;
+        right: 20px;
+    }
+    
+    .whatsapp-chat-window {
+        width: calc(100vw - 2rem);
+        max-width: 320px;
+        right: 1rem;
+        left: auto;
+        bottom: 80px;
+        transform-origin: bottom right;
+    }
+    
+    .whatsapp-header {
+        padding: 0.875rem;
+    }
+    
+    .whatsapp-header .title {
+        font-size: 1rem;
+    }
+    
+    .whatsapp-header .subtitle {
+        font-size: 0.75rem;
+    }
+    
+    .whatsapp-body {
+        padding: 0.875rem;
+    }
+    
+    .whatsapp-message {
+        padding: 0.625rem;
+        font-size: 0.85rem;
+    }
+    
+    .whatsapp-footer {
+        padding: 0.875rem;
+        gap: 0.375rem;
+    }
+    
+    #whatsapp-message-input {
+        padding: 0.625rem;
+        font-size: 0.9rem;
+    }
+    
+    #whatsapp-send-btn {
+        width: 42px;
+        font-size: 1rem;
+    }
+    
+    /* Controles de sección gratis */
+    .free-controls-section {
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .free-search-input {
+        padding: 0.75rem 0.75rem 0.75rem 2.5rem;
+        font-size: 0.9rem;
+    }
+    
+    .free-stats-bar {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+    }
+    
+    .free-stats-item {
+        padding: 0.75rem;
+    }
+    
+    .free-stats-value {
+        font-size: 1.1rem;
+    }
+    
+    /* Lista de archivos gratis */
+    .free-list-item {
+        padding: 0.75rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    /* Modales y overlays */
+    .modal-content {
+        margin: 0.5rem;
+        padding: 1rem;
+    }
+    
+    .modal-header {
+        padding: 1rem;
+    }
+    
+    .modal-body {
+        padding: 1rem;
+    }
+}
+
+/* Ajustes específicos para orientación horizontal en móviles */
+@media (max-width: 767px) and (orientation: landscape) {
+    .hero-section {
+        min-height: 100vh;
+        padding: 2rem 1rem;
+    }
+    
+    .hero-section h1 {
+        font-size: 2rem !important;
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* ===== ESTILOS RESPONSIVE PARA PÁGINAS ESPECÍFICAS ===== */
+
+/* FAQ, Privacy Policy y Contact Pages - Móviles pequeños (320px - 480px) */
+@media (max-width: 480px) {
+    /* Encabezados de páginas */
+    .relative.overflow-hidden.py-20 {
+        padding: 2rem 0;
+    }
+    
+    .relative.overflow-hidden.py-20 h1 {
+        font-size: 2.5rem !important;
+        line-height: 1.1;
+        margin-bottom: 1rem;
+    }
+    
+    .relative.overflow-hidden.py-20 p {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+    
+    /* FAQ Cards */
+    .bg-gray-800\/50.backdrop-blur-sm.p-6 {
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .bg-gray-800\/50 h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.75rem;
+    }
+    
+    .bg-gray-800\/50 p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+    
+    /* Contact Form */
+    .grid.grid-cols-1.md\:grid-cols-2 {
+        gap: 2rem;
+    }
+    
+    .bg-gray-800\/50.backdrop-blur-sm.p-8 {
+        padding: 1.5rem;
+    }
+    
+    /* Contact Channels */
+    .flex.items-center.p-6 {
+        padding: 1rem;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .flex.items-center.p-6 i {
+        margin-right: 0;
+        margin-bottom: 0.75rem;
+        font-size: 2.5rem !important;
+    }
+    
+    /* Privacy Policy Content */
+    .prose.prose-invert.lg\:prose-xl {
+        font-size: 0.9rem;
+    }
+    
+    .prose h2 {
+        font-size: 1.3rem;
+        margin-top: 1.5rem;
+        margin-bottom: 0.75rem;
+    }
+    
+    .prose ul {
+        padding-left: 1rem;
+    }
+    
+    .prose li {
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* FAQ, Privacy Policy y Contact Pages - Móviles grandes (481px - 767px) */
+@media (min-width: 481px) and (max-width: 767px) {
+    /* Encabezados de páginas */
+    .relative.overflow-hidden.py-20 {
+        padding: 3rem 0;
+    }
+    
+    .relative.overflow-hidden.py-20 h1 {
+        font-size: 3.5rem !important;
+        line-height: 1.1;
+    }
+    
+    .relative.overflow-hidden.py-20 p {
+        font-size: 1.1rem;
+    }
+    
+    /* FAQ Cards */
+    .bg-gray-800\/50.backdrop-blur-sm.p-6 {
+        padding: 1.25rem;
+    }
+    
+    .bg-gray-800\/50 h3 {
+        font-size: 1.2rem;
+    }
+    
+    .bg-gray-800\/50 p {
+        font-size: 0.95rem;
+    }
+    
+    /* Contact Form */
+    .grid.grid-cols-1.md\:grid-cols-2 {
+        gap: 3rem;
+    }
+    
+    .bg-gray-800\/50.backdrop-blur-sm.p-8 {
+        padding: 2rem;
+    }
+    
+    /* Contact Channels */
+    .flex.items-center.p-6 {
+        padding: 1.25rem;
+    }
+    
+    .flex.items-center.p-6 i {
+        font-size: 3rem !important;
+        margin-right: 1rem;
+    }
+    
+    /* Privacy Policy Content */
+    .prose.prose-invert.lg\:prose-xl {
+        font-size: 0.95rem;
+    }
+    
+    .prose h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* FAQ, Privacy Policy y Contact Pages - Tablets (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    /* Encabezados de páginas */
+    .relative.overflow-hidden.py-20 h1 {
+        font-size: 4rem !important;
+    }
+    
+    /* Contact Form Grid */
+    .grid.grid-cols-1.md\:grid-cols-2 {
+        gap: 2rem;
+    }
+    
+    /* FAQ Cards */
+    .bg-gray-800\/50.backdrop-blur-sm.p-6 {
+        padding: 1.5rem;
+    }
+    
+    /* Contact Channels */
+    .flex.items-center.p-6 {
+        padding: 1.5rem;
+    }
+    
+    /* Privacy Policy Content */
+    .prose.prose-invert.lg\:prose-xl {
+        font-size: 1rem;
+    }
+}
+
+/* Mejoras adicionales para páginas específicas en móviles */
+@media (max-width: 767px) {
+    /* Formularios en Contact Page */
+    .contact-form input,
+    .contact-form textarea,
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        padding: 0.875rem !important;
+        font-size: 1rem !important;
+        border-radius: 0.5rem !important;
+    }
+    
+    /* Botones de formulario */
+    button[type="submit"],
+    .btn-submit {
+        padding: 1rem 1.5rem !important;
+        font-size: 1rem !important;
+        min-height: 48px;
+    }
+    
+    /* Secciones de contacto */
+    .contact-section .space-y-8 > * {
+        margin-bottom: 1.5rem !important;
+    }
+    
+    /* Enlaces de redes sociales */
+    .flex.space-x-6 {
+        justify-content: center;
+        gap: 1.5rem;
+    }
+    
+    .flex.space-x-6 a {
+        font-size: 2rem !important;
+        padding: 0.5rem;
+    }
+    
+    /* Botones de contacto en FAQ */
+    .flex.flex-wrap.justify-center.gap-6 {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .flex.flex-wrap.justify-center.gap-6 a {
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+    }
+    
+    /* Mejoras para Privacy Policy */
+    .max-w-4xl.mx-auto {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    /* Espaciado entre secciones */
+    .py-16 {
+        padding-top: 2rem !important;
+        padding-bottom: 2rem !important;
+    }
+    
+    /* Títulos de sección */
+    .text-3xl.font-bold.mb-8 {
+        font-size: 1.5rem !important;
+        margin-bottom: 1.5rem !important;
+    }
+    
+    /* Contenido de FAQ */
+    .space-y-6 > * {
+        margin-bottom: 1rem !important;
+    }
+}
+
+/* Mejoras para tablets */
+@media (min-width: 768px) and (max-width: 1023px) {
+    /* Formularios en tablets */
+    .contact-form input,
+    .contact-form textarea {
+        padding: 0.75rem;
+        font-size: 0.95rem;
+    }
+    
+    /* Grid de contacto en tablets */
+    .grid.grid-cols-1.md\:grid-cols-2 {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    /* FAQ cards en tablets */
+    .space-y-6 > .bg-gray-800\/50 {
+        margin-bottom: 1.25rem;
+    }
+}
+
+/* Mejoras para accesibilidad táctil */
+@media (hover: none) and (pointer: coarse) {
+    .hover\:scale-105:hover {
+        transform: scale(1.02);
+    }
+    
+    .hover\:border-purple-500:hover {
+        border-color: #9333ea;
+    }
+    
+    .hover\:bg-gray-800:hover {
+        background-color: #1f2937;
+    }
+    
+    /* Aumentar área táctil para botones */
+    .nav-link,
+    .card-button,
+    .hero-buttons button {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    /* Eliminar efectos hover en dispositivos táctiles */
+    .card-hover:hover {
+        transform: none;
+        box-shadow: none;
+    }
+    
+    .nav-link:hover {
+        transform: none;
+    }
+    
+    /* Aumentar área táctil de botones */
+    button, .btn, a[role="button"] {
+        min-height: 44px;
+        min-width: 44px;
+    }
+}
+
+/* Optimizaciones para pantallas de alta densidad */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .nav-brand img,
+    .logo {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* Ajustes para modo oscuro del sistema */
+@media (prefers-color-scheme: dark) {
+    /* Ya está optimizado para modo oscuro */
+}
+
+/* Reducir animaciones para usuarios que prefieren menos movimiento */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .particle,
+    .hero-particle,
+    .cta-particle {
+        animation: none;
+    }
+}

@@ -537,5 +537,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Iniciar la aplicación
     init();
-
 });
