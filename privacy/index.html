@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidad | VIVARFA VIP MUSIC</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Conoce nuestra política de privacidad. En VIVARFA VIP MUSIC, nos comprometemos a proteger tus datos personales y a ser transparentes sobre cómo los utilizamos.">
+    <meta name="keywords" content="política de privacidad, privacidad, datos personales, VIVARFA, seguridad, cookies">
+    <meta name="author" content="VIVARFA VIP MUSIC">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#9333ea">
+    <meta name="google-adsense-account" content="ca-pub-9975952999842017">
+    <link rel="canonical" href="https://www.vivarfa.com/privacy/">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Política de Privacidad | VIVARFA VIP MUSIC">
+    <meta property="og:description" content="Conoce nuestra política de privacidad. En VIVARFA VIP MUSIC, nos comprometemos a proteger tus datos personales y a ser transparentes sobre cómo los utilizamos.">
+    <meta property="og:image" content="https://www.vivarfa.com/images/vivarfa.png">
+    <meta property="og:url" content="https://www.vivarfa.com/privacy.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="VIVARFA VIP MUSIC">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Política de Privacidad | VIVARFA VIP MUSIC">
+    <meta name="twitter:description" content="Conoce nuestra política de privacidad. En VIVARFA VIP MUSIC, nos comprometemos a proteger tus datos personales y a ser transparentes sobre cómo los utilizamos.">
+    <meta name="twitter:image" content="https://www.vivarfa.com/images/vivarfa.png">
+    
+    <!-- Script de Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts y Font Awesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../animations.css">
+    
+    <link rel="icon" href="../logo.png" type="image/png">
+
+    <!-- Script de Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9975952999842017" crossorigin="anonymous"></script>
+    
+    <!-- Configuración adicional de Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                        'display': ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Estilos para las tarjetas de la política de privacidad */
+        .policy-card {
+            background: rgba(17, 24, 39, 0.6); /* bg-gray-900 con transparencia */
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(55, 65, 81, 0.5); /* border-gray-700 con transparencia */
+            border-radius: 1.5rem; /* rounded-3xl */
+            padding: 2rem;
+            transition: all 0.3s ease-in-out;
+        }
+        .policy-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(147, 51, 234, 0.15);
+            border-color: rgba(147, 51, 234, 0.4); /* purple-500 con transparencia */
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white font-sans antialiased">
+    <!-- Fondo de partículas para efecto dinámico -->
+    <div id="particles-background" class="fixed inset-0 z-0 pointer-events-none"></div>
+
+    <!-- Header -->
+    <header class="bg-gray-900/80 backdrop-blur-lg sticky top-0 z-50 border-b border-gray-700">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-3">
+            <a href="/" class="flex items-center gap-3 cursor-pointer hover-scale">
+                <img src="../images/vivarfa.png" alt="Vivarfa VIP Music Logo" class="h-10 w-10 object-contain animate-float">
+                <span class="text-xl md:text-2xl font-bold gradient-text">VIVARFA VIP MUSIC</span>
+            </a>
+            <ul class="hidden md:flex items-center space-x-6">
+                <li><a href="/" class="nav-link">Inicio</a></li>
+                <li><a href="/membresias/" class="nav-link">Membresías</a></li>
+                <li><a href="/audio-packs/" class="nav-link">Audio Packs</a></li>
+                <li><a href="/video-packs/" class="nav-link">Video Packs</a></li>
+                <li><a href="/backups/" class="nav-link">Backups</a></li>
+                <li><a href="/free/" class="nav-link">Gratis</a></li>
+            </ul>
+            <button id="mobile-menu-button" class="md:hidden text-white text-2xl hover-scale">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800/95 backdrop-blur-sm">
+            <ul class="flex flex-col items-center py-4 space-y-4">
+                <li><a href="/" class="nav-link">Inicio</a></li>
+                <li><a href="/membresias/" class="nav-link">Membresías</a></li>
+                <li><a href="/audio-packs/" class="nav-link">Audio Packs</a></li>
+                <li><a href="/video-packs/" class="nav-link">Video Packs</a></li>
+                <li><a href="/backups/" class="nav-link">Backups</a></li>
+                <li><a href="/free/" class="nav-link">Gratis</a></li>
+            </ul>
+        </div>
+    </header>
+    
+    <!-- WhatsApp Button -->
+    <div id="whatsapp-chat-widget" class="animate-fadeInUp">
+        <div class="whatsapp-chat-window">
+            <div class="whatsapp-header">
+                <div class="flex items-center">
+                    <img src="../images/vivarfa.png" alt="Vivarfa VIP Music Logo" class="h-8 w-8 object-contain mr-2">
+                    <div>
+                        <div class="title">VIVARFA VIP MUSIC</div>
+                        <div class="subtitle">¿Cómo podemos ayudarte?</div>
+                    </div>
+                </div>
+            </div>
+            <div class="whatsapp-body">
+                <div class="whatsapp-message">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 mr-3">
+                            <img src="../images/vivarfa.png" alt="Vivarfa VIP Music Logo" class="h-8 w-8 object-contain rounded-full">
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-400 mb-1">Soporte VIVARFA</p>
+                            <div class="bg-gray-700 p-3 rounded-lg">
+                                Hola 👋<br>¡Bienvenido a VIVARFA VIP MUSIC!<br>¿En qué podemos ayudarte hoy?
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="whatsapp-footer">
+                <input id="whatsapp-message-input" type="text" placeholder="Escribe tu mensaje...">
+                <button id="whatsapp-send-btn" class="animate-pulse">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+        <button id="whatsapp-chat-toggle" class="whatsapp-chat-toggle">
+            <i class="fab fa-whatsapp"></i>
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+
+    <main class="relative z-10">
+        <!-- Encabezado de la página -->
+        <section class="relative overflow-hidden py-24 px-4 text-center animate-gradient">
+            <div class="max-w-7xl mx-auto">
+                <h1 class="text-5xl md:text-7xl font-black uppercase gradient-text tracking-wider font-display mb-6 animate-fadeInUp">Política de Privacidad</h1>
+                <p class="text-xl md:text-2xl text-gray-300 mt-4 max-w-3xl mx-auto animate-fadeInUp" style="animation-delay: 0.2s;">Tu confianza y la protección de tus datos son nuestra prioridad.</p>
+                <p class="mt-4 text-gray-500 animate-fadeInUp" style="animation-delay: 0.4s;">Última actualización: 03 de Agosto de 2025</p>
+            </div>
+        </section>
+        
+        <!-- Contenido de la Política de Privacidad -->
+        <section class="py-20 bg-gray-900/50">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+
+                <!-- Introducción -->
+                <div class="text-center text-lg text-gray-300 animate-fadeInUp" style="animation-delay: 0.5s;">
+                    <p>Bienvenido a la Política de Privacidad de VIVARFA VIP MUSIC. Esta política detalla cómo recopilamos, usamos, protegemos y gestionamos tus datos personales cuando visitas nuestro sitio web <a href="https://www.vivarfa.com" class="text-purple-400 hover:text-purple-300 transition-colors">www.vivarfa.com</a>.</p>
+                </div>
+
+                <!-- Tarjeta 1: Información que recopilamos -->
+                <div class="policy-card animate-fadeInUp" style="animation-delay: 0.6s;">
+                    <h2 class="text-2xl font-bold gradient-text mb-6 flex items-center"><i class="fas fa-database text-3xl mr-4 text-purple-400"></i>1. Información que recopilamos</h2>
+                    <p class="text-gray-300 mb-6">Recopilamos información para proporcionar y mejorar nuestros servicios. Esto incluye:</p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start"><i class="fas fa-check-circle text-purple-400 mt-1 mr-3 flex-shrink-0"></i><span class="text-gray-300"><strong>Información de contacto:</strong> Nombre, correo electrónico y número de WhatsApp al comunicarte o comprar.</span></li>
+                        <li class="flex items-start"><i class="fas fa-check-circle text-purple-400 mt-1 mr-3 flex-shrink-0"></i><span class="text-gray-300"><strong>Información de pago:</strong> Usamos proveedores externos como PayPal para procesar pagos. No almacenamos datos de tu tarjeta o cuenta bancaria.</span></li>
+                        <li class="flex items-start"><i class="fas fa-check-circle text-purple-400 mt-1 mr-3 flex-shrink-0"></i><span class="text-gray-300"><strong>Información de uso:</strong> Datos sobre tu interacción con el sitio (páginas vistas, descargas) para mejorar la experiencia.</span></li>
+                        <li class="flex items-start"><i class="fas fa-check-circle text-purple-400 mt-1 mr-3 flex-shrink-0"></i><span class="text-gray-300"><strong>Cookies y tecnologías similares:</strong> Usadas para análisis, publicidad y funcionamiento del sitio.</span></li>
+                    </ul>
+                </div>
+
+                <!-- Tarjeta 2: Cómo usamos tu información -->
+                <div class="policy-card animate-fadeInUp" style="animation-delay: 0.7s;">
+                    <h2 class="text-2xl font-bold gradient-text mb-6 flex items-center"><i class="fas fa-cogs text-3xl mr-4 text-purple-400"></i>2. Cómo usamos tu información</h2>
+                    <ul class="space-y-4">
+                        <li class="flex items-start"><i class="fas fa-check-circle text-purple-400 mt-1 mr-3 flex-shrink-0"></i><span class="text-gray-300"><strong>Proveer y gestionar servicios:</strong> Para procesar compras, entregar productos y administrar tu membresía.</span></li>
+                        <li class="flex items-start"><i class="fas fa-check-circle text-purple-400 mt-1 mr-3 flex-shrink-0"></i><span class="text-gray-300"><strong>Comunicación y soporte:</strong> Para responder consultas y enviar notificaciones importantes.</span></li>
+                        <li class="flex items-start"><i class="fas fa-check-circle text-purple-400 mt-1 mr-3 flex-shrink-0"></i><span class="text-gray-300"><strong>Mejora del sitio web:</strong> Para analizar el comportamiento del usuario y optimizar nuestro contenido.</span></li>
+                        <li class="flex items-start"><i class="fas fa-check-circle text-purple-400 mt-1 mr-3 flex-shrink-0"></i><span class="text-gray-300"><strong>Marketing:</strong> Para informarte sobre promociones, con tu consentimiento previo.</span></li>
+                    </ul>
+                </div>
+
+                <!-- Tarjeta 3: Publicidad de terceros -->
+                <div class="policy-card animate-fadeInUp" style="animation-delay: 0.8s;">
+                    <h2 class="text-2xl font-bold gradient-text mb-6 flex items-center"><i class="fab fa-google text-3xl mr-4 text-purple-400"></i>3. Publicidad de terceros y Google AdSense</h2>
+                    <p class="text-gray-300 mb-6">Este sitio utiliza Google AdSense. Google y sus socios usan cookies para mostrar anuncios relevantes. Puedes gestionar tus preferencias:</p>
+                    <div class="flex flex-col sm:flex-row gap-4 mt-4">
+                        <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer" class="flex-1 text-center bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-transform transform hover:scale-105">Configuración de Anuncios de Google</a>
+                        <a href="http://www.aboutads.info/choices/" target="_blank" rel="noopener noreferrer" class="flex-1 text-center bg-gray-700 hover:bg-gray-600 text-white font-bold py-3 px-6 rounded-lg transition-transform transform hover:scale-105">Inhabilitar Cookies de Terceros</a>
+                    </div>
+                </div>
+
+                <!-- Contenedor doble para las siguientes secciones -->
+                <div class="grid md:grid-cols-2 gap-10">
+                    <!-- Tarjeta 4: Cómo compartimos tu información -->
+                    <div class="policy-card animate-fadeInUp" style="animation-delay: 0.9s;">
+                        <h2 class="text-2xl font-bold gradient-text mb-6 flex items-center"><i class="fas fa-share-alt text-3xl mr-4 text-purple-400"></i>4. Cómo compartimos tu información</h2>
+                        <p class="text-gray-300">No vendemos ni alquilamos tus datos. Solo compartimos con:</p>
+                        <ul class="space-y-4 mt-4">
+                            <li class="flex items-start"><i class="fas fa-check-circle text-purple-400 mt-1 mr-3"></i><span><strong>Proveedores de servicios</strong> (ej. PayPal).</span></li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-purple-400 mt-1 mr-3"></i><span>Por <strong>requisitos legales</strong>.</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Tarjeta 5: Seguridad de tus datos -->
+                    <div class="policy-card animate-fadeInUp" style="animation-delay: 1.0s;">
+                        <h2 class="text-2xl font-bold gradient-text mb-6 flex items-center"><i class="fas fa-shield-alt text-3xl mr-4 text-purple-400"></i>5. Seguridad de tus datos</h2>
+                        <p class="text-gray-300">Implementamos medidas de seguridad técnicas y organizativas para proteger tus datos, aunque ningún método es 100% infalible.</p>
+                    </div>
+                </div>
+
+                 <!-- Contenedor doble para las últimas secciones -->
+                 <div class="grid md:grid-cols-2 gap-10">
+                    <!-- Tarjeta 6: Tus derechos -->
+                    <div class="policy-card animate-fadeInUp" style="animation-delay: 1.1s;">
+                        <h2 class="text-2xl font-bold gradient-text mb-6 flex items-center"><i class="fas fa-user-check text-3xl mr-4 text-purple-400"></i>6. Tus derechos</h2>
+                        <p class="text-gray-300">Tienes derecho a acceder, corregir, eliminar u oponerte al procesamiento de tus datos. Contáctanos para ejercerlos.</p>
+                    </div>
+
+                    <!-- Tarjeta 7: Cambios en esta política -->
+                    <div class="policy-card animate-fadeInUp" style="animation-delay: 1.2s;">
+                        <h2 class="text-2xl font-bold gradient-text mb-6 flex items-center"><i class="fas fa-history text-3xl mr-4 text-purple-400"></i>7. Cambios en esta política</h2>
+                        <p class="text-gray-300">Podemos actualizar esta política. Publicaremos los cambios aquí. Te recomendamos revisarla periódicamente.</p>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 8: Contacto -->
+                <div class="policy-card text-center animate-fadeInUp" style="animation-delay: 1.3s;">
+                    <h2 class="text-2xl font-bold gradient-text mb-4 flex items-center justify-center"><i class="fas fa-envelope-open-text text-3xl mr-4 text-purple-400"></i>8. Contacto</h2>
+                    <p class="text-gray-300 mb-6">Si tienes alguna pregunta sobre esta Política de Privacidad, no dudes en ponerte en contacto con nosotros.</p>
+                    <a href="mailto:avivarfa@gmail.com?subject=Consulta sobre Política de Privacidad&body=Hola,%0A%0ATengo una consulta sobre la Política de Privacidad de VIVARFA VIP MUSIC.%0A%0AMi consulta es:%0A%0A[Escribe tu consulta aquí]%0A%0AGracias." class="inline-block bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-bold py-3 px-8 rounded-full transition-transform transform hover:scale-105 shadow-lg">
+                        Contáctanos
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-gray-800 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <img src="../images/vivarfa.png" alt="Vivarfa VIP Music Logo" class="h-10 w-10 object-contain">
+                        <span class="text-xl font-bold gradient-text">VIVARFA VIP MUSIC</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">Tu fuente premium de audio y video para DJs y productores. Actualizaciones semanales con el mejor contenido.</p>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-white">Enlaces Rápidos</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/" class="hover:text-white transition-colors">Inicio</a></li>
+                        <li><a href="/membresias/" class="hover:text-white transition-colors">Membresías</a></li>
+                        <li><a href="/audio-packs/" class="hover:text-white transition-colors">Audio Packs</a></li>
+                        <li><a href="/video-packs/" class="hover:text-white transition-colors">Video Packs</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-white">Recursos</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/backups/" class="hover:text-white transition-colors">Backups</a></li>
+                        <li><a href="/free/" class="hover:text-white transition-colors">Contenido Gratuito</a></li>
+                        <li><a href="/faq/" class="hover:text-white transition-colors">Preguntas Frecuentes</a></li>
+                        <li><a href="/dj-resources/" class="hover:text-white transition-colors">Recursos DJ</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-white">Información</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/contact/" class="hover:text-white transition-colors">Contacto</a></li>
+                        <li><a href="/privacy/" class="hover:text-white transition-colors">Política de Privacidad</a></li>
+                        <li><a href="/about/" class="hover:text-white transition-colors">Nosotros</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 mt-8 text-center">
+                <p class="text-gray-500">© 2025 VIVARFA VIP MUSIC. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="../script.js"></script>
+    <script src="../effects.js"></script>
+</body>
+</html>

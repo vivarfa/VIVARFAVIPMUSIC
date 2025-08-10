@@ -648,21 +648,8 @@ function initPageParticles() {
 
 // Botones de llamada a la acción
 function initCTAButtons() {
-    const ctaButtons = document.querySelectorAll('.nav-link-button');
-    
-    ctaButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const targetSection = this.getAttribute('data-section');
-            const navLinks = document.querySelectorAll('.nav-link');
-            
-            // Encontrar el enlace de navegación correspondiente y simular un clic
-            navLinks.forEach(link => {
-                if (link.getAttribute('data-section') === targetSection) {
-                    link.click();
-                }
-            });
-        });
-    });
+    // Esta función ya no es necesaria con la nueva estructura de navegación directa
+    // Los botones CTA ahora usan enlaces directos en lugar de data-section
 }
 
 // Animaciones para el widget de WhatsApp

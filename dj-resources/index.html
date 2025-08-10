@@ -1,0 +1,1292 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursos para DJs | VIVARFA VIP MUSIC</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Recursos profesionales para DJs: consejos, tutoriales, herramientas y más para potenciar tu carrera como DJ y productor musical.">
+    <meta name="keywords" content="recursos DJ, tutoriales DJ, herramientas DJ, consejos para DJs, producción musical, mezcla, VIVARFA">
+    <meta name="theme-color" content="#9333ea">
+    <meta name="google-adsense-account" content="ca-pub-9975952999842017">
+    
+    <!-- Script de Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts y Font Awesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../animations.css">
+    
+    <link rel="icon" href="../logo.png" type="image/png">
+
+    <!-- Script de Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9975952999842017" crossorigin="anonymous"></script>
+    
+    <!-- Configuración adicional de Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'display': ['Montserrat', 'sans-serif'],
+                    },
+                    animation: {
+                        'bounce-slow': 'bounce 3s infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'slide-up': 'slideUp 0.8s ease-out forwards',
+                        'slide-in-left': 'slideInLeft 0.8s ease-out forwards',
+                        'slide-in-right': 'slideInRight 0.8s ease-out forwards',
+                        'scale-in': 'scaleIn 0.6s ease-out forwards',
+                        'glow': 'glow 2s ease-in-out infinite alternate'
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-20px)' }
+                        },
+                        slideUp: {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                        },
+                        slideInLeft: {
+                            '0%': { opacity: '0', transform: 'translateX(-50px)' },
+                            '100%': { opacity: '1', transform: 'translateX(0)' }
+                        },
+                        slideInRight: {
+                            '0%': { opacity: '0', transform: 'translateX(50px)' },
+                            '100%': { opacity: '1', transform: 'translateX(0)' }
+                        },
+                        scaleIn: {
+                            '0%': { opacity: '0', transform: 'scale(0.8)' },
+                            '100%': { opacity: '1', transform: 'scale(1)' }
+                        },
+                        glow: {
+                            '0%': { boxShadow: '0 0 20px rgba(147, 51, 234, 0.3)' },
+                            '100%': { boxShadow: '0 0 40px rgba(147, 51, 234, 0.6)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Estilos adicionales para animaciones mejoradas -->
+    <style>
+        .resource-card {
+            background: linear-gradient(135deg, rgba(31, 41, 55, 0.8) 0%, rgba(17, 24, 39, 0.9) 100%);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(55, 65, 81, 0.3);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .resource-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            border-color: rgba(147, 51, 234, 0.5);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 30px rgba(147, 51, 234, 0.2);
+        }
+        
+        .youtube-embed {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .youtube-embed iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 12px;
+        }
+        
+        .timeline-item {
+            opacity: 0;
+            animation: slideUp 0.8s ease-out forwards;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            animation: slideInLeft 0.8s ease-out forwards;
+        }
+        
+        .timeline-item:nth-child(even) {
+            animation: slideInRight 0.8s ease-out forwards;
+        }
+        
+        .section-divider {
+            background: linear-gradient(90deg, transparent, rgba(147, 51, 234, 0.5), transparent);
+            height: 1px;
+            margin: 4rem 0;
+        }
+        
+        .floating-icon {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .floating-icon:nth-child(2) {
+            animation-delay: 2s;
+        }
+        
+        .floating-icon:nth-child(3) {
+            animation-delay: 4s;
+        }
+        
+        .nav-link {
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            color: #a855f7;
+            transform: translateY(-2px);
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #9333ea, #ec4899);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .hero-bg {
+            background: linear-gradient(135deg, #1f2937 0%, #111827 50%, #0f172a 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 20%, rgba(147, 51, 234, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 80%, rgba(236, 72, 153, 0.1) 0%, transparent 50%);
+        }
+        
+        .stagger-animation {
+            animation-fill-mode: both;
+        }
+        
+        .stagger-animation:nth-child(1) { animation-delay: 0.1s; }
+        .stagger-animation:nth-child(2) { animation-delay: 0.2s; }
+        .stagger-animation:nth-child(3) { animation-delay: 0.3s; }
+        .stagger-animation:nth-child(4) { animation-delay: 0.4s; }
+        .stagger-animation:nth-child(5) { animation-delay: 0.5s; }
+        .stagger-animation:nth-child(6) { animation-delay: 0.6s; }
+        
+        /* Clases de animación específicas */
+        .animate-slide-up {
+            animation: slideUp 0.8s ease-out forwards;
+        }
+        
+        .animate-scale-in {
+            animation: scaleIn 0.6s ease-out forwards;
+        }
+        
+        .animate-glow {
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        /* Mejoras para la timeline */
+        .timeline-item {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .timeline-item .resource-card {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Asegurar que todos los elementos sean visibles */
+        .timeline-item, .resource-card, .animate-slide-up, .animate-scale-in {
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
+        
+        @media (max-width: 768px) {
+            .timeline-item {
+                animation: slideUp 0.6s ease-out forwards;
+                opacity: 1;
+            }
+            
+            .resource-card:hover {
+                transform: translateY(-4px) scale(1.01);
+            }
+            
+            .timeline-item {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .timeline-item .w-5\/12 {
+                width: 100%;
+                padding: 0;
+                margin-bottom: 1rem;
+            }
+            
+            .timeline-item .w-12 {
+                margin: 1rem 0;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white font-sans antialiased overflow-x-hidden">
+    <!-- Fondo de partículas para efecto dinámico -->
+    <div id="particles-background" class="fixed inset-0 z-0 pointer-events-none"></div>
+    
+    <!-- Partículas adicionales para dar vida al fondo -->
+    <div id="page-particles" class="fixed inset-0 z-0 pointer-events-none"></div>
+
+    <!-- ===== Header ===== -->
+    <header class="bg-gray-900/80 backdrop-blur-lg sticky top-0 z-50 border-b border-gray-700 animate-slide-up">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-3">
+            <!-- BRANDING ACTUALIZADO -->
+            <a href="../index.html" class="flex items-center gap-3 cursor-pointer hover-scale animate-scale-in">
+                <img src="../images/vivarfa.png" alt="Vivarfa VIP Music Logo" class="h-10 w-10 object-contain floating-icon">
+                <span class="text-xl md:text-2xl font-bold gradient-text">VIVARFA VIP MUSIC</span>
+            </a>
+            <ul class="hidden md:flex items-center space-x-6">
+                <li><a href="index.html#home" class="nav-link hover:text-white transition-all duration-300 stagger-animation">INICIO</a></li>
+                <li><a href="index.html#memberships" class="nav-link hover:text-white transition-all duration-300 stagger-animation">MEMBRESÍAS</a></li>
+                <li><a href="index.html#audio-packs" class="nav-link hover:text-white transition-all duration-300 stagger-animation">AUDIO PACKS</a></li>
+                <li><a href="index.html#video-packs" class="nav-link hover:text-white transition-all duration-300 stagger-animation">VIDEO PACKS</a></li>
+                <li><a href="index.html#backups" class="nav-link hover:text-white transition-all duration-300 stagger-animation">BACKUPS</a></li>
+                <li><a href="index.html#free" class="nav-link hover:text-white transition-all duration-300 stagger-animation">GRATIS</a></li>
+            </ul>
+            <button id="mobile-menu-button" class="md:hidden text-white text-2xl hover-scale transition-all duration-300 hover:scale-110">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800/95 backdrop-blur-sm">
+            <ul class="flex flex-col items-center py-4 space-y-4">
+                <li><a href="index.html#home" class="nav-link hover:text-white transition-all duration-300 py-2 px-4 rounded-lg hover:bg-gray-700/50">INICIO</a></li>
+                <li><a href="index.html#memberships" class="nav-link hover:text-white transition-all duration-300 py-2 px-4 rounded-lg hover:bg-gray-700/50">MEMBRESÍAS</a></li>
+                <li><a href="index.html#audio-packs" class="nav-link hover:text-white transition-all duration-300 py-2 px-4 rounded-lg hover:bg-gray-700/50">AUDIO PACKS</a></li>
+                <li><a href="index.html#video-packs" class="nav-link hover:text-white transition-all duration-300 py-2 px-4 rounded-lg hover:bg-gray-700/50">VIDEO PACKS</a></li>
+                <li><a href="index.html#backups" class="nav-link hover:text-white transition-all duration-300 py-2 px-4 rounded-lg hover:bg-gray-700/50">BACKUPS</a></li>
+                <li><a href="index.html#free" class="nav-link hover:text-white transition-all duration-300 py-2 px-4 rounded-lg hover:bg-gray-700/50">GRATIS</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-bg relative min-h-screen flex items-center justify-center overflow-hidden">
+            <!-- Decorative Elements -->
+            <div class="absolute inset-0 opacity-30">
+                <div class="absolute top-20 left-10 w-32 h-32 bg-purple-500/40 rounded-full blur-3xl animate-pulse floating-icon"></div>
+                <div class="absolute bottom-20 right-10 w-40 h-40 bg-pink-500/40 rounded-full blur-3xl animate-pulse floating-icon"></div>
+                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-blue-500/30 rounded-full blur-3xl animate-pulse floating-icon"></div>
+                <div class="absolute top-32 right-1/4 w-24 h-24 bg-cyan-500/30 rounded-full blur-2xl animate-pulse-slow floating-icon"></div>
+                <div class="absolute bottom-32 left-1/4 w-36 h-36 bg-indigo-500/30 rounded-full blur-3xl animate-pulse-slow floating-icon"></div>
+            </div>
+
+            <!-- Animated Background Pattern -->
+            <div class="absolute inset-0 opacity-10">
+                <div class="absolute top-0 left-0 w-full h-full">
+                    <div class="grid grid-cols-12 gap-4 h-full">
+                        <div class="col-span-1 bg-gradient-to-b from-purple-500/20 to-transparent animate-pulse" style="animation-delay: 0.5s;"></div>
+                        <div class="col-span-1 bg-gradient-to-b from-pink-500/20 to-transparent animate-pulse" style="animation-delay: 1s;"></div>
+                        <div class="col-span-1 bg-gradient-to-b from-blue-500/20 to-transparent animate-pulse" style="animation-delay: 1.5s;"></div>
+                        <div class="col-span-1 bg-gradient-to-b from-purple-500/20 to-transparent animate-pulse" style="animation-delay: 2s;"></div>
+                        <div class="col-span-1 bg-gradient-to-b from-pink-500/20 to-transparent animate-pulse" style="animation-delay: 2.5s;"></div>
+                        <div class="col-span-1 bg-gradient-to-b from-blue-500/20 to-transparent animate-pulse" style="animation-delay: 3s;"></div>
+                        <div class="col-span-1 bg-gradient-to-b from-purple-500/20 to-transparent animate-pulse" style="animation-delay: 3.5s;"></div>
+                        <div class="col-span-1 bg-gradient-to-b from-pink-500/20 to-transparent animate-pulse" style="animation-delay: 4s;"></div>
+                        <div class="col-span-1 bg-gradient-to-b from-blue-500/20 to-transparent animate-pulse" style="animation-delay: 4.5s;"></div>
+                        <div class="col-span-1 bg-gradient-to-b from-purple-500/20 to-transparent animate-pulse" style="animation-delay: 5s;"></div>
+                        <div class="col-span-1 bg-gradient-to-b from-pink-500/20 to-transparent animate-pulse" style="animation-delay: 5.5s;"></div>
+                        <div class="col-span-1 bg-gradient-to-b from-blue-500/20 to-transparent animate-pulse" style="animation-delay: 6s;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container mx-auto px-4 text-center relative z-10">
+                <div class="max-w-5xl mx-auto">
+                    <!-- Icon -->
+                    <div class="mb-8 animate-scale-in">
+                        <div class="relative inline-block">
+                            <i class="fas fa-headphones text-6xl md:text-8xl lg:text-9xl bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent animate-float"></i>
+                            <div class="absolute inset-0 bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 opacity-20 blur-xl animate-glow"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Title -->
+                    <h1 class="text-4xl md:text-6xl lg:text-8xl font-black mb-6 leading-tight animate-slide-up stagger-animation">
+                        <span class="bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent block">
+                            Recursos para
+                        </span>
+                        <span class="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent block mt-2">
+                            DJs Profesionales
+                        </span>
+                    </h1>
+                    
+                    <!-- Subtitle -->
+                    <p class="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed animate-slide-up stagger-animation">
+                        Descubre herramientas, tutoriales y consejos profesionales para llevar tu carrera como DJ al siguiente nivel
+                    </p>
+                    
+                    <!-- Stats -->
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12 animate-slide-up stagger-animation">
+                        <div class="text-center">
+                            <div class="text-3xl md:text-4xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">30+</div>
+                            <div class="text-gray-400 text-sm md:text-base">Tutoriales</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl md:text-4xl font-bold bg-gradient-to-r from-pink-400 to-cyan-400 bg-clip-text text-transparent">1000+</div>
+                            <div class="text-gray-400 text-sm md:text-base">Extended</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl md:text-4xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">24/7</div>
+                            <div class="text-gray-400 text-sm md:text-base">Soporte</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl md:text-4xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">115+</div>
+                            <div class="text-gray-400 text-sm md:text-base">DJs Activos</div>
+                        </div>
+                    </div>
+                    
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-6 justify-center items-center animate-slide-up stagger-animation">
+                        <a href="https://www.youtube.com/channel/UC2pCF2rbkGK7wtkMSi8-E9A" class="group bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-bold py-4 px-10 rounded-full transition-all duration-500 transform hover:scale-110 hover:shadow-2xl hover:shadow-purple-500/25 relative overflow-hidden">
+                            <span class="relative z-10 flex items-center">
+                                <i class="fas fa-play mr-3 group-hover:animate-bounce"></i>
+                                Ver Tutoriales
+                            </span>
+                            <div class="absolute inset-0 bg-gradient-to-r from-pink-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        </a>
+                        <a href="/membresias/index.html" class="group border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-10 rounded-full transition-all duration-500 transform hover:scale-110 hover:shadow-2xl hover:shadow-purple-500/25 relative overflow-hidden">
+                            <span class="relative z-10 flex items-center">
+                                <i class="fas fa-tools mr-3 group-hover:animate-spin"></i>
+                                Explorar Membresias
+                            </span>
+                        </a>
+                    </div>
+            </section>
+        
+            <!-- Divisor de sección -->
+            <div class="section-divider"></div>
+            
+            <!-- Sección de Tutoriales en Video -->
+            <section class="py-20 px-4" id="tutorials">
+                <div class="max-w-7xl mx-auto">
+                    <div class="text-center mb-16">
+                        <div class="inline-block mb-4 animate-scale-in">
+                            <i class="fas fa-play-circle text-5xl bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"></i>
+                        </div>
+                        <h2 class="text-4xl md:text-6xl font-black bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent mb-6 animate-slide-up">Tutoriales en Video</h2>
+                        <p class="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto animate-slide-up leading-relaxed">Aprende de los mejores DJs profesionales con nuestros tutoriales exclusivos y lleva tus habilidades al siguiente nivel</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- Video 1 -->
+                        <div class="resource-card rounded-2xl overflow-hidden group animate-slide-up stagger-animation">
+                            <div class="youtube-embed">
+                                <iframe src="https://www.youtube.com/embed/Zm4cvtf69jA" 
+                                        title="FL Studio 12 - Masterclass Completa" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen
+                                        class="w-full h-full">
+                                </iframe>
+                            </div>
+                            <div class="p-6">
+                                <div class="flex items-center mb-3">
+                                    <div class="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></div>
+                                    <span class="text-green-400 text-sm font-semibold">GRATIS</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors duration-300">FL Studio 12 - Masterclass Completa</h3>
+                                <p class="text-gray-400 text-sm mb-4 leading-relaxed">Aprende a dominar FL Studio desde cero con esta masterclass completa y profesional</p>
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center text-purple-400 text-sm font-semibold">
+                                        <i class="fas fa-clock mr-2"></i>
+                                        +1 hora
+                                    </div>
+                                    <div class="flex items-center text-yellow-400 text-sm">
+                                        <i class="fas fa-star mr-1"></i>
+                                        4.9
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Video 2 -->
+                        <div class="resource-card rounded-2xl overflow-hidden group animate-slide-up stagger-animation">
+                            <div class="youtube-embed">
+                                <iframe src="https://www.youtube.com/embed/YQgw6GpJhfs" 
+                                        title="Cómo Hacer un Mix Básico en FL Studio" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen
+                                        class="w-full h-full">
+                                </iframe>
+                            </div>
+                            <div class="p-6">
+                                <div class="flex items-center mb-3">
+                                    <div class="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></div>
+                                    <span class="text-green-400 text-sm font-semibold">GRATIS</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors duration-300">Cómo Hacer un Mix Básico en FL Studio</h3>
+                                <p class="text-gray-400 text-sm mb-4 leading-relaxed">Tutorial paso a paso para crear tu primer mix profesional en FL Studio</p>
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center text-purple-400 text-sm font-semibold">
+                                        <i class="fas fa-clock mr-2"></i>
+                                        16 min
+                                    </div>
+                                    <div class="flex items-center text-yellow-400 text-sm">
+                                        <i class="fas fa-star mr-1"></i>
+                                        4.8
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Video 3 -->
+                        <div class="resource-card rounded-2xl overflow-hidden group animate-slide-up stagger-animation">
+                            <div class="youtube-embed">
+                                <iframe src="https://www.youtube.com/embed/65NUmZw4kKs" 
+                                        title="Crea un Edit de Reggaeton en FL Studio" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen
+                                        class="w-full h-full">
+                                </iframe>
+                            </div>
+                            <div class="p-6">
+                                <div class="flex items-center mb-3">
+                                    <div class="w-2 h-2 bg-yellow-400 rounded-full mr-2 animate-pulse"></div>
+                                    <span class="text-yellow-400 text-sm font-semibold">PREMIUM</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors duration-300">Crea un Edit de Reggaeton en FL Studio</h3>
+                                <p class="text-gray-400 text-sm mb-4 leading-relaxed">Aprende a crear edits únicos de reggaeton que destaquen en tus sets</p>
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center text-purple-400 text-sm font-semibold">
+                                        <i class="fas fa-clock mr-2"></i>
+                                        15 min
+                                    </div>
+                                    <div class="flex items-center text-yellow-400 text-sm">
+                                        <i class="fas fa-star mr-1"></i>
+                                        5.0
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Video 4 -->
+                        <div class="resource-card rounded-2xl overflow-hidden group animate-slide-up stagger-animation">
+                            <div class="youtube-embed">
+                                <iframe src="https://www.youtube.com/embed/vev-XG3srqU" 
+                                        title="Cómo Crear Dembows de Reggaeton" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen
+                                        class="w-full h-full">
+                                </iframe>
+                            </div>
+                            <div class="p-6">
+                                <div class="flex items-center mb-3">
+                                    <div class="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></div>
+                                    <span class="text-green-400 text-sm font-semibold">GRATIS</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors duration-300">Cómo Crear Dembows de Reggaeton</h3>
+                                <p class="text-gray-400 text-sm mb-4 leading-relaxed">Domina la creación de dembows pegajosos para tus producciones de reggaeton</p>
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center text-purple-400 text-sm font-semibold">
+                                        <i class="fas fa-clock mr-2"></i>
+                                        19 min
+                                    </div>
+                                    <div class="flex items-center text-yellow-400 text-sm">
+                                        <i class="fas fa-star mr-1"></i>
+                                        4.7
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Video 5 -->
+                        <div class="resource-card rounded-2xl overflow-hidden group animate-slide-up stagger-animation">
+                            <div class="youtube-embed">
+                                <iframe src="https://www.youtube.com/embed/T6BUrdOj0KM" 
+                                        title="Remix de Reggaeton en Virtual DJ + Visuales" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen
+                                        class="w-full h-full">
+                                </iframe>
+                            </div>
+                            <div class="p-6">
+                                <div class="flex items-center mb-3">
+                                    <div class="w-2 h-2 bg-yellow-400 rounded-full mr-2 animate-pulse"></div>
+                                    <span class="text-yellow-400 text-sm font-semibold">PREMIUM</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors duration-300">Remix de Reggaeton en Virtual DJ + Visuales</h3>
+                                <p class="text-gray-400 text-sm mb-4 leading-relaxed">Crea remixes espectaculares con efectos visuales en Virtual DJ</p>
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center text-purple-400 text-sm font-semibold">
+                                        <i class="fas fa-clock mr-2"></i>
+                                        12 min
+                                    </div>
+                                    <div class="flex items-center text-yellow-400 text-sm">
+                                        <i class="fas fa-star mr-1"></i>
+                                        4.9
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Video 6 -->
+                        <div class="resource-card rounded-2xl overflow-hidden group animate-slide-up stagger-animation">
+                            <div class="youtube-embed">
+                                <iframe src="https://www.youtube.com/embed/gmP7UQB3UI4" 
+                                        title="Configura Virtual DJ con Mapeo de Teclado" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen
+                                        class="w-full h-full">
+                                </iframe>
+                            </div>
+                            <div class="p-6">
+                                <div class="flex items-center mb-3">
+                                    <div class="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></div>
+                                    <span class="text-green-400 text-sm font-semibold">GRATIS</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors duration-300">Configura Virtual DJ con Mapeo de Teclado</h3>
+                                <p class="text-gray-400 text-sm mb-4 leading-relaxed">Optimiza tu flujo de trabajo con configuraciones personalizadas de teclado</p>
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center text-purple-400 text-sm font-semibold">
+                                        <i class="fas fa-clock mr-2"></i>
+                                        10 min
+                                    </div>
+                                    <div class="flex items-center text-yellow-400 text-sm">
+                                        <i class="fas fa-star mr-1"></i>
+                                        4.6
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Botón Ver Más -->
+                    <div class="text-center mt-12 animate-slide-up">
+                        <a href="https://www.youtube.com/channel/UC2pCF2rbkGK7wtkMSi8-E9A" class="group inline-flex items-center bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-full transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25">
+                            <i class="fas fa-play-circle mr-3 group-hover:animate-spin"></i>
+                            Ver Todos los Tutoriales
+                            <i class="fas fa-arrow-right ml-3 group-hover:translate-x-1 transition-transform duration-300"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Divisor de sección -->
+            <div class="section-divider"></div>
+            
+            <!-- Historia del DJ -->
+            <section class="py-20 px-4" id="history">
+                <div class="max-w-7xl mx-auto">
+                    <div class="text-center mb-16">
+                        <div class="inline-block mb-4 animate-scale-in">
+                            <i class="fas fa-history text-5xl bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"></i>
+                        </div>
+                        <h2 class="text-4xl md:text-6xl font-black bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent mb-6 animate-slide-up">Historia del DJ</h2>
+                        <p class="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto animate-slide-up leading-relaxed">Un viaje fascinante a través de la evolución de la cultura DJ y su impacto en la música mundial</p>
+                    </div>
+
+                    <div class="relative">
+                        <!-- Timeline Line -->
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-purple-500 via-pink-500 to-cyan-500 rounded-full animate-glow"></div>
+
+                        <!-- Timeline Items -->
+                        <div class="space-y-20">
+                            <!-- 1940s -->
+                            <div class="timeline-item flex items-center justify-between relative">
+                                <div class="w-5/12 text-right pr-8">
+                                    <div class="resource-card rounded-2xl p-8 group">
+                                        <div class="flex items-center justify-end mb-4">
+                                            <div class="text-right mr-4">
+                                                <h3 class="text-3xl font-black text-purple-400 mb-1">1940s</h3>
+                                                <div class="w-16 h-1 bg-gradient-to-r from-purple-500 to-pink-500 ml-auto rounded-full"></div>
+                                            </div>
+                                            <i class="fas fa-broadcast-tower text-3xl text-purple-400 group-hover:animate-pulse"></i>
+                                        </div>
+                                        <h4 class="text-2xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors duration-300">Los Inicios en la Radio</h4>
+                                        <p class="text-gray-300 leading-relaxed mb-4">El término "Disc Jockey" nace con locutores que seleccionaban discos de vinilo. Se convierten en los primeros curadores musicales, influyendo en los gustos del público.</p>
+                                        <div class="flex items-center justify-end text-sm text-purple-400">
+                                            <i class="fas fa-radio mr-2"></i>
+                                            Era de la Radio
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full border-4 border-gray-900 z-10 relative flex items-center justify-center animate-pulse">
+                                    <i class="fas fa-music text-white text-sm"></i>
+                                </div>
+                                <div class="w-5/12"></div>
+                            </div>
+
+                            <!-- 1950s -->
+                            <div class="timeline-item flex items-center justify-between relative">
+                                <div class="w-5/12"></div>
+                                <div class="w-12 h-12 bg-gradient-to-r from-pink-500 to-cyan-500 rounded-full border-4 border-gray-900 z-10 relative flex items-center justify-center animate-pulse">
+                                    <i class="fas fa-volume-up text-white text-sm"></i>
+                                </div>
+                                <div class="w-5/12 pl-8">
+                                    <div class="resource-card rounded-2xl p-8 group">
+                                        <div class="flex items-center mb-4">
+                                            <i class="fas fa-volume-up text-3xl text-pink-400 group-hover:animate-bounce mr-4"></i>
+                                            <div>
+                                                <h3 class="text-3xl font-black text-pink-400 mb-1">1950s</h3>
+                                                <div class="w-16 h-1 bg-gradient-to-r from-pink-500 to-cyan-500 rounded-full"></div>
+                                            </div>
+                                        </div>
+                                        <h4 class="text-2xl font-bold text-white mb-4 group-hover:text-pink-400 transition-colors duration-300">Sound Systems en Jamaica</h4>
+                                        <p class="text-gray-300 leading-relaxed mb-4">Sistemas de sonido móviles llevan la música a las calles, dando origen al "toasting" (precursor del rap) y sentando las bases de la cultura de club moderna.</p>
+                                        <div class="flex items-center text-sm text-pink-400">
+                                            <i class="fas fa-map-marker-alt mr-2"></i>
+                                            Jamaica
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 1969 -->
+                            <div class="timeline-item flex items-center justify-between relative">
+                                <div class="w-5/12 text-right pr-8">
+                                    <div class="resource-card rounded-2xl p-8 group">
+                                        <div class="flex items-center justify-end mb-4">
+                                            <div class="text-right mr-4">
+                                                <h3 class="text-3xl font-black text-blue-400 mb-1">1969</h3>
+                                                <div class="w-16 h-1 bg-gradient-to-r from-blue-500 to-purple-500 ml-auto rounded-full"></div>
+                                            </div>
+                                            <i class="fas fa-sync-alt text-3xl text-blue-400 group-hover:animate-spin"></i>
+                                        </div>
+                                        <h4 class="text-2xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors duration-300">El Nacimiento del Beatmatching</h4>
+                                        <p class="text-gray-300 leading-relaxed mb-4">En Nueva York, Francis Grasso es pionero en la técnica de sincronizar los beats de dos canciones, creando una mezcla continua y revolucionando la experiencia en la pista de baile.</p>
+                                        <div class="flex items-center justify-end text-sm text-blue-400">
+                                            <i class="fas fa-user mr-2"></i>
+                                            Francis Grasso
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full border-4 border-gray-900 z-10 relative flex items-center justify-center animate-pulse">
+                                    <i class="fas fa-cog text-white text-sm"></i>
+                                </div>
+                                <div class="w-5/12"></div>
+                            </div>
+
+                            <!-- 1970s -->
+                            <div class="timeline-item flex items-center justify-between relative">
+                                <div class="w-5/12"></div>
+                                <div class="w-12 h-12 bg-gradient-to-r from-cyan-500 to-green-500 rounded-full border-4 border-gray-900 z-10 relative flex items-center justify-center animate-pulse">
+                                    <i class="fas fa-record-vinyl text-white text-sm"></i>
+                                </div>
+                                <div class="w-5/12 pl-8">
+                                    <div class="resource-card rounded-2xl p-8 group">
+                                        <div class="flex items-center mb-4">
+                                            <i class="fas fa-record-vinyl text-3xl text-cyan-400 group-hover:animate-spin mr-4"></i>
+                                            <div>
+                                                <h3 class="text-3xl font-black text-cyan-400 mb-1">1970s</h3>
+                                                <div class="w-16 h-1 bg-gradient-to-r from-cyan-500 to-green-500 rounded-full"></div>
+                                            </div>
+                                        </div>
+                                        <h4 class="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">Era del Disco y Hip Hop</h4>
+                                        <p class="text-gray-300 leading-relaxed mb-4">La cultura Disco eleva al DJ a figura central. Mientras, DJ Kool Herc en el Bronx usa dos tornamesas Technics SL-1200 para crear "breaks", dando origen al Hip Hop.</p>
+                                        <div class="flex items-center text-sm text-cyan-400">
+                                            <i class="fas fa-map-marker-alt mr-2"></i>
+                                            Bronx, Nueva York
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 1980s -->
+                            <div class="timeline-item flex items-center justify-between relative">
+                                <div class="w-5/12 text-right pr-8">
+                                    <div class="resource-card rounded-2xl p-8 group">
+                                        <div class="flex items-center justify-end mb-4">
+                                            <div class="text-right mr-4">
+                                                <h3 class="text-3xl font-black text-green-400 mb-1">1980s</h3>
+                                                <div class="w-16 h-1 bg-gradient-to-r from-green-500 to-purple-500 ml-auto rounded-full"></div>
+                                            </div>
+                                            <i class="fas fa-city text-3xl text-green-400 group-hover:animate-bounce"></i>
+                                        </div>
+                                        <h4 class="text-2xl font-bold text-white mb-4 group-hover:text-green-400 transition-colors duration-300">House en Chicago, Techno en Detroit</h4>
+                                        <p class="text-gray-300 leading-relaxed mb-4">Nuevos géneros electrónicos emergen, definidos por DJs y productores que usan cajas de ritmos como la Roland TR-808, creando la banda sonora del futuro.</p>
+                                        <div class="flex items-center justify-end text-sm text-green-400">
+                                            <i class="fas fa-microchip mr-2"></i>
+                                            Era Electrónica
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-purple-500 rounded-full border-4 border-gray-900 z-10 relative flex items-center justify-center animate-pulse">
+                                    <i class="fas fa-home text-white text-sm"></i>
+                                </div>
+                                <div class="w-5/12"></div>
+                            </div>
+
+                            <!-- 1990s -->
+                            <div class="timeline-item flex items-center justify-between relative">
+                                <div class="w-5/12"></div>
+                                <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full border-4 border-gray-900 z-10 relative flex items-center justify-center animate-pulse">
+                                    <i class="fas fa-compact-disc text-white text-sm"></i>
+                                </div>
+                                <div class="w-5/12 pl-8">
+                                    <div class="resource-card rounded-2xl p-8 group">
+                                        <div class="flex items-center mb-4">
+                                            <i class="fas fa-compact-disc text-3xl text-purple-400 group-hover:animate-spin mr-4"></i>
+                                            <div>
+                                                <h3 class="text-3xl font-black text-purple-400 mb-1">1990s</h3>
+                                                <div class="w-16 h-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full"></div>
+                                            </div>
+                                        </div>
+                                        <h4 class="text-2xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors duration-300">El Auge del CDJ y la Cultura Rave</h4>
+                                        <p class="text-gray-300 leading-relaxed mb-4">Pioneer lanza el CDJ-500, marcando el inicio de la era digital. La cultura rave explota a nivel mundial, convirtiendo a los DJs en superestrellas globales.</p>
+                                        <div class="flex items-center text-sm text-purple-400">
+                                            <i class="fas fa-globe mr-2"></i>
+                                            Revolución Global
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 2000s-Hoy -->
+                            <div class="timeline-item flex items-center justify-between relative">
+                                <div class="w-5/12 text-right pr-8">
+                                    <div class="resource-card rounded-2xl p-8 group">
+                                        <div class="flex items-center justify-end mb-4">
+                                            <div class="text-right mr-4">
+                                                <h3 class="text-3xl font-black text-pink-400 mb-1">2000s+</h3>
+                                                <div class="w-16 h-1 bg-gradient-to-r from-pink-500 to-cyan-500 ml-auto rounded-full"></div>
+                                            </div>
+                                            <i class="fas fa-laptop text-3xl text-pink-400 group-hover:animate-pulse"></i>
+                                        </div>
+                                        <h4 class="text-2xl font-bold text-white mb-4 group-hover:text-pink-400 transition-colors duration-300">La Revolución Digital</h4>
+                                        <p class="text-gray-300 leading-relaxed mb-4">El software como Serato, junto con los controladores MIDI, democratizan el arte. La tecnología permite una creatividad sin límites, desde la mezcla de video hasta el streaming.</p>
+                                        <div class="flex items-center justify-end text-sm text-pink-400">
+                                            <i class="fas fa-rocket mr-2"></i>
+                                            Era Digital
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w-12 h-12 bg-gradient-to-r from-pink-500 to-cyan-500 rounded-full border-4 border-gray-900 z-10 relative flex items-center justify-center animate-glow">
+                                    <i class="fas fa-laptop text-white text-sm"></i>
+                                </div>
+                                <div class="w-5/12"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Estadísticas de la evolución -->
+                    <div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 animate-slide-up">
+                        <div class="text-center resource-card rounded-xl p-6">
+                            <div class="text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">80+</div>
+                            <div class="text-gray-400 text-sm">Años de Historia</div>
+                        </div>
+                        <div class="text-center resource-card rounded-xl p-6">
+                            <div class="text-3xl font-bold bg-gradient-to-r from-pink-400 to-cyan-400 bg-clip-text text-transparent mb-2">1000+</div>
+                            <div class="text-gray-400 text-sm">Géneros Creados</div>
+                        </div>
+                        <div class="text-center resource-card rounded-xl p-6">
+                            <div class="text-3xl font-bold bg-gradient-to-r from-cyan-400 to-green-400 bg-clip-text text-transparent mb-2">∞</div>
+                            <div class="text-gray-400 text-sm">Posibilidades</div>
+                        </div>
+                        <div class="text-center resource-card rounded-xl p-6">
+                            <div class="text-3xl font-bold bg-gradient-to-r from-green-400 to-purple-400 bg-clip-text text-transparent mb-2">Global</div>
+                            <div class="text-gray-400 text-sm">Impacto Cultural</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        
+        <!-- Sección de Software y Herramientas -->
+        <section class="py-20 bg-gradient-to-br from-gray-900 via-gray-800 to-slate-900 relative overflow-hidden">
+            <!-- Decorative Elements -->
+            <div class="absolute inset-0 opacity-10">
+                <div class="absolute top-20 left-10 w-32 h-32 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full blur-3xl animate-float"></div>
+                <div class="absolute bottom-20 right-10 w-40 h-40 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full blur-3xl animate-float" style="animation-delay: 2s;"></div>
+                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-gradient-to-r from-green-500 to-purple-500 rounded-full blur-3xl animate-float" style="animation-delay: 4s;"></div>
+            </div>
+            
+            <!-- Section Divider -->
+            <div class="section-divider mb-16"></div>
+            
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <!-- Section Header -->
+                <div class="text-center mb-16 animate-slide-up">
+                    <div class="floating-icon mb-6">
+                        <i class="fas fa-laptop-code text-4xl text-purple-400 animate-glow"></i>
+                    </div>
+                    <h2 class="text-4xl md:text-6xl font-black mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
+                        Software y Herramientas
+                    </h2>
+                    <div class="w-32 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto mb-6 rounded-full"></div>
+                    <p class="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                        Descubre las mejores herramientas profesionales para llevar tu arte al siguiente nivel
+                    </p>
+                </div>
+                
+                <!-- Software Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 stagger-animation">
+                    <!-- Software 1 - Serato DJ Pro -->
+                    <div class="resource-card rounded-2xl p-8 group animate-scale-in">
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mr-4 group-hover:animate-pulse">
+                                    <i class="fas fa-music text-white text-lg"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-2xl font-bold text-white group-hover:text-purple-400 transition-colors duration-300">Serato DJ Pro</h3>
+                                    <div class="w-16 h-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mt-1"></div>
+                                </div>
+                            </div>
+                            <span class="bg-purple-600/20 text-purple-400 text-xs font-bold px-3 py-2 rounded-full border border-purple-500/30">PRO DJ</span>
+                        </div>
+                        <p class="text-gray-300 mb-6 leading-relaxed">Software profesional para DJs con soporte para controladores, vinilos de control y CDJs. Ideal para scratch, mezclas creativas y performances en vivo.</p>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center text-sm text-gray-400">
+                                <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                <span>4.8/5</span>
+                                <span class="mx-2">•</span>
+                                <span>Profesional</span>
+                            </div>
+                            <div class="text-sm font-bold text-purple-400">$249/año</div>
+                        </div>
+                        <a href="https://serato.com" target="_blank" class="inline-flex items-center justify-center w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25">
+                            <span>Visitar Sitio Oficial</span>
+                            <i class="fas fa-external-link-alt ml-2"></i>
+                        </a>
+                    </div>
+                    
+                    <!-- Software 2 - Rekordbox -->
+                    <div class="resource-card rounded-2xl p-8 group animate-scale-in" style="animation-delay: 0.1s;">
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mr-4 group-hover:animate-pulse">
+                                    <i class="fas fa-compact-disc text-white text-lg"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-2xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300">Rekordbox</h3>
+                                    <div class="w-16 h-1 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full mt-1"></div>
+                                </div>
+                            </div>
+                            <span class="bg-cyan-600/20 text-cyan-400 text-xs font-bold px-3 py-2 rounded-full border border-cyan-500/30">PIONEER</span>
+                        </div>
+                        <p class="text-gray-300 mb-6 leading-relaxed">La solución completa de Pioneer DJ para preparar, gestionar y reproducir tu música. Perfecto para usuarios de equipos Pioneer y para preparar USBs para clubes.</p>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center text-sm text-gray-400">
+                                <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                <span>4.7/5</span>
+                                <span class="mx-2">•</span>
+                                <span>Club Standard</span>
+                            </div>
+                            <div class="text-sm font-bold text-cyan-400">Gratis/Pro</div>
+                        </div>
+                        <a href="https://rekordbox.com" target="_blank" class="inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25">
+                            <span>Visitar Sitio Oficial</span>
+                            <i class="fas fa-external-link-alt ml-2"></i>
+                        </a>
+                    </div>
+                    
+                    <!-- Software 3 - Virtual DJ -->
+                    <div class="resource-card rounded-2xl p-8 group animate-scale-in" style="animation-delay: 0.2s;">
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mr-4 group-hover:animate-pulse">
+                                    <i class="fas fa-video text-white text-lg"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-2xl font-bold text-white group-hover:text-green-400 transition-colors duration-300">Virtual DJ</h3>
+                                    <div class="w-16 h-1 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full mt-1"></div>
+                                </div>
+                            </div>
+                            <span class="bg-green-600/20 text-green-400 text-xs font-bold px-3 py-2 rounded-full border border-green-500/30">VERSÁTIL</span>
+                        </div>
+                        <p class="text-gray-300 mb-6 leading-relaxed">Software versátil con funciones avanzadas como mezcla de video, karaoke y compatibilidad con una amplia gama de controladores. Ideal para DJs móviles y eventos.</p>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center text-sm text-gray-400">
+                                <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                <span>4.5/5</span>
+                                <span class="mx-2">•</span>
+                                <span>Móvil/Eventos</span>
+                            </div>
+                            <div class="text-sm font-bold text-green-400">$19/mes</div>
+                        </div>
+                        <a href="https://www.virtualdj.com" target="_blank" class="inline-flex items-center justify-center w-full bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-green-500/25">
+                            <span>Visitar Sitio Oficial</span>
+                            <i class="fas fa-external-link-alt ml-2"></i>
+                        </a>
+                    </div>
+                    
+                    <!-- Software 4 - Ableton Live -->
+                    <div class="resource-card rounded-2xl p-8 group animate-scale-in" style="animation-delay: 0.3s;">
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-xl flex items-center justify-center mr-4 group-hover:animate-pulse">
+                                    <i class="fas fa-play-circle text-white text-lg"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-2xl font-bold text-white group-hover:text-orange-400 transition-colors duration-300">Ableton Live</h3>
+                                    <div class="w-16 h-1 bg-gradient-to-r from-orange-500 to-red-500 rounded-full mt-1"></div>
+                                </div>
+                            </div>
+                            <span class="bg-orange-600/20 text-orange-400 text-xs font-bold px-3 py-2 rounded-full border border-orange-500/30">PRODUCCIÓN</span>
+                        </div>
+                        <p class="text-gray-300 mb-6 leading-relaxed">DAW potente para producción musical y performances en vivo. Perfecto para DJs que también producen música o quieren incorporar elementos de producción en sus sets.</p>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center text-sm text-gray-400">
+                                <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                <span>4.9/5</span>
+                                <span class="mx-2">•</span>
+                                <span>Producción</span>
+                            </div>
+                            <div class="text-sm font-bold text-orange-400">$449</div>
+                        </div>
+                        <a href="https://www.ableton.com" target="_blank" class="inline-flex items-center justify-center w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-orange-500/25">
+                            <span>Visitar Sitio Oficial</span>
+                            <i class="fas fa-external-link-alt ml-2"></i>
+                        </a>
+                    </div>
+                    
+                    <!-- Software 5 - Mixed In Key -->
+                    <div class="resource-card rounded-2xl p-8 group animate-scale-in" style="animation-delay: 0.4s;">
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-xl flex items-center justify-center mr-4 group-hover:animate-pulse">
+                                    <i class="fas fa-key text-white text-lg"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-2xl font-bold text-white group-hover:text-blue-400 transition-colors duration-300">Mixed In Key</h3>
+                                    <div class="w-16 h-1 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full mt-1"></div>
+                                </div>
+                            </div>
+                            <span class="bg-blue-600/20 text-blue-400 text-xs font-bold px-3 py-2 rounded-full border border-blue-500/30">ANÁLISIS</span>
+                        </div>
+                        <p class="text-gray-300 mb-6 leading-relaxed">Herramienta esencial para analizar la tonalidad de tus pistas y crear mezclas armónicas. Incluye detección de energía y compatibilidad con los principales softwares de DJ.</p>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center text-sm text-gray-400">
+                                <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                <span>4.6/5</span>
+                                <span class="mx-2">•</span>
+                                <span>Harmonic Mixing</span>
+                            </div>
+                            <div class="text-sm font-bold text-blue-400">$58</div>
+                        </div>
+                        <a href="https://mixedinkey.com" target="_blank" class="inline-flex items-center justify-center w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25">
+                            <span>Visitar Sitio Oficial</span>
+                            <i class="fas fa-external-link-alt ml-2"></i>
+                        </a>
+                    </div>
+                    
+                    <!-- Software 6 - DJ Conversion Utility -->
+                    <div class="resource-card rounded-2xl p-8 group animate-scale-in" style="animation-delay: 0.5s;">
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-gradient-to-r from-yellow-500 to-amber-500 rounded-xl flex items-center justify-center mr-4 group-hover:animate-pulse">
+                                    <i class="fas fa-exchange-alt text-white text-lg"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-2xl font-bold text-white group-hover:text-yellow-400 transition-colors duration-300">DJ Conversion Utility</h3>
+                                    <div class="w-16 h-1 bg-gradient-to-r from-yellow-500 to-amber-500 rounded-full mt-1"></div>
+                                </div>
+                            </div>
+                            <span class="bg-yellow-600/20 text-yellow-400 text-xs font-bold px-3 py-2 rounded-full border border-yellow-500/30">UTILIDAD</span>
+                        </div>
+                        <p class="text-gray-300 mb-6 leading-relaxed">Herramienta para convertir bibliotecas entre diferentes plataformas de DJ (Serato, Rekordbox, Traktor, etc.). Ideal para DJs que trabajan con múltiples softwares o cambian de plataforma.</p>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center text-sm text-gray-400">
+                                <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                <span>4.4/5</span>
+                                <span class="mx-2">•</span>
+                                <span>Conversión</span>
+                            </div>
+                            <div class="text-sm font-bold text-yellow-400">$29</div>
+                        </div>
+                        <a href="https://www.djconversionutility.com" target="_blank" class="inline-flex items-center justify-center w-full bg-gradient-to-r from-yellow-600 to-amber-600 hover:from-yellow-700 hover:to-amber-700 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-yellow-500/25">
+                            <span>Visitar Sitio Oficial</span>
+                            <i class="fas fa-external-link-alt ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Call to Action -->
+                <div class="text-center mt-16 animate-slide-up">
+                    <div class="bg-gradient-to-r from-purple-900/50 to-pink-900/50 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/30">
+                        <h3 class="text-2xl font-bold text-white mb-4">¿Necesitas ayuda para elegir?</h3>
+                        <p class="text-gray-300 mb-6">Nuestro equipo de expertos puede ayudarte a encontrar el software perfecto para tu estilo y necesidades.</p>
+                        <a href="https://wa.me/51917776934?text=Hola%2C%20necesito%20ayuda%20para%20elegir%20el%20software%20perfecto%20para%20mi%20estilo%20de%20DJ" target="_blank" class="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25 inline-block">
+                            <i class="fab fa-whatsapp mr-2"></i>
+                            Consultar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+                
+        <!-- Sección de Tendencias y Noticias -->
+        <section class="py-20 bg-gradient-to-br from-slate-900 via-gray-900 to-black relative overflow-hidden">
+            <!-- Decorative Background -->
+            <div class="absolute inset-0 opacity-10">
+                <div class="absolute top-0 left-0 w-full h-full bg-repeat" style="background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0iI2ZmZiIgZmlsbC1ydWxlPSJldmVub2RkIj48Y2lyY2xlIGN4PSIxIiBjeT0iMSIgcj0iMSIvPjwvZz48L3N2Zz4=')"></div>
+                <div class="absolute top-10 right-10 w-40 h-40 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full blur-3xl animate-float"></div>
+                <div class="absolute bottom-10 left-10 w-32 h-32 bg-gradient-to-r from-green-500 to-cyan-500 rounded-full blur-3xl animate-float" style="animation-delay: 3s;"></div>
+            </div>
+            
+            <!-- Section Divider -->
+            <div class="section-divider mb-16"></div>
+            
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <!-- Section Header -->
+                <div class="text-center mb-16 animate-slide-up">
+                    <div class="floating-icon mb-6">
+                        <i class="fas fa-chart-line text-4xl text-cyan-400 animate-glow"></i>
+                    </div>
+                    <h2 class="text-4xl md:text-6xl font-black mb-6 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
+                        Tendencias Actuales
+                    </h2>
+                    <div class="w-32 h-1 bg-gradient-to-r from-cyan-500 to-purple-500 mx-auto mb-6 rounded-full"></div>
+                    <p class="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                        Mantente al día con las últimas innovaciones y tendencias que están transformando la industria del DJ
+                    </p>
+                </div>
+                
+                <!-- Trends Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 stagger-animation">
+                    <!-- Tendencia 1 - Streaming -->
+                    <div class="resource-card rounded-2xl p-8 group animate-scale-in">
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-16 bg-gradient-to-r from-red-500 to-pink-500 rounded-2xl flex items-center justify-center mr-6 group-hover:animate-pulse">
+                                <i class="fas fa-broadcast-tower text-white text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-white group-hover:text-red-400 transition-colors duration-300">Streaming para DJs</h3>
+                                <div class="w-20 h-1 bg-gradient-to-r from-red-500 to-pink-500 rounded-full mt-2"></div>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 mb-6 leading-relaxed">El streaming en plataformas como Twitch, YouTube y Facebook se ha convertido en una forma popular para que los DJs lleguen a audiencias globales. Aprende cómo configurar tu equipo para transmisiones de alta calidad y monetizar tus sesiones en línea.</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center text-sm text-gray-400">
+                                <i class="fas fa-calendar-alt mr-2"></i>
+                                <span>Actualizado: Mayo 2025</span>
+                            </div>
+                            <div class="flex items-center text-sm text-red-400">
+                                <i class="fas fa-fire mr-1"></i>
+                                <span>Trending</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Tendencia 2 - IA -->
+                    <div class="resource-card rounded-2xl p-8 group animate-scale-in" style="animation-delay: 0.1s;">
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-2xl flex items-center justify-center mr-6 group-hover:animate-pulse">
+                                <i class="fas fa-robot text-white text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-white group-hover:text-purple-400 transition-colors duration-300">Inteligencia Artificial</h3>
+                                <div class="w-20 h-1 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full mt-2"></div>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 mb-6 leading-relaxed">Las herramientas de IA están revolucionando la forma en que los DJs y productores crean y editan música. Desde la masterización automatizada hasta la generación de stems y remixes asistidos por IA, estas tecnologías están cambiando el panorama musical.</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center text-sm text-gray-400">
+                                <i class="fas fa-calendar-alt mr-2"></i>
+                                <span>Actualizado: Junio 2025</span>
+                            </div>
+                            <div class="flex items-center text-sm text-purple-400">
+                                <i class="fas fa-star mr-1"></i>
+                                <span>Innovación</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Tendencia 3 - Standalone -->
+                    <div class="resource-card rounded-2xl p-8 group animate-scale-in" style="animation-delay: 0.2s;">
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-500 rounded-2xl flex items-center justify-center mr-6 group-hover:animate-pulse">
+                                <i class="fas fa-microchip text-white text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-white group-hover:text-green-400 transition-colors duration-300">Controladores Standalone</h3>
+                                <div class="w-20 h-1 bg-gradient-to-r from-green-500 to-teal-500 rounded-full mt-2"></div>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 mb-6 leading-relaxed">Los controladores todo-en-uno que no requieren ordenador están ganando popularidad. Estos equipos combinan la portabilidad con funcionalidades avanzadas, permitiendo a los DJs actuar sin depender de un laptop.</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center text-sm text-gray-400">
+                                <i class="fas fa-calendar-alt mr-2"></i>
+                                <span>Actualizado: Abril 2025</span>
+                            </div>
+                            <div class="flex items-center text-sm text-green-400">
+                                <i class="fas fa-arrow-up mr-1"></i>
+                                <span>En Alza</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Tendencia 4 - Video/Visuales -->
+                    <div class="resource-card rounded-2xl p-8 group animate-scale-in" style="animation-delay: 0.3s;">
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mr-6 group-hover:animate-pulse">
+                                <i class="fas fa-video text-white text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300">Video y Visuales</h3>
+                                <div class="w-20 h-1 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full mt-2"></div>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 mb-6 leading-relaxed">La incorporación de elementos visuales en las actuaciones de DJ está en auge. Desde VJing hasta mapping y realidad aumentada, los DJs están ofreciendo experiencias audiovisuales completas que van más allá de la música.</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center text-sm text-gray-400">
+                                <i class="fas fa-calendar-alt mr-2"></i>
+                                <span>Actualizado: Marzo 2025</span>
+                            </div>
+                            <div class="flex items-center text-sm text-cyan-400">
+                                <i class="fas fa-eye mr-1"></i>
+                                <span>Visual</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Newsletter Subscription -->
+                <div class="text-center mt-16 animate-slide-up">
+                    <div class="bg-gradient-to-r from-cyan-900/50 to-blue-900/50 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30">
+                        <div class="floating-icon mb-4">
+                            <i class="fas fa-newspaper text-3xl text-cyan-400 animate-glow"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-4">Acceder a Membresías o Contenido Gratuito</h3>
+                        <p class="text-gray-300 mb-8 max-w-2xl mx-auto">Elige la opción que mejor se adapte a tus necesidades: accede a nuestras membresías premium o explora nuestro contenido gratuito exclusivo para DJs.</p>
+                        <div class="flex flex-col sm:flex-row gap-6 max-w-lg mx-auto">
+                            <a href="/membresias/" class="flex-1 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25 text-center">
+                                <i class="fas fa-crown mr-2"></i>
+                                Ver Membresías
+                            </a>
+                            <a href="/free/" class="flex-1 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-green-500/25 text-center">
+                                <i class="fas fa-gift mr-2"></i>
+                                Contenido Gratuito
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-gray-800 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <img src="../images/vivarfa.png" alt="Vivarfa VIP Music Logo" class="h-10 w-10 object-contain">
+                        <span class="text-xl font-bold gradient-text">VIVARFA VIP MUSIC</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">Tu fuente premium de audio y video para DJs y productores. Actualizaciones semanales con el mejor contenido.</p>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-white">Enlaces Rápidos</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/" class="hover:text-white transition-colors">Inicio</a></li>
+                        <li><a href="/membresias/" class="hover:text-white transition-colors">Membresías</a></li>
+                        <li><a href="/audio-packs/" class="hover:text-white transition-colors">Audio Packs</a></li>
+                        <li><a href="/video-packs/" class="hover:text-white transition-colors">Video Packs</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-white">Recursos</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/backups/" class="hover:text-white transition-colors">Backups</a></li>
+                        <li><a href="/free/" class="hover:text-white transition-colors">Contenido Gratuito</a></li>
+                        <li><a href="/faq/" class="hover:text-white transition-colors">Preguntas Frecuentes</a></li>
+                        <li><a href="/dj-resources/" class="hover:text-white transition-colors">Recursos DJ</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-white">Información</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/contact/" class="hover:text-white transition-colors">Contacto</a></li>
+                        <li><a href="/privacy/" class="hover:text-white transition-colors">Política de Privacidad</a></li>
+                        <li><a href="/about/" class="hover:text-white transition-colors">Nosotros</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 mt-8 text-center">
+                <p class="text-gray-500">© 2025 VIVARFA VIP MUSIC. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== Widget de Mini-Chat de WhatsApp Mejorado ===== -->
+    <div id="whatsapp-chat-widget" class="animate-fadeInUp">
+        <div class="whatsapp-chat-window">
+            <div class="whatsapp-header">
+                <div class="flex items-center">
+                    <img src="../images/vivarfa.png" alt="Vivarfa VIP Music Logo" class="h-8 w-8 object-contain mr-2">
+                    <div>
+                        <div class="title">VIVARFA VIP MUSIC</div>
+                        <div class="subtitle">¿Cómo podemos ayudarte?</div>
+                    </div>
+                </div>
+            </div>
+            <div class="whatsapp-body">
+                <div class="whatsapp-message">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 mr-3">
+                            <img src="../images/vivarfa.png" alt="Vivarfa VIP Music Logo" class="h-8 w-8 object-contain rounded-full">
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-400 mb-1">Soporte VIVARFA</p>
+                            <div class="bg-gray-700 p-3 rounded-lg">
+                                Hola 👋<br>¡Bienvenido a VIVARFA VIP MUSIC!<br>¿En qué podemos ayudarte hoy?
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="whatsapp-footer">
+                <input id="whatsapp-message-input" type="text" placeholder="Escribe tu mensaje...">
+                <button id="whatsapp-send-btn" class="animate-pulse">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+        <button id="whatsapp-chat-toggle" class="whatsapp-chat-toggle">
+            <i class="fab fa-whatsapp"></i>
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+
+    <script src="../script.js"></script>
+    <script src="../effects.js"></script>
+</body>
+</html>

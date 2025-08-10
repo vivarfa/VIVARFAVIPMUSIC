@@ -8,22 +8,139 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let appData = null; // Almacenará los datos de los JSON
 
-    // --- MANEJADOR DEL MENÚ MÓVIL ---
+    // --- MANEJADOR DEL MENÚ MÓVIL MEJORADO ---
     if (mobileMenuButton && mobileMenu) {
-        mobileMenuButton.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+        // Toggle del menú móvil
+        mobileMenuButton.addEventListener('click', (e) => {
+            e.stopPropagation();
+            mobileMenu.classList.toggle('hidden');
+            
+            // Cambiar icono del botón
+            const icon = mobileMenuButton.querySelector('i');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.className = 'fas fa-bars';
+            } else {
+                icon.className = 'fas fa-times';
+            }
+        });
+        
+        // Cerrar menú al hacer click fuera
+        document.addEventListener('click', (e) => {
+            if (!mobileMenu.contains(e.target) && !mobileMenuButton.contains(e.target)) {
+                mobileMenu.classList.add('hidden');
+                const icon = mobileMenuButton.querySelector('i');
+                icon.className = 'fas fa-bars';
+            }
+        });
+        
+        // Cerrar menú al hacer click en un enlace
+        const mobileNavLinks = mobileMenu.querySelectorAll('.nav-link');
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                const icon = mobileMenuButton.querySelector('i');
+                icon.className = 'fas fa-bars';
+            });
+        });
+        
+        // Cerrar menú con tecla Escape
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.add('hidden');
+                const icon = mobileMenuButton.querySelector('i');
+                icon.className = 'fas fa-bars';
+            }
+        });
     }
+    
+    // --- FUNCIONALIDADES RESPONSIVAS ADICIONALES ---
+    
+    // Detectar cambios de tamaño de ventana
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+            // Cerrar menú móvil si se cambia a desktop
+            if (window.innerWidth >= 768 && mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.add('hidden');
+                const icon = mobileMenuButton.querySelector('i');
+                if (icon) icon.className = 'fas fa-bars';
+            }
+            
+            // Reajustar grids responsivos
+            adjustResponsiveGrids();
+        }, 250);
+    });
+    
+    // Función para ajustar grids responsivos
+    function adjustResponsiveGrids() {
+        const grids = document.querySelectorAll('.responsive-grid');
+        grids.forEach(grid => {
+            const items = grid.children.length;
+            const screenWidth = window.innerWidth;
+            
+            if (screenWidth < 640) {
+                grid.style.gridTemplateColumns = '1fr';
+            } else if (screenWidth < 1024) {
+                grid.style.gridTemplateColumns = 'repeat(2, 1fr)';
+            } else if (screenWidth < 1280) {
+                grid.style.gridTemplateColumns = 'repeat(3, 1fr)';
+            } else {
+                grid.style.gridTemplateColumns = 'repeat(4, 1fr)';
+            }
+        });
+    }
+    
+    // Smooth scroll para enlaces internos
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+    
+    // Lazy loading para imágenes
+    if ('IntersectionObserver' in window) {
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.src = img.dataset.src || img.src;
+                    img.classList.remove('lazy');
+                    observer.unobserve(img);
+                }
+            });
+        });
+        
+        document.querySelectorAll('img[data-src]').forEach(img => {
+            imageObserver.observe(img);
+        });
+    }
+    
+    // Inicializar grids responsivos al cargar
+    adjustResponsiveGrids();
 
     // --- FUNCIÓN PARA CARGAR TODOS LOS DATOS .JSON ---
     const fetchData = async () => {
         if (appData) return appData; // Evitar recargar si ya tenemos los datos
         try {
+            // Detectar si estamos en un subdirectorio
+            const isSubdirectory = window.location.pathname.includes('/') && window.location.pathname !== '/' && !window.location.pathname.endsWith('index.html');
+            const dataPath = isSubdirectory ? '../data/' : './data/';
+            
             const [memberships, audioPacks, videoPacks, backups, freeContent, contactInfo] = await Promise.all([
-                fetch('./data/memberships.json').then(res => res.json()),
-                fetch('./data/audio-packs.json').then(res => res.json()),
-                fetch('./data/video-packs.json').then(res => res.json()),
-                fetch('./data/backups.json').then(res => res.json()),
-                fetch('./data/free-content.json').then(res => res.json()),
-                fetch('./data/contact-info.json').then(res => res.json())
+                fetch(dataPath + 'memberships.json').then(res => res.json()),
+                fetch(dataPath + 'audio-packs.json').then(res => res.json()),
+                fetch(dataPath + 'video-packs.json').then(res => res.json()),
+                fetch(dataPath + 'backups.json').then(res => res.json()),
+                fetch(dataPath + 'free-content.json').then(res => res.json()),
+                fetch(dataPath + 'contact-info.json').then(res => res.json())
             ]);
             appData = { memberships, audioPacks, videoPacks, backups, freeContent, contactInfo };
             return appData;
@@ -63,19 +180,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="border-t border-gray-100 dark:border-gray-700 pt-6">
                     <div class="mb-6">
                         <label for="${planSelectorId}" class="block text-sm font-semibold text-gray-900 dark:text-white mb-3">Selecciona tu plan:</label>
-                        <select id="${planSelectorId}" class="w-full p-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-purple-500 focus:ring-2 focus:ring-purple-200 dark:focus:ring-purple-800 transition-all duration-300 bg-white dark:bg-gray-700 text-gray-900 dark:text-white font-medium" onchange="const selectedOption = this.options[this.selectedIndex]; const price = selectedOption.value; const link = selectedOption.getAttribute('data-link'); const button = document.getElementById('${paymentButtonId}'); button.href = link; button.innerHTML = '<i class=\\'fas fa-crown mr-2\\'></i>Suscribirse por <span class=\\'font-bold\\'>' + price + '</span>';">
+                        <select id="${planSelectorId}" class="w-full p-3 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-purple-500 focus:ring-2 focus:ring-purple-200 dark:focus:ring-purple-800 transition-all duration-300 bg-white dark:bg-gray-700 text-gray-900 dark:text-white font-medium" onchange="const selectedOption = this.options[this.selectedIndex]; const price = selectedOption.value; const link = selectedOption.getAttribute('data-link'); const button = document.getElementById('${paymentButtonId}'); button.href = link; button.innerHTML = '<i class=\'fas fa-crown mr-2\'></i>Suscribirse por <span class=\'button-price\'>' + price + '</span>';">
                             ${optionsHtml}
                         </select>
                     </div>
                     <a id="${paymentButtonId}" href="${product.prices[0]?.paymentLink || '#'}" target="_blank" rel="noopener noreferrer" class="block w-full text-center bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-4 rounded-xl font-bold text-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
-                        <i class="fas fa-crown mr-2"></i>Suscribirse por <span class="font-bold">${product.prices[0]?.price}</span>
+                        <i class="fas fa-crown mr-2"></i>Suscribirse por <span class="button-price">${product.prices[0]?.price}</span>
                     </a>
                 </div>
             </div>
         </div>`;
     };
     const createProductCard = (product, type) => {
-        const priceHtml = `<div class="text-center mb-4"><span class="text-3xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">${product.price}</span></div>`;
+        const priceHtml = `<div class="price-container">
+            <div class="professional-price">
+                <div class="price-decorative-line"></div>
+                <div class="price-value">
+                    <span class="price-currency">US$</span>
+                    <span class="price-amount">${product.price.replace('US$ ', '')}</span>
+                </div>
+                <div class="price-decorative-line"></div>
+            </div>
+        </div>`;
         const descriptionHtml = product.description.map(line => `<div class="flex items-start mb-3"><div class="flex-shrink-0 w-5 h-5 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center mr-3 mt-0.5"><i class="fas fa-check text-white text-xs"></i></div><span class="text-gray-800 dark:text-gray-100 text-sm leading-relaxed">${line.substring(2)}</span></div>`).join('');
         const buttonText = type === 'free' ? '<i class="fas fa-download mr-2"></i>Descargar Gratis' : '<i class="fas fa-shopping-cart mr-2"></i>Comprar Ahora';
         const buttonGradient = type === 'free' ? 'from-green-600 to-teal-600 hover:from-green-700 hover:to-teal-700' : 'from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700';
@@ -287,42 +413,19 @@ document.addEventListener('DOMContentLoaded', () => {
         free: () => freeContentHTML
     };
 
-    // --- LÓGICA DE NAVEGACIÓN Y RENDERIZADO ---
-    const renderSection = (sectionName, data) => {
-        if (!dynamicContentContainer) return;
-
-        if (staticContentContainer) {
-            staticContentContainer.style.display = (sectionName === 'home') ? 'block' : 'none';
-        }
-
-        if (sections[sectionName]) {
-            dynamicContentContainer.innerHTML = sections[sectionName](data);
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-            
-            allNavLinks.forEach(link => {
-                link.classList.toggle('active', link.dataset.section === sectionName);
-            });
-
-            dynamicContentContainer.querySelectorAll('.nav-link-button').forEach(button => {
-                button.addEventListener('click', (e) => {
-                    const targetSection = e.currentTarget.dataset.section;
-                    window.location.hash = targetSection;
-                });
-            });
-
-            if (mobileMenu && !mobileMenu.classList.contains('hidden')) { mobileMenu.classList.add('hidden'); }
-            if (sectionName === 'free') { setTimeout(initFreeContentExplorer, 50); }
-        }
-    };
-    
-    // --- MANEJADOR DE CAMBIOS DE HASH ---
-    const handleHashChange = async () => {
+    // --- LÓGICA DE NAVEGACIÓN SIMPLIFICADA PARA HOMEPAGE ---
+    const initHomePage = async () => {
         const data = await fetchData();
         if (!data) return;
 
-        const hash = window.location.hash.substring(1);
-        const sectionName = hash && sections[hash] ? hash : 'home';
-        renderSection(sectionName, data);
+        // Solo mostrar contenido estático en la homepage
+        if (staticContentContainer) {
+            staticContentContainer.style.display = 'block';
+        }
+        
+        if (dynamicContentContainer) {
+            dynamicContentContainer.innerHTML = '';
+        }
     };
 
     // --- LÓGICA DEL MINI-CHAT DE WHATSAPP ---
@@ -459,31 +562,8 @@ document.addEventListener('DOMContentLoaded', () => {
             scrollIndicator.addEventListener('click', scrollToNextSection);
         }
         
-        // Configurar scroll suave para el botón "Explorar Membresías" cuando esté en home
-        const exploreButton = document.querySelector('button[data-section="memberships"]');
-        if (exploreButton) {
-            exploreButton.addEventListener('click', (e) => {
-                e.preventDefault();
-                const currentHash = window.location.hash.substring(1);
-                if (!currentHash || currentHash === 'home') {
-                    scrollToNextSection();
-                } else {
-                    window.location.hash = 'memberships';
-                }
-            });
-        }
-        
-        // Configurar navegación y manejar carga inicial
-        allNavLinks.forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                const section = e.currentTarget.dataset.section;
-                if(section) window.location.hash = section;
-            });
-        });
-
-        window.addEventListener('hashchange', handleHashChange);
-        handleHashChange();
+        // Inicializar página principal
+        initHomePage();
 
         // Inicializar carrusel
         if (document.getElementById('testimonials-container')) {
@@ -535,6 +615,149 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // --- FUNCIÓN PARA CREAR PARTÍCULAS DE FONDO ---
+    const createParticles = () => {
+        const particlesContainer = document.getElementById('particles-background');
+        if (!particlesContainer) return;
+
+        // Limpiar partículas existentes
+        particlesContainer.innerHTML = '';
+
+        // Crear efecto de ondas
+        const waveEffect = document.createElement('div');
+        waveEffect.className = 'wave-effect';
+        particlesContainer.appendChild(waveEffect);
+
+        // Crear partículas
+        const particleCount = 50;
+        for (let i = 0; i < particleCount; i++) {
+            const particle = document.createElement('div');
+            const particleType = Math.floor(Math.random() * 3) + 1;
+            
+            particle.className = `particle particle-${particleType}`;
+            
+            // Agregar efecto de brillo aleatorio
+            if (Math.random() > 0.7) {
+                particle.classList.add('particle-glow');
+            }
+            
+            // Posición aleatoria
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.top = Math.random() * 100 + '%';
+            
+            // Retraso de animación aleatorio
+            particle.style.animationDelay = Math.random() * 8 + 's';
+            
+            // Duración de animación aleatoria
+            const duration = 6 + Math.random() * 8;
+            particle.style.animationDuration = duration + 's';
+            
+            particlesContainer.appendChild(particle);
+        }
+    };
+
+    // --- FUNCIÓN PARA ANIMAR CONTADORES ---
+    const animateCounters = () => {
+        const counters = document.querySelectorAll('.counter');
+        const observerOptions = {
+            threshold: 0.5,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counter = entry.target;
+                    const target = parseInt(counter.getAttribute('data-target'));
+                    const duration = 2000; // 2 segundos
+                    const increment = target / (duration / 16); // 60fps
+                    let current = 0;
+
+                    const updateCounter = () => {
+                        current += increment;
+                        if (current < target) {
+                            counter.textContent = Math.floor(current);
+                            requestAnimationFrame(updateCounter);
+                        } else {
+                            counter.textContent = target;
+                        }
+                    };
+
+                    updateCounter();
+                    observer.unobserve(counter);
+                }
+            });
+        }, observerOptions);
+
+        counters.forEach(counter => observer.observe(counter));
+    };
+
+    // --- FUNCIÓN PARA EFECTOS DE SCROLL ---
+    const initScrollEffects = () => {
+        const scrollElements = document.querySelectorAll('.scroll-animate');
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        scrollElements.forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    };
+
+    // --- FUNCIÓN PARA EFECTOS DE PARALLAX SUAVE ---
+    const initParallaxEffects = () => {
+        let ticking = false;
+
+        const updateParallax = () => {
+            const scrolled = window.pageYOffset;
+            const parallaxElements = document.querySelectorAll('.parallax');
+            
+            parallaxElements.forEach(element => {
+                const speed = element.dataset.speed || 0.5;
+                const yPos = -(scrolled * speed);
+                element.style.transform = `translateY(${yPos}px)`;
+            });
+            
+            ticking = false;
+        };
+
+        const requestTick = () => {
+            if (!ticking) {
+                requestAnimationFrame(updateParallax);
+                ticking = true;
+            }
+        };
+
+        window.addEventListener('scroll', requestTick);
+    };
+
+    // Inicializar efectos cuando el DOM esté listo
+    const initAnimations = () => {
+        createParticles();
+        animateCounters();
+        initScrollEffects();
+        initParallaxEffects();
+        
+        // Recrear partículas cada 30 segundos para mantener el efecto dinámico
+        setInterval(createParticles, 30000);
+    };
+
     // Iniciar la aplicación
     init();
+    
+    // Inicializar animaciones después de un pequeño retraso
+    setTimeout(initAnimations, 500);
 });

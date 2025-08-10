@@ -3,18 +3,23 @@ Allow: /
 
 # Página principal
 Allow: /index.html
+Allow: /
 
 # Páginas de información
-Allow: /about.html
-Allow: /contact.html
-Allow: /privacy.html
+Allow: /about/
+Allow: /contact/
+Allow: /privacy/
+Allow: /faq/
 
 # Páginas de productos y servicios
-Allow: /membresias.html
-Allow: /demospacks.html
-Allow: /testimonials.html
-Allow: /faq.html
-Allow: /dj-resources.html
+Allow: /membresias/
+Allow: /audio-packs/
+Allow: /video-packs/
+Allow: /backups/
+Allow: /free/
+Allow: /demo-packs/
+Allow: /demo-membresias/
+Allow: /dj-resources/
 
 # Permitir acceso a recursos estáticos
 Allow: /images/

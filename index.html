@@ -10,6 +10,7 @@
     <meta name="keywords" content="packs de audio, video remix, DJ, productor musical, música electrónica, reggaetón, cumbia, salsa, membresías VIP, backups musicales, samples gratis">
     <meta name="theme-color" content="#9333ea">
     <meta name="google-adsense-account" content="ca-pub-9975952999842017">
+    <link rel="canonical" href="https://www.vivarfa.com/">
     
     <!-- Script de Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -54,17 +55,17 @@
     <header class="bg-gray-900/80 backdrop-blur-lg sticky top-0 z-50 border-b border-gray-700">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-3">
             <!-- BRANDING ACTUALIZADO -->
-            <a href="#" data-section="home" class="nav-link flex items-center gap-3 cursor-pointer hover-scale">
+            <a href="/" class="nav-link flex items-center gap-3 cursor-pointer hover-scale">
                 <img src="./images/vivarfa.png" alt="Vivarfa VIP Music Logo" class="h-10 w-10 object-contain animate-float">
                 <span class="text-xl md:text-2xl font-bold gradient-text">VIVARFA VIP MUSIC</span>
             </a>
             <ul class="hidden md:flex items-center space-x-6">
-                <li><a href="#" data-section="home" class="nav-link active">Inicio</a></li>
-                <li><a href="#" data-section="memberships" class="nav-link">Membresías</a></li>
-                <li><a href="#" data-section="audio-packs" class="nav-link">Audio Packs</a></li>
-                <li><a href="#" data-section="video-packs" class="nav-link">Video Packs</a></li>
-                <li><a href="#" data-section="backups" class="nav-link">Backups</a></li>
-                <li><a href="#" data-section="free" class="nav-link">Gratis</a></li>
+                <li><a href="/" class="nav-link active">Inicio</a></li>
+                <li><a href="/membresias/" class="nav-link">Membresías</a></li>
+                <li><a href="/audio-packs/" class="nav-link">Audio Packs</a></li>
+                <li><a href="/video-packs/" class="nav-link">Video Packs</a></li>
+                <li><a href="/backups/" class="nav-link">Backups</a></li>
+                <li><a href="/free/" class="nav-link">Gratis</a></li>
             </ul>
             <button id="mobile-menu-button" class="md:hidden text-white text-2xl hover-scale">
                 <i class="fas fa-bars"></i>
@@ -73,12 +74,12 @@
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-gray-800/95 backdrop-blur-sm">
             <ul class="flex flex-col items-center py-4 space-y-4">
-                 <li><a href="#" data-section="home" class="nav-link">Inicio</a></li>
-                 <li><a href="#" data-section="memberships" class="nav-link">Membresías</a></li>
-                 <li><a href="#" data-section="audio-packs" class="nav-link">Audio Packs</a></li>
-                 <li><a href="#" data-section="video-packs" class="nav-link">Video Packs</a></li>
-                 <li><a href="#" data-section="backups" class="nav-link">Backups</a></li>
-                 <li><a href="#" data-section="free" class="nav-link">Gratis</a></li>
+                 <li><a href="/" class="nav-link">Inicio</a></li>
+                 <li><a href="/membresias/" class="nav-link">Membresías</a></li>
+                 <li><a href="/audio-packs/" class="nav-link">Audio Packs</a></li>
+                 <li><a href="/video-packs/" class="nav-link">Video Packs</a></li>
+                 <li><a href="/backups/" class="nav-link">Backups</a></li>
+                 <li><a href="/free/" class="nav-link">Gratis</a></li>
             </ul>
         </div>
     </header>
@@ -87,12 +88,12 @@
         <!-- El contenido estático de la página principal se mantiene aquí -->
         <div id="static-content">
             <!-- Hero Section Profesional Mejorada -->
-            <section class="relative overflow-hidden min-h-screen flex items-center justify-center section-background">
+            <section class="relative overflow-hidden min-h-screen flex items-center justify-center section-background hero-section">
                 <!-- Fondo con overlay mejorado -->
                 <div class="absolute inset-0 bg-black/40 z-10"></div>
                 
                 <!-- Contenido principal -->
-                <div class="relative z-20 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <div class="relative z-20 max-w-6xl mx-auto container-responsive text-center-mobile text-left-desktop">
                     <!-- Badge superior -->
                     <div class="inline-flex items-center gap-2 bg-purple-600/20 backdrop-blur-sm border border-purple-500/30 rounded-full px-6 py-3 mb-8 animate-fadeInUp">
                         <div class="w-2 h-2 bg-purple-400 rounded-full animate-pulse"></div>
@@ -100,7 +101,7 @@
                     </div>
                     
                     <!-- Título principal -->
-                    <h1 class="text-4xl sm:text-6xl lg:text-7xl xl:text-8xl font-black text-white mb-6 leading-tight animate-fadeInUp" style="animation-delay: 0.1s;">
+                    <h1 class="text-4xl sm:text-6xl lg:text-7xl xl:text-8xl font-black text-white mb-6 leading-tight animate-fadeInUp hero-title" style="animation-delay: 0.1s;">
                         <span class="block bg-gradient-to-r from-white via-purple-200 to-pink-200 bg-clip-text text-transparent">
                             VIVARFA
                         </span>
@@ -110,7 +111,7 @@
                     </h1>
                     
                     <!-- Descripción -->
-                    <p class="text-lg sm:text-xl lg:text-2xl text-gray-200 max-w-4xl mx-auto mb-10 leading-relaxed animate-fadeInUp" style="animation-delay: 0.2s;">
+                    <p class="text-lg sm:text-xl lg:text-2xl text-gray-200 max-w-4xl mx-auto mb-10 leading-relaxed animate-fadeInUp hero-subtitle" style="animation-delay: 0.2s;">
                         La plataforma líder en contenido premium para DJs profesionales.
                         <span class="block mt-2 text-purple-200">
                             Más de 1000+ packs de audio y video actualizados semanalmente.
@@ -118,38 +119,38 @@
                     </p>
                     
                     <!-- Botones de acción -->
-                    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mb-16 animate-fadeInUp" style="animation-delay: 0.3s;">
-                        <button data-section="memberships" class="nav-link-button group relative bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-xl text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25 w-full sm:w-auto">
+                    <div class="flex-responsive items-center justify-center gap-4 sm:gap-6 mb-16 animate-fadeInUp" style="animation-delay: 0.3s;">
+                        <a href="/membresias/" class="nav-link-button group relative bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-xl text-lg button-zoom btn-large-responsive inline-block text-center">
                             <span class="relative z-10 flex items-center justify-center gap-3">
                                 <i class="fas fa-crown text-xl"></i>
                                 Explorar Membresías
                             </span>
                             <div class="absolute inset-0 bg-gradient-to-r from-purple-700 to-pink-700 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                        </button>
+                        </a>
                         
-                        <button data-section="free" class="nav-link-button group relative bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white font-bold py-4 px-8 rounded-xl text-lg border border-white/20 hover:border-white/40 transition-all duration-300 transform hover:scale-105 w-full sm:w-auto">
+                        <a href="/free/" class="nav-link-button group relative bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white font-bold py-4 px-8 rounded-xl text-lg border border-white/20 hover:border-white/40 button-zoom btn-large-responsive inline-block text-center">
                             <span class="flex items-center justify-center gap-3">
                                 <i class="fas fa-download text-xl"></i>
                                 Contenido Gratuito
                             </span>
-                        </button>
+                        </a>
                     </div>
                     
                     <!-- Estadísticas rápidas -->
                     <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8 max-w-4xl mx-auto animate-fadeInUp" style="animation-delay: 0.4s;">
-                        <div class="bg-white/5 backdrop-blur-sm rounded-xl p-4 sm:p-6 border border-white/10">
+                        <div class="bg-white/5 backdrop-blur-sm rounded-xl p-4 sm:p-6 border border-white/10 stats-hover">
                             <div class="text-2xl sm:text-3xl font-bold text-purple-400 mb-1">1000+</div>
                             <div class="text-sm sm:text-base text-gray-300">Audio Packs</div>
                         </div>
-                        <div class="bg-white/5 backdrop-blur-sm rounded-xl p-4 sm:p-6 border border-white/10">
+                        <div class="bg-white/5 backdrop-blur-sm rounded-xl p-4 sm:p-6 border border-white/10 stats-hover">
                             <div class="text-2xl sm:text-3xl font-bold text-pink-400 mb-1">500+</div>
                             <div class="text-sm sm:text-base text-gray-300">Video Packs</div>
                         </div>
-                        <div class="bg-white/5 backdrop-blur-sm rounded-xl p-4 sm:p-6 border border-white/10">
+                        <div class="bg-white/5 backdrop-blur-sm rounded-xl p-4 sm:p-6 border border-white/10 stats-hover">
                             <div class="text-2xl sm:text-3xl font-bold text-blue-400 mb-1">100+</div>
                             <div class="text-sm sm:text-base text-gray-300">DJs Activos</div>
                         </div>
-                        <div class="bg-white/5 backdrop-blur-sm rounded-xl p-4 sm:p-6 border border-white/10">
+                        <div class="bg-white/5 backdrop-blur-sm rounded-xl p-4 sm:p-6 border border-white/10 stats-hover">
                             <div class="text-2xl sm:text-3xl font-bold text-green-400 mb-1">24/7</div>
                             <div class="text-sm sm:text-base text-gray-300">Soporte</div>
                         </div>
@@ -189,7 +190,7 @@
                     
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
                         <!-- Característica 1 -->
-                        <div class="group bg-gray-800/50 backdrop-blur-sm p-8 rounded-2xl border border-gray-700 hover:border-blue-500 transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20">
+                        <div class="group bg-gray-800/50 backdrop-blur-sm p-8 rounded-2xl border border-gray-700 hover:border-blue-500 card-hover">
                             <div class="bg-gradient-to-r from-blue-500 to-purple-600 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                                 <i class="fas fa-sync-alt text-white text-2xl"></i>
                             </div>
@@ -200,7 +201,7 @@
                         </div>
                         
                         <!-- Característica 2 -->
-                        <div class="group bg-gray-800/50 backdrop-blur-sm p-8 rounded-2xl border border-gray-700 hover:border-purple-500 transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20">
+                        <div class="group bg-gray-800/50 backdrop-blur-sm p-8 rounded-2xl border border-gray-700 hover:border-purple-500 card-hover">
                             <div class="bg-gradient-to-r from-purple-500 to-pink-600 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                                 <i class="fas fa-star text-white text-2xl"></i>
                             </div>
@@ -211,7 +212,7 @@
                         </div>
                         
                         <!-- Característica 3 -->
-                        <div class="group bg-gray-800/50 backdrop-blur-sm p-8 rounded-2xl border border-gray-700 hover:border-green-500 transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-green-500/20">
+                        <div class="group bg-gray-800/50 backdrop-blur-sm p-8 rounded-2xl border border-gray-700 hover:border-green-500 card-hover">
                             <div class="bg-gradient-to-r from-green-500 to-blue-600 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                                 <i class="fas fa-headset text-white text-2xl"></i>
                             </div>
@@ -280,7 +281,7 @@
                 </p>
                 
                 <div class="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
-                    <a href="#memberships" data-section="memberships" class="nav-link group bg-white text-purple-600 px-10 py-5 rounded-2xl font-bold text-lg hover:bg-gray-50 transform hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-3xl border-4 border-white/20">
+                    <a href="/membresias/" class="nav-link group bg-white text-purple-600 px-10 py-5 rounded-2xl font-bold text-lg hover:bg-gray-50 transform hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-3xl border-4 border-white/20">
                         <i class="fas fa-crown mr-3 group-hover:animate-bounce"></i>
                         Explorar Membresías Premium
                     </a>
@@ -343,47 +344,44 @@
         </section>
     </main>
 
-    <!-- ===== Footer Mejorado ===== -->
+    <!-- Footer -->
     <footer class="bg-gray-900 border-t border-gray-800 pt-16 pb-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
                 <div>
                     <div class="flex items-center gap-3 mb-4">
-                        <img src="./images/vivarfa.png" alt="Vivarfa VIP Music Logo" class="h-10 w-10 object-contain">
+                        <img src="../images/vivarfa.png" alt="Vivarfa VIP Music Logo" class="h-10 w-10 object-contain">
                         <span class="text-xl font-bold gradient-text">VIVARFA VIP MUSIC</span>
                     </div>
                     <p class="text-gray-400 mb-4">Tu fuente premium de audio y video para DJs y productores. Actualizaciones semanales con el mejor contenido.</p>
-                    <div id="social-links-container" class="flex space-x-4 mt-4">
-                        <!-- Iconos de redes sociales -->
-                    </div>
                 </div>
                 
                 <div>
                     <h3 class="text-lg font-semibold mb-4 text-white">Enlaces Rápidos</h3>
                     <ul class="space-y-2 text-gray-400">
-                        <li><a href="#" data-section="home" class="nav-link hover:text-white transition-colors">Inicio</a></li>
-                        <li><a href="#" data-section="memberships" class="nav-link hover:text-white transition-colors">Membresías</a></li>
-                        <li><a href="#" data-section="audio-packs" class="nav-link hover:text-white transition-colors">Audio Packs</a></li>
-                        <li><a href="#" data-section="video-packs" class="nav-link hover:text-white transition-colors">Video Packs</a></li>
+                        <li><a href="/" class="hover:text-white transition-colors">Inicio</a></li>
+                        <li><a href="/membresias/" class="hover:text-white transition-colors">Membresías</a></li>
+                        <li><a href="/audio-packs/" class="hover:text-white transition-colors">Audio Packs</a></li>
+                        <li><a href="/video-packs/" class="hover:text-white transition-colors">Video Packs</a></li>
                     </ul>
                 </div>
                 
                 <div>
                     <h3 class="text-lg font-semibold mb-4 text-white">Recursos</h3>
                     <ul class="space-y-2 text-gray-400">
-                        <li><a href="#" data-section="backups" class="nav-link hover:text-white transition-colors">Backups</a></li>
-                        <li><a href="#" data-section="free" class="nav-link hover:text-white transition-colors">Contenido Gratuito</a></li>
-                        <li><a href="faq.html" class="hover:text-white transition-colors">Preguntas Frecuentes</a></li>
-                        <li><a href="dj-resources.html" class="hover:text-white transition-colors">Recursos DJ</a></li>
+                        <li><a href="/backups/" class="hover:text-white transition-colors">Backups</a></li>
+                        <li><a href="/free/" class="hover:text-white transition-colors">Contenido Gratuito</a></li>
+                        <li><a href="/faq/" class="hover:text-white transition-colors">Preguntas Frecuentes</a></li>
+                        <li><a href="/dj-resources/" class="hover:text-white transition-colors">Recursos DJ</a></li>
                     </ul>
                 </div>
                 
                 <div>
                     <h3 class="text-lg font-semibold mb-4 text-white">Información</h3>
                     <ul class="space-y-2 text-gray-400">
-                        <li><a href="contact.html" class="hover:text-white transition-colors">Contacto</a></li>
-                        <li><a href="privacy.html" class="hover:text-white transition-colors">Política de Privacidad</a></li>
-                        <li><a href="about.html" class="hover:text-white transition-colors">Nosotros</a></li>
+                        <li><a href="/contact/" class="hover:text-white transition-colors">Contacto</a></li>
+                        <li><a href="/privacy/" class="hover:text-white transition-colors">Política de Privacidad</a></li>
+                        <li><a href="/about/" class="hover:text-white transition-colors">Nosotros</a></li>
                     </ul>
                 </div>
             </div>
@@ -393,6 +391,7 @@
             </div>
         </div>
     </footer>
+
 
     <!-- ===== Widget de Mini-Chat de WhatsApp Mejorado ===== -->
     <div id="whatsapp-chat-widget" class="animate-fadeInUp">

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nosotros | VIVARFA VIP MUSIC</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Conoce la historia y misión de VIVARFA VIP MUSIC. Somos una plataforma líder dedicada a proveer recursos musicales de alta calidad para DJs y productores.">
+    <meta name="keywords" content="sobre nosotros, VIVARFA, historia, misión, equipo, DJ, música">
+    <meta name="author" content="VIVARFA VIP MUSIC">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#9333ea">
+    <meta name="google-adsense-account" content="ca-pub-9975952999842017">
+    <link rel="canonical" href="https://www.vivarfa.com/about/">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Sobre Nosotros | VIVARFA VIP MUSIC">
+    <meta property="og:description" content="Conoce la historia y misión de VIVARFA VIP MUSIC. Somos una plataforma líder dedicada a proveer recursos musicales de alta calidad para DJs y productores.">
+    <meta property="og:image" content="https://www.vivarfa.com/images/vivarfa.png">
+    <meta property="og:url" content="https://www.vivarfa.com/about.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="VIVARFA VIP MUSIC">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sobre Nosotros | VIVARFA VIP MUSIC">
+    <meta name="twitter:description" content="Conoce la historia y misión de VIVARFA VIP MUSIC. Somos una plataforma líder dedicada a proveer recursos musicales de alta calidad para DJs y productores.">
+    <meta name="twitter:image" content="https://www.vivarfa.com/images/vivarfa.png">
+    
+    <!-- Script de Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts y Font Awesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../animations.css">
+    
+    <link rel="icon" href="../logo.png" type="image/png">
+
+    <!-- Script de Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9975952999842017" crossorigin="anonymous"></script>
+    
+    <!-- Configuración adicional de Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                        'display': ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+     <style>
+        .content-card {
+            background: rgba(17, 24, 39, 0.6);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(55, 65, 81, 0.5);
+            transition: all 0.3s ease-in-out;
+        }
+        .content-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(147, 51, 234, 0.15);
+            border-color: rgba(147, 51, 234, 0.4);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white font-sans antialiased">
+    <!-- Fondo de partículas para efecto dinámico -->
+    <div id="particles-background" class="fixed inset-0 z-0 pointer-events-none"></div>
+
+    <!-- Header -->
+    <header class="bg-gray-900/80 backdrop-blur-lg sticky top-0 z-50 border-b border-gray-700">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-3">
+            <a href="/" class="flex items-center gap-3 cursor-pointer hover-scale">
+                <img src="../images/vivarfa.png" alt="Vivarfa VIP Music Logo" class="h-10 w-10 object-contain animate-float">
+                <span class="text-xl md:text-2xl font-bold gradient-text">VIVARFA VIP MUSIC</span>
+            </a>
+            <ul class="hidden md:flex items-center space-x-6">
+                <li><a href="/" class="nav-link">Inicio</a></li>
+                <li><a href="/membresias/" class="nav-link">Membresías</a></li>
+                <li><a href="/audio-packs/" class="nav-link">Audio Packs</a></li>
+                <li><a href="/video-packs/" class="nav-link">Video Packs</a></li>
+                <li><a href="/backups/" class="nav-link">Backups</a></li>
+                <li><a href="/free/" class="nav-link">Gratis</a></li>
+            </ul>
+            <button id="mobile-menu-button" class="md:hidden text-white text-2xl hover-scale">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800/95 backdrop-blur-sm">
+            <ul class="flex flex-col items-center py-4 space-y-4">
+                <li><a href="/" class="nav-link">Inicio</a></li>
+                <li><a href="/membresias/" class="nav-link">Membresías</a></li>
+                <li><a href="/audio-packs/" class="nav-link">Audio Packs</a></li>
+                <li><a href="/video-packs/" class="nav-link">Video Packs</a></li>
+                <li><a href="/backups/" class="nav-link">Backups</a></li>
+                <li><a href="/free/" class="nav-link">Gratis</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="relative z-10">
+        <!-- Encabezado de la página -->
+        <section class="relative overflow-hidden py-24 px-4 text-center animate-gradient">
+            <div class="max-w-7xl mx-auto">
+                <h1 class="text-5xl md:text-7xl font-black uppercase gradient-text tracking-wider font-display mb-6 animate-fadeInUp">Nuestra Historia</h1>
+                <p class="text-xl md:text-2xl text-gray-300 mt-4 max-w-3xl mx-auto animate-fadeInUp" style="animation-delay: 0.2s;">Potenciando a DJs y productores musicales con recursos de élite.</p>
+            </div>
+        </section>
+        
+        <!-- Contenido de la página "Sobre Nosotros" -->
+        <div class="py-20 bg-gray-900/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
+
+                <!-- Sección: ¿Qué es VIVARFA? -->
+                <section class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="animate-fadeInUp" style="animation-delay: 0.4s;">
+                        <h2 class="text-3xl font-bold gradient-text mb-6">¿Qué es VIVARFA VIP MUSIC?</h2>
+                        <p class="text-lg text-gray-300 leading-relaxed"><strong>VIVARFA VIP MUSIC</strong> es una plataforma online especializada en la venta y distribución de contenido musical digital de alta calidad. Nacimos de la pasión por la música y la necesidad de ofrecer a DJs, animadores, productores y amantes de la música, un lugar donde encontrar material exclusivo, curado y listo para usar en cualquier entorno profesional o personal.</p>
+                    </div>
+                    <div class="animate-fadeInUp" style="animation-delay: 0.5s;">
+                        <img src="../images/vivarfa.jpeg" alt="VIVARFA VIP MUSIC" class="rounded-2xl shadow-2xl shadow-purple-500/10 w-full h-64 object-contain">
+                    </div>
+                </section>
+                
+                <!-- Sección: Misión -->
+                <section class="text-center">
+                    <div class="content-card rounded-2xl p-8 md:p-12 max-w-4xl mx-auto animate-fadeInUp" style="animation-delay: 0.2s;">
+                        <i class="fas fa-bullseye text-5xl text-purple-400 mb-6"></i>
+                        <h2 class="text-3xl font-bold gradient-text mb-4">Nuestra Misión</h2>
+                        <p class="text-lg text-gray-300 leading-relaxed">Empoderar a la comunidad de DJs y creadores de contenido musical. Lo hacemos proporcionando herramientas que no solo facilitan el trabajo técnico de la mezcla, sino que también inspiran la creatividad. Creemos que con los recursos adecuados, cualquier DJ puede elevar sus sets y crear experiencias inolvidables para su público.</p>
+                    </div>
+                </section>
+
+                <!-- Sección: ¿Qué ofrecemos? -->
+                <section>
+                    <h2 class="text-4xl font-bold gradient-text text-center mb-12 animate-fadeInUp">Un Catálogo Para el DJ Moderno</h2>
+                    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- Card Oferta 1 -->
+                        <div class="content-card rounded-2xl p-8 text-center animate-fadeInUp" style="animation-delay: 0.3s;">
+                            <i class="fas fa-compact-disc text-4xl text-purple-400 mb-4"></i>
+                            <h3 class="text-xl font-bold text-white mb-2">Remixes Pro</h3>
+                            <p class="text-gray-400">Audio y video con ediciones profesionales (intro, outro) optimizados para la mezcla en vivo.</p>
+                        </div>
+                        <!-- Card Oferta 2 -->
+                        <div class="content-card rounded-2xl p-8 text-center animate-fadeInUp" style="animation-delay: 0.4s;">
+                            <i class="fas fa-server text-4xl text-purple-400 mb-4"></i>
+                            <h3 class="text-xl font-bold text-white mb-2">Backups Masivos</h3>
+                            <p class="text-gray-400">Colecciones de +500 GB de música y video que abarcan décadas y géneros. Tu biblioteca completa.</p>
+                        </div>
+                        <!-- Card Oferta 3 -->
+                        <div class="content-card rounded-2xl p-8 text-center animate-fadeInUp" style="animation-delay: 0.5s;">
+                            <i class="fas fa-music text-4xl text-purple-400 mb-4"></i>
+                            <h3 class="text-xl font-bold text-white mb-2">Packs Temáticos</h3>
+                            <p class="text-gray-400">Packs curados por género (Salsa, Cumbia) o temática (Hora Loca, Retro) para cada momento.</p>
+                        </div>
+                        <!-- Card Oferta 4 -->
+                        <div class="content-card rounded-2xl p-8 text-center animate-fadeInUp" style="animation-delay: 0.6s;">
+                            <i class="fas fa-crown text-4xl text-purple-400 mb-4"></i>
+                            <h3 class="text-xl font-bold text-white mb-2">Membresías VIP</h3>
+                            <p class="text-gray-400">Acceso total con actualizaciones semanales. Recibe gigabytes de material nuevo cada mes.</p>
+                        </div>
+                        <!-- Card Oferta 5 -->
+                        <div class="content-card rounded-2xl p-8 text-center animate-fadeInUp" style="animation-delay: 0.7s;">
+                            <i class="fas fa-graduation-cap text-4xl text-purple-400 mb-4"></i>
+                            <h3 class="text-xl font-bold text-white mb-2">Recursos Educativos</h3>
+                            <p class="text-gray-400">Tutoriales y guías para ayudar a crecer a nuestra comunidad de DJs y productores.</p>
+                        </div>
+                        <!-- Card Oferta 6 -->
+                        <div class="content-card rounded-2xl p-8 text-center animate-fadeInUp" style="animation-delay: 0.8s;">
+                            <i class="fas fa-gift text-4xl text-purple-400 mb-4"></i>
+                            <h3 class="text-xl font-bold text-white mb-2">Contenido Gratuito</h3>
+                            <p class="text-gray-400">Packs de muestra gratuitos para que todos puedan probar la calidad de nuestro trabajo.</p>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Sección: ¿Para quién es? -->
+                <section>
+                    <h2 class="text-4xl font-bold gradient-text text-center mb-12 animate-fadeInUp">Hecho para la Comunidad Creativa</h2>
+                     <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+                        <!-- Usuario 1 -->
+                         <div class="animate-fadeInUp" style="animation-delay: 0.3s;">
+                             <div class="bg-gray-800 p-6 rounded-full w-24 h-24 mx-auto flex items-center justify-center border-2 border-purple-500">
+                                 <i class="fas fa-headphones-alt text-4xl text-white"></i>
+                             </div>
+                             <h3 class="text-xl font-bold mt-4">DJs Profesionales</h3>
+                         </div>
+                         <!-- Usuario 2 -->
+                         <div class="animate-fadeInUp" style="animation-delay: 0.4s;">
+                            <div class="bg-gray-800 p-6 rounded-full w-24 h-24 mx-auto flex items-center justify-center border-2 border-purple-500">
+                                <i class="fas fa-calendar-alt text-4xl text-white"></i>
+                            </div>
+                             <h3 class="text-xl font-bold mt-4">Organizadores</h3>
+                         </div>
+                         <!-- Usuario 3 -->
+                         <div class="animate-fadeInUp" style="animation-delay: 0.5s;">
+                            <div class="bg-gray-800 p-6 rounded-full w-24 h-24 mx-auto flex items-center justify-center border-2 border-purple-500">
+                                <i class="fas fa-sliders-h text-4xl text-white"></i>
+                            </div>
+                             <h3 class="text-xl font-bold mt-4">Productores</h3>
+                         </div>
+                         <!-- Usuario 4 -->
+                         <div class="animate-fadeInUp" style="animation-delay: 0.6s;">
+                            <div class="bg-gray-800 p-6 rounded-full w-24 h-24 mx-auto flex items-center justify-center border-2 border-purple-500">
+                                <i class="fas fa-heart text-4xl text-white"></i>
+                            </div>
+                             <h3 class="text-xl font-bold mt-4">Aficionados</h3>
+                         </div>
+                     </div>
+                </section>
+
+                <!-- Sección: Comunidad y CTA -->
+                <section class="text-center bg-gray-900 rounded-2xl p-10 md:p-16 border border-gray-700 shadow-2xl shadow-purple-500/10 animate-fadeInUp">
+                    <h2 class="text-4xl font-bold gradient-text mb-4">Más que una Tienda, una Comunidad</h2>
+                    <p class="text-lg text-gray-300 max-w-3xl mx-auto mb-8">Fomentamos la interacción en redes y ofrecemos soporte 24/7 vía WhatsApp. Nuestro compromiso es con la calidad, la actualización constante y tu satisfacción.</p>
+                    <a href="/membresias/" class="inline-block bg-gradient-to-r from-purple-600 to-pink-600 text-white px-10 py-4 rounded-full font-semibold text-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-lg">
+                        ¡Únete a la Familia VIVARFA!
+                    </a>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-gray-800 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <img src="../images/vivarfa.png" alt="Vivarfa VIP Music Logo" class="h-10 w-10 object-contain">
+                        <span class="text-xl font-bold gradient-text">VIVARFA VIP MUSIC</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">Tu fuente premium de audio y video para DJs y productores. Actualizaciones semanales con el mejor contenido.</p>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-white">Enlaces Rápidos</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/" class="hover:text-white transition-colors">Inicio</a></li>
+                        <li><a href="/membresias/" class="hover:text-white transition-colors">Membresías</a></li>
+                        <li><a href="/audio-packs/" class="hover:text-white transition-colors">Audio Packs</a></li>
+                        <li><a href="/video-packs/" class="hover:text-white transition-colors">Video Packs</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-white">Recursos</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/backups/" class="hover:text-white transition-colors">Backups</a></li>
+                        <li><a href="/free/" class="hover:text-white transition-colors">Contenido Gratuito</a></li>
+                        <li><a href="/faq/" class="hover:text-white transition-colors">Preguntas Frecuentes</a></li>
+                        <li><a href="/dj-resources/" class="hover:text-white transition-colors">Recursos DJ</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-white">Información</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/contact/" class="hover:text-white transition-colors">Contacto</a></li>
+                        <li><a href="/privacy/" class="hover:text-white transition-colors">Política de Privacidad</a></li>
+                        <li><a href="/about/" class="hover:text-white transition-colors">Nosotros</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 mt-8 text-center">
+                <p class="text-gray-500">© 2025 VIVARFA VIP MUSIC. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="../script.js"></script>
+    <script src="../effects.js"></script>
+</body>
+</html>

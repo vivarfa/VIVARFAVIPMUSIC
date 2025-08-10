@@ -53,6 +53,279 @@ body {
 .nav-link.active, .nav-link:hover { color: #a855f7; }
 .nav-link.active::after, .nav-link:hover::after { transform: scaleX(1); }
 
+/* --- ESTILOS RESPONSIVOS MEJORADOS --- */
+/* Menú hamburguesa mejorado */
+#mobile-menu-button {
+    position: relative;
+    z-index: 60;
+    transition: all 0.3s ease;
+}
+
+#mobile-menu-button:hover {
+    color: #a855f7;
+    transform: scale(1.1);
+}
+
+#mobile-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(31, 41, 55, 0.98);
+    backdrop-filter: blur(20px);
+    border-top: 1px solid #374151;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    transform: translateY(-10px);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#mobile-menu:not(.hidden) {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+#mobile-menu .nav-link {
+    display: block;
+    padding: 12px 20px;
+    margin: 0;
+    border-bottom: 1px solid rgba(55, 65, 81, 0.5);
+    transition: all 0.3s ease;
+}
+
+#mobile-menu .nav-link:hover {
+    background: rgba(147, 51, 234, 0.1);
+    padding-left: 30px;
+}
+
+/* Responsive Grid Layouts */
+.responsive-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+    .responsive-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .responsive-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1280px) {
+    .responsive-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+    .gradient-text {
+        font-size: 1.25rem;
+    }
+    
+    h1 {
+        font-size: 2rem !important;
+    }
+    
+    h2 {
+        font-size: 1.5rem !important;
+    }
+    
+    h3 {
+        font-size: 1.25rem !important;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem !important;
+        line-height: 1.2;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem !important;
+    }
+}
+
+/* Responsive Spacing */
+@media (max-width: 768px) {
+    .section-padding {
+        padding: 2rem 1rem;
+    }
+    
+    .container-responsive {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+/* Responsive Cards */
+@media (max-width: 768px) {
+    .card-hover {
+        margin-bottom: 1rem;
+    }
+    
+    .card-hover:hover {
+        transform: translateY(-4px);
+    }
+}
+
+/* Responsive Professional Price */
+@media (max-width: 768px) {
+    .professional-price {
+        padding: 15px 20px;
+        margin: 10px 0;
+    }
+    
+    .price-value {
+        font-size: 1.25rem;
+    }
+    
+    .price-currency {
+        font-size: 0.875rem;
+    }
+}
+
+/* Responsive Stats Bar */
+@media (max-width: 768px) {
+    .free-stats-bar {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .free-stats-bar {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Responsive Controls */
+@media (max-width: 768px) {
+    .free-controls-section {
+        padding: 1rem;
+    }
+    
+    .free-search-input {
+        padding: 10px 14px 10px 40px;
+    }
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+    nav {
+        padding: 0.75rem 1rem;
+    }
+    
+    .nav-brand {
+        font-size: 1.125rem;
+    }
+}
+
+/* Responsive Hero Section */
+@media (max-width: 768px) {
+    .hero-section {
+        min-height: 80vh;
+        padding: 2rem 1rem;
+    }
+    
+    .hero-badge {
+        padding: 0.5rem 1rem;
+        font-size: 0.75rem;
+    }
+}
+
+/* Responsive Buttons */
+@media (max-width: 768px) {
+    .btn-responsive {
+        padding: 0.75rem 1.5rem;
+        font-size: 0.875rem;
+    }
+    
+    .btn-large-responsive {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+    }
+}
+
+/* Responsive Images */
+@media (max-width: 768px) {
+    .responsive-image {
+        height: 200px;
+        object-fit: cover;
+    }
+}
+
+/* Responsive Modals and Overlays */
+@media (max-width: 768px) {
+    .modal-responsive {
+        margin: 1rem;
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+}
+
+/* Responsive Tables */
+@media (max-width: 768px) {
+    .table-responsive {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
+
+/* Hide/Show elements based on screen size */
+.mobile-only {
+    display: block;
+}
+
+.desktop-only {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .mobile-only {
+        display: none;
+    }
+    
+    .desktop-only {
+        display: block;
+    }
+}
+
+/* Responsive Flexbox utilities */
+.flex-responsive {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    .flex-responsive {
+        flex-direction: row;
+    }
+}
+
+/* Responsive Text Alignment */
+.text-center-mobile {
+    text-align: center;
+}
+
+.text-left-desktop {
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .text-left-desktop {
+        text-align: center;
+    }
+}
+
 
 /* --- ESTILOS PARA LAS TARJETAS DE MEMBRESÍA MEJORADAS --- */
 .feature-list { max-height: 220px; overflow-y: auto; scrollbar-width: thin; scrollbar-color: #9333ea #374151; }
@@ -98,6 +371,140 @@ body {
 .free-download-btn-item:hover { color: #9333ea; transform: scale(1.1); }
 
 @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+/* --- ESTILOS PROFESIONALES PARA PRECIOS --- */
+.professional-price {
+    position: relative;
+    display: inline-block;
+    padding: 20px 30px;
+    margin: 15px 0;
+    background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+    border-radius: 16px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.professional-price::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #9333ea, #ec4899, #06b6d4, #9333ea);
+    border-radius: 18px;
+    z-index: -1;
+    background-size: 300% 300%;
+    animation: gradientShift 3s ease infinite;
+}
+
+.professional-price:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(147, 51, 234, 0.4);
+}
+
+.price-decorative-line {
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #9333ea, #ec4899);
+    margin: 0 auto;
+    border-radius: 2px;
+    position: relative;
+    overflow: hidden;
+}
+
+.price-decorative-line::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    animation: shimmer 2s infinite;
+}
+
+.price-value {
+    font-size: 2.5rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #9333ea, #ec4899, #06b6d4);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 30px rgba(147, 51, 234, 0.5);
+    letter-spacing: -1px;
+    margin: 12px 0;
+    position: relative;
+}
+
+.price-currency {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #9ca3af;
+    vertical-align: top;
+    margin-right: 2px;
+}
+
+.price-amount {
+    position: relative;
+}
+
+.price-container {
+    text-align: center;
+    padding: 10px;
+    position: relative;
+}
+
+/* Efecto de brillo en hover */
+.professional-price:hover .price-value {
+    animation: priceGlow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes shimmer {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+@keyframes priceGlow {
+    0% { text-shadow: 0 0 20px rgba(147, 51, 234, 0.5); }
+    100% { text-shadow: 0 0 30px rgba(147, 51, 234, 0.8), 0 0 40px rgba(236, 72, 153, 0.6); }
+}
+
+/* Estilos para precios en botones */
+.button-price {
+    position: relative;
+    font-weight: 700;
+    background: linear-gradient(135deg, #9333ea, #ec4899);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 10px rgba(147, 51, 234, 0.3);
+}
+
+/* Responsive para precios */
+@media (max-width: 768px) {
+    .price-value {
+        font-size: 2rem;
+    }
+    
+    .professional-price {
+        padding: 15px 20px;
+        margin: 10px 0;
+    }
+    
+    .price-decorative-line {
+        width: 40px;
+        height: 2px;
+    }
+}
 
 /* --- ESTILOS PARA EL CARRUSEL DE TESTIMONIOS INFINITO --- */
 #testimonial-carousel-wrapper {
@@ -177,7 +584,7 @@ body {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    z-index: 1000;
+    z-index: 9999;
     font-family: 'Inter', sans-serif;
 }
 
