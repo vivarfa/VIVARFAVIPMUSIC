@@ -86,15 +86,4 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-</urlset>mkdir membresias
-mkdir demo-membresias
-mkdir demo-packs
-mkdir about
-mkdir contact
-mkdir dj-resources
-mkdir faq
-mkdir privacy
-mkdir free
-mkdir audio-packs
-mkdir video-packs
-mkdir backups
+</urlset>
