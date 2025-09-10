@@ -27,7 +27,7 @@
     <style>
         /* Estilos para gradientes, animaciones y scrollbar (del archivo original) */
         .gradient-text {
-            background: linear-gradient(135deg, #06d6a0, #118ab2, #073b4c);
+            background: linear-gradient(135deg, #9333ea, #ec4899);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -263,12 +263,13 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9975952999842017" crossorigin="anonymous"></script>
 </head>
 <body class="bg-gray-900 text-white font-sans antialiased">
-    <!-- Header -->
+    <!-- ===== Header ===== -->
     <header class="bg-gray-900/80 backdrop-blur-lg sticky top-0 z-50 border-b border-gray-700">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-3">
-            <a href="/" class="flex items-center gap-3 cursor-pointer hover-scale">
+            <!-- BRANDING ACTUALIZADO -->
+            <a href="/" class="nav-link flex items-center gap-3 cursor-pointer hover-scale">
                 <img src="../images/vivarfa.png" alt="Vivarfa VIP Music Logo" class="h-10 w-10 object-contain animate-float">
-                <span class="text-xl md:text-2xl font-bold" style="background-image: linear-gradient(to right, #9333ea, #ec4899); -webkit-background-clip: text; background-clip: text; color: transparent;">VIVARFA VIP MUSIC</span>
+                <span class="text-xl md:text-2xl font-bold gradient-text">VIVARFA VIP MUSIC</span>
             </a>
             <ul class="hidden md:flex items-center space-x-6">
                 <li><a href="/" class="nav-link">Inicio</a></li>
@@ -399,7 +400,7 @@
                             <select id="sort-filter" class="filter-select px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500 hover:bg-gray-600/80 focus:scale-105">
                                 <option value="name">Nombre A-Z</option>
                                 <option value="name-desc">Nombre Z-A</option>
-                                <option value="date">Más reciente</option>
+                                <option value="date" selected>Más reciente</option>
                                 <option value="date-desc">Más antiguo</option>
                             </select>
                         </div>
@@ -473,7 +474,7 @@
                 <div>
                     <div class="flex items-center gap-3 mb-4">
                         <img src="../images/vivarfa.png" alt="Vivarfa VIP Music Logo" class="h-10 w-10 object-contain">
-                        <span class="text-xl md:text-2xl font-bold" style="background-image: linear-gradient(to right, #9333ea, #ec4899); -webkit-background-clip: text; background-clip: text; color: transparent;">VIVARFA VIP MUSIC</span>
+                        <span class="text-xl font-bold gradient-text">VIVARFA VIP MUSIC</span>
                     </div>
                     <p class="text-gray-400 mb-4">Tu fuente premium de audio y video para DJs y productores. Actualizaciones semanales con el mejor contenido.</p>
                 </div>
@@ -504,12 +505,16 @@
                         <li><a href="/contact/" class="hover:text-white transition-colors">Contacto</a></li>
                         <li><a href="/privacy/" class="hover:text-white transition-colors">Política de Privacidad</a></li>
                         <li><a href="/about/" class="hover:text-white transition-colors">Nosotros</a></li>
+                        <li><a href="/tutoriales/" class="hover:text-white transition-colors">Tutoriales</a></li>
                     </ul>
                 </div>
             </div>
             
             <div class="border-t border-gray-800 pt-8 mt-8 text-center">
-                <p class="text-gray-500">© 2025 VIVARFA VIP MUSIC. Todos los derechos reservados.</p>
+                <p class="text-gray-500 mb-2">© 2025 VIVARFA VIP MUSIC. Todos los derechos reservados.</p>
+                <p class="text-gray-600 text-sm">
+                    Desarrollado por <a href="https://www.billcodex.com" target="_blank" class="text-purple-400 hover:text-purple-300 transition-colors font-medium">BillCodex</a>
+                </p>
             </div>
         </div>
     </footer>

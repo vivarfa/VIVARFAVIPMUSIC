@@ -265,34 +265,36 @@
     <div id="page-particles" class="fixed inset-0 z-0 pointer-events-none"></div>
 
     <!-- ===== Header ===== -->
-    <header class="bg-gray-900/80 backdrop-blur-lg sticky top-0 z-50 border-b border-gray-700 animate-slide-up">
+    <header class="bg-gray-900/80 backdrop-blur-lg sticky top-0 z-50 border-b border-gray-700">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-3">
             <!-- BRANDING ACTUALIZADO -->
-            <a href="../index.html" class="flex items-center gap-3 cursor-pointer hover-scale animate-scale-in">
-                <img src="../images/vivarfa.png" alt="Vivarfa VIP Music Logo" class="h-10 w-10 object-contain floating-icon">
+            <a href="/" class="nav-link flex items-center gap-3 cursor-pointer hover-scale">
+                <img src="../images/vivarfa.png" alt="Vivarfa VIP Music Logo" class="h-10 w-10 object-contain animate-float">
                 <span class="text-xl md:text-2xl font-bold gradient-text">VIVARFA VIP MUSIC</span>
             </a>
             <ul class="hidden md:flex items-center space-x-6">
-                <li><a href="index.html#home" class="nav-link hover:text-white transition-all duration-300 stagger-animation">INICIO</a></li>
-                <li><a href="index.html#memberships" class="nav-link hover:text-white transition-all duration-300 stagger-animation">MEMBRESÍAS</a></li>
-                <li><a href="index.html#audio-packs" class="nav-link hover:text-white transition-all duration-300 stagger-animation">AUDIO PACKS</a></li>
-                <li><a href="index.html#video-packs" class="nav-link hover:text-white transition-all duration-300 stagger-animation">VIDEO PACKS</a></li>
-                <li><a href="index.html#backups" class="nav-link hover:text-white transition-all duration-300 stagger-animation">BACKUPS</a></li>
-                <li><a href="index.html#free" class="nav-link hover:text-white transition-all duration-300 stagger-animation">GRATIS</a></li>
+                <li><a href="/" class="nav-link">Inicio</a></li>
+                <li><a href="/membresias/" class="nav-link">Membresías</a></li>
+                <li><a href="/audio-packs/" class="nav-link">Audio Packs</a></li>
+                <li><a href="/video-packs/" class="nav-link">Video Packs</a></li>
+                <li><a href="/backups/" class="nav-link">Backups</a></li>
+                <li><a href="/tutoriales/" class="nav-link">Tutoriales</a></li>
+                <li><a href="/free/" class="nav-link">Gratis</a></li>
             </ul>
-            <button id="mobile-menu-button" class="md:hidden text-white text-2xl hover-scale transition-all duration-300 hover:scale-110">
+            <button id="mobile-menu-button" class="md:hidden text-white text-2xl hover-scale">
                 <i class="fas fa-bars"></i>
             </button>
         </nav>
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-gray-800/95 backdrop-blur-sm">
             <ul class="flex flex-col items-center py-4 space-y-4">
-                <li><a href="index.html#home" class="nav-link hover:text-white transition-all duration-300 py-2 px-4 rounded-lg hover:bg-gray-700/50">INICIO</a></li>
-                <li><a href="index.html#memberships" class="nav-link hover:text-white transition-all duration-300 py-2 px-4 rounded-lg hover:bg-gray-700/50">MEMBRESÍAS</a></li>
-                <li><a href="index.html#audio-packs" class="nav-link hover:text-white transition-all duration-300 py-2 px-4 rounded-lg hover:bg-gray-700/50">AUDIO PACKS</a></li>
-                <li><a href="index.html#video-packs" class="nav-link hover:text-white transition-all duration-300 py-2 px-4 rounded-lg hover:bg-gray-700/50">VIDEO PACKS</a></li>
-                <li><a href="index.html#backups" class="nav-link hover:text-white transition-all duration-300 py-2 px-4 rounded-lg hover:bg-gray-700/50">BACKUPS</a></li>
-                <li><a href="index.html#free" class="nav-link hover:text-white transition-all duration-300 py-2 px-4 rounded-lg hover:bg-gray-700/50">GRATIS</a></li>
+                 <li><a href="/" class="nav-link">Inicio</a></li>
+                 <li><a href="/membresias/" class="nav-link">Membresías</a></li>
+                 <li><a href="/audio-packs/" class="nav-link">Audio Packs</a></li>
+                 <li><a href="/video-packs/" class="nav-link">Video Packs</a></li>
+                 <li><a href="/backups/" class="nav-link">Backups</a></li>
+                 <li><a href="/tutoriales/" class="nav-link">Tutoriales</a></li>
+                 <li><a href="/free/" class="nav-link">Gratis</a></li>
             </ul>
         </div>
     </header>
@@ -1236,12 +1238,16 @@
                         <li><a href="/contact/" class="hover:text-white transition-colors">Contacto</a></li>
                         <li><a href="/privacy/" class="hover:text-white transition-colors">Política de Privacidad</a></li>
                         <li><a href="/about/" class="hover:text-white transition-colors">Nosotros</a></li>
+                        <li><a href="/tutoriales/" class="hover:text-white transition-colors">Tutoriales</a></li>
                     </ul>
                 </div>
             </div>
             
             <div class="border-t border-gray-800 pt-8 mt-8 text-center">
-                <p class="text-gray-500">© 2025 VIVARFA VIP MUSIC. Todos los derechos reservados.</p>
+                <p class="text-gray-500 mb-2">© 2025 VIVARFA VIP MUSIC. Todos los derechos reservados.</p>
+                <p class="text-gray-600 text-sm">
+                    Desarrollado por <a href="https://www.billcodex.com" target="_blank" class="text-purple-400 hover:text-purple-300 transition-colors font-medium">BillCodex</a>
+                </p>
             </div>
         </div>
     </footer>
